@@ -1,0 +1,12 @@
+site_name: Özlemcim's Cheatsheets
+theme:
+  name: material
+  language: tr
+  palette:
+    primary: deep purple
+    accent: pink
+nav:
+  - Ana Sayfa: index.md
+  - Docker: docker.md
+  - Kubernetes: kubernetes.md
+  - iOS: ios.md
