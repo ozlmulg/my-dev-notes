@@ -1,12 +1,12 @@
 # iOS Cheatsheet
 
-## Xcode Kısayolları
+## Xcode Shortcuts
 - `Cmd + B` → Build
 - `Cmd + R` → Run
 - `Cmd + Shift + K` → Clean
 
-## Swift Temelleri
+## Swift Basics
 ```swift
-let name = "Özlemcim"
-print("Merhaba \(name)")
+let name = "Test"
+print("Hello \(name)")
 ```

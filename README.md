@@ -1,41 +1,52 @@
 # My Dev Notes
 
-Bu repo, benim kişisel geliştirme notlarım, cheatsheet’lerim, öğrendiğim yeni konular ve okunacak mesleki kitaplardan oluşan dijital not defterimdir.
+This repository is my personal digital notebook containing development notes, cheatsheets, newly learned topics, and
+professional books to read.
 
-## İçerik
+## Contents
 
-- Docker, Kubernetes, iOS ve diğer teknolojilerle ilgili cheatsheet’ler  
-- Geliştirme notları ve öğrendiğim yeni bilgiler  
-- Okunacak kitap listeleri  
-- Kişisel projeler ve fikirler
+- Cheatsheets related to Docker, Kubernetes, iOS, and other technologies
+- Development notes and new knowledge I’ve acquired
+- Lists of books to read
+- Personal projects and ideas
 
-## Kurulum ve Kullanım
+## Installation and Usage
 
-1. Repoyu klonla:
+1. Clone the repository:
    ```bash
    git clone https://github.com/kullaniciAdi/my-dev-notes.git
    cd my-dev-notes
    ```
 
-2. Sanal ortam oluştur ve aktif et:
+2. Create and activate a virtual environment:
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
     ```
 
-3. Gerekli paketleri yükle:
+3. Install the required packages:
    ```bash
    pip install mkdocs-material
    ```
 
-4. Siteyi yerel olarak başlat:
+4. Start the site locally (Open your browser and go to http://127.0.0.1:8000):
    ```bash
    mkdocs serve
    ```
 
-Tarayıcıda http://127.0.0.1:8000 adresine git.
-
-5. Siteyi GitHub Pages’e deploy etmek için:
+5. To deploy the site to GitHub Pages:
    ```bash
    mkdocs gh-deploy
+   ```
+
+6. To deactivate virtual environment:
+   ```bash
+   deactivate
+   ```
+
+7. For "Address already in use" error:
+   ```bash
+   lsof -i :8000
+   kill -9 PID
+   mkdocs serve -a 127.0.0.1:8001 # run on a different port
    ```

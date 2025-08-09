@@ -1,7 +1,9 @@
-# Özlemcim'in Cheatsheet'leri
+# My Dev Notes
 
-Merhaba 👋  
-Bu site Docker, Kubernetes, iOS ve diğer öğrendiğim konuların notlarını içerir.
+Welcome to My Dev Notes 👋  
+This site contains my personal development notes, cheatsheets, and useful commands.
+
+Feel free to explore topics like Docker, Kubernetes, and more!
 
 - [Docker Cheatsheet](docker.md)
 - [Kubernetes Cheatsheet](kubernetes.md)
