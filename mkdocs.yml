@@ -32,3 +32,4 @@ nav:
   - Tools:
       - Apicurio: tools/apicurio-via-docker.md
       - KafkaUI: tools/kafkaui-via-docker.md
+      - Multi Gitter: tools/multi-gitter.md
