@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../docker-cheatsheet/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../kubernetes/kubectl/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>My Dev Notes</title>
+        <title>Docker Compose - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#docker-compose-commands" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Docker Compose
             
           </span>
         </div>
@@ -175,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -193,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -253,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -276,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/github-actions/" class="md-nav__link">
+      <a href="../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -303,18 +312,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -330,7 +341,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -344,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cli/" class="md-nav__link">
+      <a href="../docker-cli/" class="md-nav__link">
         
   
   
@@ -367,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -387,10 +398,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/docker/docker-compose/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Docker Compose
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -401,6 +434,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services-in-detached-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services in Detached Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-running-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Running Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuilding-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restarting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restarting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services Without Removing Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -458,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubectl/" class="md-nav__link">
+      <a href="../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -481,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/minikube/" class="md-nav__link">
+      <a href="../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -549,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -572,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -612,6 +746,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services-in-detached-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services in Detached Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-running-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Running Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuilding-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restarting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restarting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services Without Removing Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -623,8 +848,128 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="docker-compose-commands">Docker Compose Commands</h1>
+<p>Docker Compose is a tool for defining and running multi-container Docker applications. Below are some common Docker
+Compose commands with explanations using the new <code>docker compose</code> syntax.</p>
+<hr />
+<h2 id="starting-services">Starting Services</h2>
+<pre><code class="language-bash">docker compose up
+</code></pre>
+<ul>
+<li>Builds, (re)creates, starts, and attaches to containers for a service defined in <code>docker-compose.yml</code>.</li>
+</ul>
+<hr />
+<h2 id="starting-services-in-detached-mode">Starting Services in Detached Mode</h2>
+<pre><code class="language-bash">docker compose up -d
+</code></pre>
+<ul>
+<li>Starts the containers in the background (detached mode).</li>
+</ul>
+<hr />
+<h2 id="stopping-services">Stopping Services</h2>
+<pre><code class="language-bash">docker compose down
+</code></pre>
+<ul>
+<li>Stops and removes containers, networks, volumes, and images created by <code>docker compose up</code>.</li>
+</ul>
+<hr />
+<h2 id="viewing-running-containers">Viewing Running Containers</h2>
+<pre><code class="language-bash">docker compose ps
+</code></pre>
+<ul>
+<li>Lists containers started by <code>docker compose</code>.</li>
+</ul>
+<hr />
+<h2 id="viewing-logs">Viewing Logs</h2>
+<pre><code class="language-bash">docker compose logs
+</code></pre>
+<ul>
+<li>Shows output logs from containers.</li>
+</ul>
+<hr />
+<h2 id="rebuilding-services">Rebuilding Services</h2>
+<pre><code class="language-bash">docker compose build
+</code></pre>
+<ul>
+<li>Builds or rebuilds services.</li>
+</ul>
+<hr />
+<h2 id="restarting-services">Restarting Services</h2>
+<pre><code class="language-bash">docker compose restart
+</code></pre>
+<ul>
+<li>Restarts running containers.</li>
+</ul>
+<hr />
+<h2 id="stopping-services-without-removing-containers">Stopping Services Without Removing Containers</h2>
+<pre><code class="language-bash">docker compose stop
+</code></pre>
+<ul>
+<li>Stops running containers but does not remove them.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker compose up</code></td>
+<td>Start and attach to containers</td>
+</tr>
+<tr>
+<td><code>docker compose up -d</code></td>
+<td>Start containers in detached mode</td>
+</tr>
+<tr>
+<td><code>docker compose down</code></td>
+<td>Stop and remove containers and networks</td>
+</tr>
+<tr>
+<td><code>docker compose ps</code></td>
+<td>List containers</td>
+</tr>
+<tr>
+<td><code>docker compose logs</code></td>
+<td>Show container logs</td>
+</tr>
+<tr>
+<td><code>docker compose build</code></td>
+<td>Build or rebuild services</td>
+</tr>
+<tr>
+<td><code>docker compose restart</code></td>
+<td>Restart running containers</td>
+</tr>
+<tr>
+<td><code>docker compose stop</code></td>
+<td>Stop containers without removing them</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>For more info, visit the official docs: https://docs.docker.com/compose/</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -660,10 +1005,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

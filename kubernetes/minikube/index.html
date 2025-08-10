@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../kubectl/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../tools/apicurio-via-docker/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>My Dev Notes</title>
+        <title>Minikube - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#minikube-usage-basic-commands" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Minikube
             
           </span>
         </div>
@@ -175,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -193,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -253,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -276,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/github-actions/" class="md-nav__link">
+      <a href="../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -344,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cli/" class="md-nav__link">
+      <a href="../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -367,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -390,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-compose/" class="md-nav__link">
+      <a href="../../docker/docker-compose/" class="md-nav__link">
         
   
   
@@ -417,18 +426,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -444,7 +455,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -458,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubectl/" class="md-nav__link">
+      <a href="../kubectl/" class="md-nav__link">
         
   
   
@@ -478,10 +489,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/kubernetes/minikube/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -492,6 +525,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-minikube-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Minikube Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -549,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -572,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -612,6 +719,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-minikube-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Minikube Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -623,8 +794,98 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="minikube-usage-basic-commands">Minikube Usage &amp; Basic Commands</h1>
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Below are some commonly used Minikube commands with
+brief explanations.</p>
+<hr />
+<h2 id="installing-minikube">Installing Minikube</h2>
+<pre><code class="language-bash">brew install minikube
+</code></pre>
+<ul>
+<li>Installs Minikube on macOS using Homebrew.</li>
+</ul>
+<hr />
+<h2 id="starting-minikube">Starting Minikube</h2>
+<pre><code class="language-bash">minikube start --driver=docker
+</code></pre>
+<ul>
+<li>Starts a Minikube cluster using the Docker driver.</li>
+</ul>
+<hr />
+<h2 id="checking-minikube-status">Checking Minikube Status</h2>
+<pre><code class="language-bash">minikube status
+</code></pre>
+<ul>
+<li>Shows the current status of the Minikube cluster.</li>
+</ul>
+<hr />
+<h2 id="stopping-minikube">Stopping Minikube</h2>
+<pre><code class="language-bash">minikube stop
+</code></pre>
+<ul>
+<li>Stops the running Minikube cluster without deleting it.</li>
+</ul>
+<hr />
+<h2 id="deleting-minikube">Deleting Minikube</h2>
+<pre><code class="language-bash">minikube delete
+</code></pre>
+<ul>
+<li>Deletes the Minikube cluster and all its data.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brew install minikube</code></td>
+<td>Install Minikube</td>
+</tr>
+<tr>
+<td><code>minikube start --driver=docker</code></td>
+<td>Start Minikube with Docker driver</td>
+</tr>
+<tr>
+<td><code>minikube status</code></td>
+<td>Check the status of Minikube</td>
+</tr>
+<tr>
+<td><code>minikube stop</code></td>
+<td>Stop the Minikube cluster</td>
+</tr>
+<tr>
+<td><code>minikube delete</code></td>
+<td>Delete the Minikube cluster</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>For more details, visit the official documentation: https://minikube.sigs.k8s.io/docs/</p>
+<blockquote>
+<p><strong>Note:</strong> Docker must be installed and running on your machine to use Minikube with the Docker driver.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -660,10 +921,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
