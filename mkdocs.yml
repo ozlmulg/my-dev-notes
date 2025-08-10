@@ -7,5 +7,16 @@ theme:
     accent: pink
 nav:
   - Homepage: index.md
-  - Docker: docker.md
-  - Kubernetes: kubernetes.md
+  - Git:
+      - Git Cheatsheet: git/git-cheatsheet.md
+      - Github Actions: git/github-actions.md
+  - Docker:
+      - Docker CLI: docker/docker-cli.md
+      - Docker Cheatsheet: docker/docker-cheatsheet.md
+      - Docker Compose: docker/docker-compose.md
+  - Kubernetes:
+      - Kubectl: kubernetes/kubectl.md
+      - Minikube: kubernetes/minikube.md
+  - Tools:
+      - Apicurio: tools/apicurio-via-docker.md
+      - KafkaUI: tools/kafkaui-via-docker.md
