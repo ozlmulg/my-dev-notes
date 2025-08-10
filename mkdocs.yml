@@ -9,4 +9,3 @@ nav:
   - Homepage: index.md
   - Docker: docker.md
   - Kubernetes: kubernetes.md
-  - iOS: ios.md

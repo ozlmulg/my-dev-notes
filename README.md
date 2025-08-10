@@ -5,7 +5,7 @@ professional books to read.
 
 ## Contents
 
-- Cheatsheets related to Docker, Kubernetes, iOS, and other technologies
+- Cheatsheets related to Docker, Kubernetes, and other technologies
 - Development notes and new knowledge I’ve acquired
 - Lists of books to read
 - Personal projects and ideas
