@@ -7,6 +7,8 @@ theme:
     accent: pink
 nav:
   - Homepage: index.md
+  - Linux:
+      - Linux Cheatsheet: linux/linux-cheatsheet.md
   - Git:
       - Git Cheatsheet: git/git-cheatsheet.md
       - Github Actions: git/github-actions.md
