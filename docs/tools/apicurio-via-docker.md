@@ -12,8 +12,10 @@ backend and UI)** using Docker.
 - Ensure that ports **8080** (backend) and **8888** (UI) are free before starting
 - You can check if a port is in use with:
 
+```
 lsof -i:8080  
 lsof -i:8888
+```
 
 ---
 
@@ -26,9 +28,11 @@ lsof -i:8888
 ## Step 2 — Run the Backend
 
 1. Pull the Apicurio Registry backend image:
+
    `docker pull apicurio/apicurio-registry:3.0.6`
 
 2. Run the backend container:
+
    `docker run -it -p 8080:8080 apicurio/apicurio-registry:3.0.6`
 
 3. Open your browser and navigate to: http://localhost:8080/
@@ -38,9 +42,11 @@ lsof -i:8888
 ## Step 3 — Run the UI
 
 1. Pull the Apicurio Registry UI image:
+
    `docker pull apicurio/apicurio-registry-ui:3.0.6`
 
 2. Run the UI container:
+
    `docker run -it -p 8888:8080 apicurio/apicurio-registry-ui:3.0.6`
 
 3. Open your browser and navigate to: http://localhost:8888/

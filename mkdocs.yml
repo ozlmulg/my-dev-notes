@@ -17,6 +17,18 @@ nav:
   - Kubernetes:
       - Kubectl: kubernetes/kubectl.md
       - Minikube: kubernetes/minikube.md
+      - Kubeadm: kubernetes/kubeadm.md
+  - Mobile Development:
+      - Android:
+          - Android Firebase Integration: mobile/android/android-firebase-integration.md
+          - Android Keystore Settings: mobile/android/android-keystore-settings.md
+          - Android Google Maps Integration: mobile/android/android-google-maps-integration.md
+          - Android Push Notification Integration: mobile/android/android-push-notification-integration.md
+      - iOS:
+          - iOS Firebase Integration: mobile/ios/ios-firebase-integration.md
+          - iOS Google Maps Integration: mobile/ios/ios-google-maps-integration.md
+          - iOS Test Flight Integration: mobile/ios/ios-test-flight-integration.md
+          - iOS Push Notification Integration: mobile/ios/ios-push-notification-integration.md
   - Tools:
       - Apicurio: tools/apicurio-via-docker.md
       - KafkaUI: tools/kafkaui-via-docker.md
