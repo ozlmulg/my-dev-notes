@@ -333,6 +333,15 @@ Example:
 
 ---
 
+## printenv
+
+Displays the current environment variables.
+
+Example:  
+`printenv`
+
+---
+
 # Notes
 
 - Most commands support many options and flags; check their man pages (e.g., `man grep`) for details.
