@@ -1,6 +1,9 @@
 # yaml-language-server: https://squidfunk.github.io/mkdocs-material
 
+# Project information
 site_name: My Dev Notes
+
+# Configuration
 theme:
   name: material
   language: en
@@ -33,6 +36,22 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+
+# Additional configuration
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ozlmulg
+      name: GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/ozlmulg
+      name: Docker Hub
+    - icon: material/copyright
+      link: https://squidfunk.github.io/mkdocs-material/
+      name: Mkdocs Material
+
+# Page tree
 nav:
   - Home: index.md
   - Linux:
