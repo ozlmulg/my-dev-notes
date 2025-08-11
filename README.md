@@ -1,11 +1,10 @@
 # My Dev Notes
 
-This repository is my personal digital notebook containing development notes, cheatsheets, newly learned topics, and
-professional books to read.
+This site contains my personal development notes, cheatsheets, and useful commands.
 
 ## Contents
 
-- Cheatsheets related to development technologies
+- Cheatsheets related to software technologies
 - Development notes and new knowledge I’ve acquired
 - Lists of books to read
 - Personal projects and ideas

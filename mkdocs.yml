@@ -70,7 +70,7 @@ nav:
       - Kubectl: kubernetes/kubectl.md
       - Minikube: kubernetes/minikube.md
       - Kubeadm: kubernetes/kubeadm.md
-  - Mobile Development:
+  - Mobile:
       - Android:
           - Android Firebase Integration: mobile/android/android-firebase-integration.md
           - Android Keystore Settings: mobile/android/android-keystore-settings.md
