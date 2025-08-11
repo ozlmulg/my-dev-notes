@@ -1,3 +1,5 @@
+# yaml-language-server: https://squidfunk.github.io/mkdocs-material
+
 site_name: My Dev Notes
 theme:
   name: material
@@ -5,6 +7,8 @@ theme:
   palette:
     primary: deep purple
     accent: pink
+  features:
+    - content.code.copy
 nav:
   - Homepage: index.md
   - Linux:
@@ -13,6 +17,8 @@ nav:
   - Git:
       - Git Cheatsheet: git/git-cheatsheet.md
       - Github Actions: git/github-actions.md
+  - Maven:
+      - Maven Wrapper: maven/maven-wrapper.md
   - Docker:
       - Docker CLI: docker/docker-cli.md
       - Docker Cheatsheet: docker/docker-cheatsheet.md

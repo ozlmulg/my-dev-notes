@@ -155,9 +155,9 @@ Usage:
 Archives and extracts files.
 
 Usage:  
-Create archive:  
+- Create archive:  
 `tar -cvf archive.tar folder/`  
-Extract archive:  
+- Extract archive:  
 `tar -xvf archive.tar`
 
 ---
