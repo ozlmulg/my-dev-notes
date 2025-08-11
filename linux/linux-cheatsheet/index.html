@@ -494,15 +494,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uname" class="md-nav__link">
-    <span class="md-ellipsis">
-      uname
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#whoami" class="md-nav__link">
     <span class="md-ellipsis">
       whoami
@@ -605,6 +596,33 @@
   <a href="#pwd" class="md-nav__link">
     <span class="md-ellipsis">
       pwd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      arch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      uname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which" class="md-nav__link">
+    <span class="md-ellipsis">
+      which
     </span>
   </a>
   
@@ -1610,15 +1628,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uname" class="md-nav__link">
-    <span class="md-ellipsis">
-      uname
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#whoami" class="md-nav__link">
     <span class="md-ellipsis">
       whoami
@@ -1726,6 +1735,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      arch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      uname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which" class="md-nav__link">
+    <span class="md-ellipsis">
+      which
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1747,88 +1783,88 @@
 <hr />
 <h2 id="watch">watch</h2>
 <p>Runs a command repeatedly, showing its output and errors. Useful for monitoring changes in real time.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>watch ls -l</code></p>
 <p><code>watch -n 5 ls -l</code></p>
 <hr />
 <h2 id="grep">grep</h2>
 <p>Searches for a pattern within files or input.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>grep "error" /var/log/syslog</code></p>
 <hr />
 <h2 id="tail">tail</h2>
 <p>Shows the last part of a file.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>tail -f /var/log/syslog</code></p>
 <hr />
 <h2 id="ps">ps</h2>
 <p>Displays information about running processes.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>ps -u $(whoami)</code></p>
 <hr />
 <h2 id="top">top</h2>
 <p>Interactive process viewer showing system resource usage.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>top</code></p>
 <hr />
 <h2 id="htop">htop</h2>
 <p>An enhanced, interactive process viewer (must be installed separately).</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>htop</code></p>
 <hr />
 <h2 id="chmod">chmod</h2>
 <p>Changes file permissions.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>chmod +x script.sh</code></p>
 <hr />
 <h2 id="chown">chown</h2>
 <p>Changes file owner and group.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>chown user:group file.txt</code></p>
 <hr />
 <h2 id="ssh">ssh</h2>
 <p>Secure shell for logging into a remote machine.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>ssh user@host</code></p>
 <hr />
 <h2 id="scp">scp</h2>
 <p>Securely copies files between hosts.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>scp file.txt user@remote:/path/to/destination</code></p>
 <hr />
 <h2 id="rsync">rsync</h2>
 <p>Efficiently syncs files/directories between locations.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>rsync -avz /local/dir user@remote:/remote/dir</code></p>
 <hr />
 <h2 id="df">df</h2>
 <p>Shows disk space usage.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>df -h</code></p>
 <hr />
 <h2 id="du">du</h2>
 <p>Shows disk usage of files and directories.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>du -h --max-depth=1</code></p>
 <hr />
 <h2 id="find">find</h2>
 <p>Searches for files and directories matching criteria.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>find . -name "*.log"</code></p>
 <hr />
 <h2 id="sed">sed</h2>
 <p>Stream editor for filtering and transforming text.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>sed 's/old/new/g' file.txt</code></p>
 <hr />
 <h2 id="awk">awk</h2>
 <p>Powerful text processing and pattern scanning language.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>awk '{print $1}' file.txt</code></p>
 <hr />
 <h2 id="tar">tar</h2>
 <p>Archives and extracts files.</p>
-<p>Example:<br />
+<p>Usage:<br />
 Create archive:<br />
 <code>tar -cvf archive.tar folder/</code><br />
 Extract archive:<br />
@@ -1836,85 +1872,100 @@ Extract archive:<br />
 <hr />
 <h2 id="zip-unzip">zip / unzip</h2>
 <p>Compress and decompress files.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>zip archive.zip file1 file2</code><br />
 <code>unzip archive.zip</code></p>
 <hr />
 <h2 id="systemctl">systemctl</h2>
 <p>Controls systemd system and service manager.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>systemctl status nginx</code><br />
 <code>systemctl restart nginx</code></p>
 <hr />
 <h2 id="journalctl">journalctl</h2>
 <p>Views systemd logs.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>journalctl -u nginx.service</code></p>
-<hr />
-<h2 id="uname">uname</h2>
-<p>Displays system information.</p>
-<p>Example:<br />
-<code>uname -a</code></p>
 <hr />
 <h2 id="whoami">whoami</h2>
 <p>Shows current logged in user.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>whoami</code></p>
 <hr />
 <h2 id="history">history</h2>
 <p>Shows command history.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>history</code></p>
 <hr />
 <h2 id="clear">clear</h2>
 <p>Clears the terminal screen.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>clear</code></p>
 <hr />
 <h2 id="env">env</h2>
 <p>Shows environment variables.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>env</code></p>
 <hr />
 <h2 id="export">export</h2>
 <p>Sets environment variables.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>export PATH=$PATH:/new/path</code></p>
 <hr />
 <h2 id="alias">alias</h2>
 <p>Creates command shortcuts.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>alias ll='ls -la'</code></p>
 <hr />
 <h2 id="kill">kill</h2>
 <p>Terminates processes by PID.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>kill 1234</code></p>
 <hr />
 <h2 id="pkill">pkill</h2>
 <p>Kills processes by name.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>pkill nginx</code></p>
 <hr />
 <h2 id="sleep">sleep</h2>
 <p>Pauses execution for specified seconds.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>sleep 5</code></p>
 <hr />
 <h2 id="date">date</h2>
 <p>Shows or sets the system date/time.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>date</code></p>
 <hr />
 <h2 id="printenv">printenv</h2>
 <p>Displays the current environment variables.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>printenv</code></p>
 <hr />
 <h2 id="pwd">pwd</h2>
 <p><code>pwd</code> (Print Working Directory) displays the current directory you are in within the terminal.</p>
-<p>Example:<br />
+<p>Usage:<br />
 <code>pwd</code></p>
+<hr />
+<h2 id="arch">arch</h2>
+<p><code>arch</code> prints the architecture of the machine you are currently using.</p>
+<p>Usage:<br />
+<code>arch</code></p>
+<p>Example output:<br />
+<code>x86_64</code> or <code>arm64</code></p>
+<hr />
+<h2 id="uname">uname</h2>
+<p>Displays system information.</p>
+<p>Usage:<br />
+<code>uname -a</code></p>
+<p><code>uname -m</code> # Displays machine hardware name like <code>x86_64</code> or <code>arm64</code></p>
+<hr />
+<h2 id="which">which</h2>
+<p><code>which</code> shows the full path of the executable that would run when you type the command.</p>
+<p>Usage:<br />
+<code>which brew</code></p>
+<p>Example output:<br />
+<code>/usr/local/bin/brew</code></p>
 <hr />
 <h1 id="notes">Notes</h1>
 <ul>
