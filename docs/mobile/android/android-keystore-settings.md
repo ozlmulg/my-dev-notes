@@ -51,6 +51,10 @@ APP_KEY_PASSWORD=123456
 - Allows managing separate credentials for debug and release builds.
 - **Important:** This file **must** be included in `.gitignore` to avoid committing sensitive data.
 
+```
+release.properties
+```
+
 ---
 
 ## 3. 🔐 Obtaining Keystore SHA-1 Fingerprint
@@ -89,6 +93,7 @@ To decrypt `release.properties.gpg` on another machine or CI/CD:
 
 In your app-level `build.gradle`:
 
+``` groovy
     android {
         signingConfigs {
             debug {
@@ -114,6 +119,7 @@ In your app-level `build.gradle`:
             }
         }
     }
+```
 
 - `releaseProperties` is loaded from the decrypted `release.properties` file, which is **not** committed to Git.
 

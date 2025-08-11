@@ -8,7 +8,7 @@ This document provides step-by-step instructions to add Google Maps integration 
 
 ### 1.1 Create or Select Project
 
-- Go to https://console.cloud.google.com/
+- Log in to [Google Cloud Console](https://console.cloud.google.com/).
 - Create a new project or select an existing one.
 - For permissions, coordinate with an authorized team member.
 
@@ -42,7 +42,8 @@ Enable the following APIs:
 
 ## 2. 🔐 Obtain Keystore SHA-1 Fingerprint
 
-- Follow instructions [here](android-keystore-settings.md) for generating a keystore and obtaining SHA-1 fingerprint in
+- Follow instructions for [Android Keystore Settings](android-keystore-settings.md) for generating a keystore and
+  obtaining SHA-1 fingerprint in
   your Android Studio project.
 - Alternatively, run the following command:
 

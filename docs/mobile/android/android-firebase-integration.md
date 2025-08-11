@@ -30,7 +30,7 @@ integration allows you to use services such as **Push Notifications**, **Crashly
 2. Click the **Android** icon to add an app.
 3. Fill in the required info:
     - Android package name (e.g., `com.example.myapp`)
-    - App nickname (optional)
+    - App nickname (optional) (e.g., `MyApp - Android Internal App`)
     - Debug signing certificate SHA-1 (optional, can be retrieved via Android Studio)
 4. Click **Register app**.
 5. Download the `google-services.json` file.
@@ -39,9 +39,7 @@ integration allows you to use services such as **Push Notifications**, **Crashly
 
 ## 📥 3. Adding `google-services.json` to Your Project
 
-Place the downloaded `google-services.json` file into your Android app folder:
-
-    YourProject/app/google-services.json
+Place the downloaded `google-services.json` file into your Android app folder: `YourProject/app/google-services.json`
 
 This file enables the Firebase SDK to configure the app.
 
@@ -49,26 +47,30 @@ This file enables the Firebase SDK to configure the app.
 
 ## ⚙️ 4. Firebase SDK Setup
 
-### In project-level `build.gradle` (usually `build.gradle (Project: your-app)`):
+- In project-level `build.gradle` (usually `build.gradle (Project: your-app)`):
 
-    buildscript {
-        dependencies {
-            classpath 'com.google.gms:google-services:4.4.0'
-        }
-    }
+```groovy
+buildscript {
+  dependencies {
+    classpath 'com.google.gms:google-services:4.4.0'
+  }
+}
+```    
 
-### In app-level `build.gradle` (usually `build.gradle (Module: app)`):
+- In app-level `build.gradle` (usually `build.gradle (Module: app)`):
 
-    plugins {
-        id 'com.android.application'
-        id 'com.google.gms.google-services' // add at the bottom
-    }
+```groovy
+plugins {
+  id 'com.android.application'
+  id 'com.google.gms.google-services' // add at the bottom
+}
 
-    dependencies {
-        implementation 'com.google.firebase:firebase-analytics:21.6.1'
-        // Optional Firebase modules:
-        implementation 'com.google.firebase:firebase-messaging:23.4.1' // for push notifications
-    }
+dependencies {
+  implementation 'com.google.firebase:firebase-analytics:21.6.1'
+  // Optional Firebase modules:
+  implementation 'com.google.firebase:firebase-messaging:23.4.1' // for push notifications
+}
+```
 
 ---
 
@@ -78,15 +80,20 @@ Firebase initializes automatically with `google-services.json` and the Google se
 
 If you want manual initialization, do it in your `Application` subclass:
 
-    class BaseApplication : Application() {
-        override fun onCreate() {
-            super.onCreate()
-            FirebaseApp.initializeApp(this)
-        }
-    }
+```kotlin
+class BaseApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    FirebaseApp.initializeApp(this)
+  }
+}
+```
 
 And add to your `AndroidManifest.xml`:
 
-    <application
-        android:name=".BaseApplication"
-        ... >
+```xml
+
+<application
+    android:name=".BaseApplication"
+    ... >
+```
