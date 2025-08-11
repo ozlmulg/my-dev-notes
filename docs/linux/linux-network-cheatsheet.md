@@ -1,6 +1,6 @@
 # Linux Network Commands
 
-This document lists some of the most commonly used Linux Network commands by developers, with descriptions and usage
+This document lists some of the most commonly used Linux network commands by developers, with descriptions and usage
 examples.
 
 ---
