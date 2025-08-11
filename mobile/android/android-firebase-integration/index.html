@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../../../kubernetes/kubeadm/">
       
       
-        <link rel="next" href="../minikube/">
+        <link rel="next" href="../android-keystore-settings/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Android Firebase Integration - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#android-firebase-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Android Firebase Integration
             
           </span>
         </div>
@@ -184,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -353,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -467,12 +467,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
     
   </span>
   
@@ -507,15 +621,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Kubernetes
+    Mobile Development
     
   </span>
   
@@ -523,10 +637,50 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Kubernetes
+            Mobile Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Android
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Android
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -551,7 +705,7 @@
   
   
   <span class="md-ellipsis">
-    Kubectl
+    Android Firebase Integration
     
   </span>
   
@@ -564,7 +718,7 @@
   
   
   <span class="md-ellipsis">
-    Kubectl
+    Android Firebase Integration
     
   </span>
   
@@ -587,54 +741,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      📋 Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#1-creating-a-firebase-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      🔧 1. Creating a Firebase Project
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#2-adding-an-android-app-to-firebase" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      🧩 2. Adding an Android App to Firebase
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#3-adding-google-servicesjson-to-your-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      📥 3. Adding google-services.json to Your Project
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#4-firebase-sdk-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      ⚙️ 4. Firebase SDK Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#5-starting-firebase-sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      🚀 5. Starting Firebase SDK
     </span>
   </a>
   
@@ -656,159 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Minikube
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubeadm
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Mobile Development
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Mobile Development
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Android
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Android
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Android Firebase Integration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -831,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -854,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -923,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -946,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -969,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -992,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1068,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -1091,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -1114,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -1164,54 +1166,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      📋 Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#1-creating-a-firebase-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      🔧 1. Creating a Firebase Project
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#2-adding-an-android-app-to-firebase" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      🧩 2. Adding an Android App to Firebase
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#3-adding-google-servicesjson-to-your-project" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      📥 3. Adding google-services.json to Your Project
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#4-firebase-sdk-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      ⚙️ 4. Firebase SDK Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#5-starting-firebase-sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      🚀 5. Starting Firebase SDK
     </span>
   </a>
   
@@ -1233,43 +1235,105 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
-<ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<h1 id="android-firebase-integration">Android Firebase Integration</h1>
+<p>This document describes the basic configuration required to connect an Android application to Firebase. Completing this
+integration allows you to use services such as <strong>Push Notifications</strong>, <strong>Crashlytics</strong>, and <strong>Analytics</strong>.</p>
+<hr />
+<h2 id="prerequisites">📋 Prerequisites</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Firebase Account</td>
+<td><a href="https://console.firebase.google.com">Firebase Console</a></td>
+<td>Ensure you have access or invitation from an admin.</td>
+</tr>
+<tr>
+<td>✅ Android Studio</td>
+<td>Development environment where Firebase SDK will be integrated</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ Android Project</td>
+<td>The Android app project to be connected to Firebase</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-creating-a-firebase-project">🔧 1. Creating a Firebase Project</h2>
+<ol>
+<li>Go to <a href="https://console.firebase.google.com">Firebase Console</a>.</li>
+<li>Click <strong>Add project</strong>.</li>
+<li>Enter a project name and optionally enable Google Analytics.</li>
+<li>Complete the project creation process.</li>
+</ol>
+<hr />
+<h2 id="2-adding-an-android-app-to-firebase">🧩 2. Adding an Android App to Firebase</h2>
+<ol>
+<li>Open your Firebase project.</li>
+<li>Click the <strong>Android</strong> icon to add an app.</li>
+<li>Fill in the required info:<ul>
+<li>Android package name (e.g., <code>com.example.myapp</code>)</li>
+<li>App nickname (optional) (e.g., <code>MyApp - Android Internal App</code>)</li>
+<li>Debug signing certificate SHA-1 (optional, can be retrieved via Android Studio)</li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
+</li>
+<li>Click <strong>Register app</strong>.</li>
+<li>Download the <code>google-services.json</code> file.</li>
+</ol>
+<hr />
+<h2 id="3-adding-google-servicesjson-to-your-project">📥 3. Adding <code>google-services.json</code> to Your Project</h2>
+<p>Place the downloaded <code>google-services.json</code> file into your Android app folder: <code>YourProject/app/google-services.json</code></p>
+<p>This file enables the Firebase SDK to configure the app.</p>
+<hr />
+<h2 id="4-firebase-sdk-setup">⚙️ 4. Firebase SDK Setup</h2>
 <ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
+<li>In project-level <code>build.gradle</code> (usually <code>build.gradle (Project: your-app)</code>):</li>
 </ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
+<pre><code class="language-groovy">buildscript {
+  dependencies {
+    classpath 'com.google.gms:google-services:4.4.0'
+  }
+}
+</code></pre>
 <ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
+<li>In app-level <code>build.gradle</code> (usually <code>build.gradle (Module: app)</code>):</li>
 </ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
-</ul>
+<pre><code class="language-groovy">plugins {
+  id 'com.android.application'
+  id 'com.google.gms.google-services' // add at the bottom
+}
+
+dependencies {
+  implementation 'com.google.firebase:firebase-analytics:21.6.1'
+  // Optional Firebase modules:
+  implementation 'com.google.firebase:firebase-messaging:23.4.1' // for push notifications
+}
+</code></pre>
+<hr />
+<h2 id="5-starting-firebase-sdk">🚀 5. Starting Firebase SDK</h2>
+<p>Firebase initializes automatically with <code>google-services.json</code> and the Google services plugin.</p>
+<p>If you want manual initialization, do it in your <code>Application</code> subclass:</p>
+<pre><code class="language-kotlin">class BaseApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    FirebaseApp.initializeApp(this)
+  }
+}
+</code></pre>
+<p>And add to your <code>AndroidManifest.xml</code>:</p>
+<pre><code class="language-xml">
+&lt;application
+    android:name=&quot;.BaseApplication&quot;
+    ... &gt;
+</code></pre>
 
 
 
@@ -1318,10 +1382,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

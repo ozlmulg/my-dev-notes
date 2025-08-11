@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../android-google-maps-integration/">
       
       
-        <link rel="next" href="../minikube/">
+        <link rel="next" href="../../ios/ios-firebase-integration/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Android Push Notification Integration - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#android-push-notification-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Android Push Notification Integration
             
           </span>
         </div>
@@ -184,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -353,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -467,12 +467,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
     
   </span>
   
@@ -507,217 +621,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Kubernetes
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Minikube
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubeadm
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -733,7 +637,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Mobile Development
@@ -744,18 +648,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -771,7 +677,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Android
@@ -785,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -808,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -831,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -851,10 +757,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Android Push Notification Integration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -865,6 +793,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-firebase-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 1. Firebase Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-firebase-sdk-and-push-notification-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ 2. Firebase SDK and Push Notification Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-initializing-firebase-and-retrieving-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 3. Initializing Firebase and Retrieving Token
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-android-13-notification-permission-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 4. Android 13+ Notification Permission (Recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-testing-push-notifications-from-firebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 5. Testing Push Notifications from Firebase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Notes and Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -923,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -946,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -969,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -992,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1068,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -1091,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -1114,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -1164,54 +1175,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      📋 Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#1-firebase-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      🧩 1. Firebase Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#2-firebase-sdk-and-push-notification-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      ⚙️ 2. Firebase SDK and Push Notification Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#3-initializing-firebase-and-retrieving-token" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      🚀 3. Initializing Firebase and Retrieving Token
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#4-android-13-notification-permission-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      🔔 4. Android 13+ Notification Permission (Recommended)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#5-testing-push-notifications-from-firebase" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      🚀 5. Testing Push Notifications from Firebase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Notes and Tips
     </span>
   </a>
   
@@ -1233,42 +1253,122 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="android-push-notification-integration">Android Push Notification Integration</h1>
+<p>This guide explains how to set up and integrate push notifications into an Android application using Firebase Cloud
+Messaging (FCM). It covers creating a Firebase project, adding the <code>google-services.json</code> file, configuring Android
+project files, and testing the notifications.</p>
+<p><strong>Goal:</strong> Enable delivery of push notifications to Android devices via Firebase.</p>
+<hr />
+<h2 id="prerequisites">📋 Prerequisites</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Firebase Project</td>
+<td>Create one at <a href="https://console.firebase.google.com">Firebase Console</a></td>
+</tr>
+<tr>
+<td>✅ Android App</td>
+<td>Written in Kotlin or Java, with access to AndroidManifest and build.gradle files</td>
+</tr>
+<tr>
+<td>✅ Physical Device</td>
+<td>Recommended for push testing (emulators may work but physical devices ensure accuracy)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-firebase-setup">🧩 1. Firebase Setup</h2>
+<p>Follow the steps in the document below to create a Firebase project and add the <code>google-services.json</code> file to your
+project:</p>
+<p><a href="../android-firebase-integration/">Android Firebase Integration</a></p>
+<hr />
+<h2 id="2-firebase-sdk-and-push-notification-setup">⚙️ 2. Firebase SDK and Push Notification Setup</h2>
+<p><strong>🔧 build.gradle (Project-level)</strong></p>
+<pre><code class="language-groovy">buildscript {
+  dependencies {
+    classpath 'com.google.gms:google-services:4.4.0' // Keep the version updated  
+  }
+}
+</code></pre>
+<p><strong>🔧 build.gradle (App-level)</strong></p>
+<pre><code class="language-groovy">plugins {
+  id 'com.android.application'
+  id 'com.google.gms.google-services' // Make sure this is added at the bottom  
+}
+
+dependencies {
+  implementation platform('com.google.firebase:firebase-bom:32.7.0') // Version BOM  
+  implementation 'com.google.firebase:firebase-messaging'
+}
+</code></pre>
+<hr />
+<h2 id="3-initializing-firebase-and-retrieving-token">🚀 3. Initializing Firebase and Retrieving Token</h2>
+<p><strong>📝 MyFirebaseMessagingService.kt</strong></p>
+<pre><code class="language-kotlin">class MyFirebaseMessagingService : FirebaseMessagingService() {
+
+  override fun onNewToken(token: String) {
+    super.onNewToken(token)
+    Log.d(&quot;FCM&quot;, &quot;FCM Token: $token&quot;)
+    // TODO: Send token to backend server for push targeting  
+  }
+
+  override fun onMessageReceived(remoteMessage: RemoteMessage) {
+    super.onMessageReceived(remoteMessage)
+
+    val notification = remoteMessage.notification
+    notification?.let {
+      Log.d(&quot;FCM&quot;, &quot;Notification: ${it.title} - ${it.body}&quot;)
+    }
+  }
+}
+</code></pre>
+<p><strong>📝 AndroidManifest.xml</strong></p>
+<pre><code class="language-xml">
+&lt;service
+    android:name=&quot;.MyFirebaseMessagingService&quot;
+    android:exported=&quot;false&quot;&gt;
+  &lt;intent-filter&gt;
+    &lt;action android:name=&quot;com.google.firebase.MESSAGING_EVENT&quot;/&gt;
+  &lt;/intent-filter&gt;
+&lt;/service&gt;
+
+&lt;uses-permission android:name=&quot;android.permission.POST_NOTIFICATIONS&quot;/&gt;  
+</code></pre>
+<p>✅ For Android 13+ devices, runtime permission for notifications must be requested.</p>
+<hr />
+<h2 id="4-android-13-notification-permission-recommended">🔔 4. Android 13+ Notification Permission (Recommended)</h2>
+<pre><code class="language-kotlin">if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU) {
+  ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1001)
+}
+</code></pre>
+<hr />
+<h2 id="5-testing-push-notifications-from-firebase">🚀 5. Testing Push Notifications from Firebase</h2>
+<ol>
+<li>Open <strong>Firebase Console &gt; Cloud Messaging &gt; Send your first message</strong>.</li>
+<li>Enter a title and message.</li>
+<li>Click <strong>Test on device</strong>.</li>
+<li>Enter the device token (retrieved from app logs).</li>
+<li>Click <strong>Send Test Message</strong>.</li>
+<li>✅ The notification should appear on the device.</li>
+</ol>
+<hr />
+<h2 id="notes-and-tips">🧠 Notes and Tips</h2>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li>Do not share your <code>google-services.json</code> file publicly — it contains sensitive credentials.</li>
+<li>The app’s package name in Firebase must match your app’s actual package name.</li>
+<li>If required, add your SHA-1 key to the Firebase project for authentication.</li>
+<li>To successfully receive push notifications:<ul>
+<li>The notification permission must be granted.</li>
+<li>The device must be connected to the internet.</li>
+<li>The FCM token must be sent to your backend correctly.</li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
-<ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
-</ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
-<ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
-</ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
+</li>
 </ul>
 
 
@@ -1318,10 +1418,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

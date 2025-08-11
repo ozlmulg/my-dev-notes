@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../ios-google-maps-integration/">
       
       
-        <link rel="next" href="../minikube/">
+        <link rel="next" href="../ios-push-notification-integration/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>iOS Test Flight Integration - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#ios-testflight-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              iOS Test Flight Integration
             
           </span>
         </div>
@@ -184,7 +184,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -353,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -444,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -467,12 +467,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
     
   </span>
   
@@ -507,217 +621,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Kubernetes
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Kubernetes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Minikube
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubeadm
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -733,7 +637,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Mobile Development
@@ -785,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -808,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -831,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -854,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -882,18 +786,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -909,7 +815,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             iOS
@@ -923,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -946,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -966,10 +872,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    iOS Test Flight Integration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -980,6 +908,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-app-store-connect-and-apple-developer-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. App Store Connect and Apple Developer Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prepare-your-app-in-xcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Prepare Your App in Xcode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configure-testflight-in-app-store-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configure TestFlight in App Store Connect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-testers-receive" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What Testers Receive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -992,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1068,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -1091,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -1114,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -1164,54 +1175,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#1-app-store-connect-and-apple-developer-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      1. App Store Connect and Apple Developer Setup
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#2-prepare-your-app-in-xcode" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      2. Prepare Your App in Xcode
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#3-configure-testflight-in-app-store-connect" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      3. Configure TestFlight in App Store Connect
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#4-what-testers-receive" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      4. What Testers Receive
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
     </span>
   </a>
   
@@ -1233,43 +1253,101 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="ios-testflight-integration">iOS TestFlight Integration</h1>
+<p>This document guides you through the steps to enable testing of your local iOS project via TestFlight by other users.</p>
+<hr />
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li>Apple Developer account (annual $99 fee)</li>
+<li>Xcode</li>
+<li>Valid provisioning profile for your Apple device</li>
+<li>Access to <strong>App Store Connect</strong> (same Apple account)</li>
+<li>App must have a <strong>Bundle ID</strong> and version number</li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
+<hr />
+<h2 id="1-app-store-connect-and-apple-developer-setup">1. App Store Connect and Apple Developer Setup</h2>
 <ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
+<li>Have an authorized person invite you to <strong>App Store Connect</strong> via <a href="https://appstoreconnect.apple.com/access/users">https://appstoreconnect.apple.com/access/users</a> with <strong>Developer</strong> role for read access or <strong>App Manager</strong> role for admin tasks.</li>
+<li>Accept the invitation email and set your password to activate your developer account.</li>
+<li>Log in to <a href="https://developer.apple.com/account/">https://developer.apple.com/account/</a></li>
+<li>Create an App ID (Bundle ID) under <a href="https://developer.apple.com/account/resources/identifiers/list">https://developer.apple.com/account/resources/identifiers/list</a> if you haven’t already. Xcode might create some automatically but you may need to create others manually.</li>
+<li>In <strong>App Store Connect</strong> (<a href="https://appstoreconnect.apple.com/apps">https://appstoreconnect.apple.com/apps</a>), create a new app:<ul>
+<li>Platform: iOS</li>
+<li>Name: (Your app’s internal or public name) (e.g. <code>MyApp Internal</code>)</li>
+<li>Primary Language: Choose your language</li>
+<li>Bundle ID: Must exactly match the one in Xcode (e.g. <code>com.example.app.internal</code>)</li>
+<li>SKU: A unique short identifier (e.g. <code>com.example.app.internal</code>)</li>
 </ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
+</li>
+</ul>
+<hr />
+<h2 id="2-prepare-your-app-in-xcode">2. Prepare Your App in Xcode</h2>
 <ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
+<li>Open your project in Xcode.</li>
+<li>Under the <strong>General</strong> tab:<ul>
+<li>Verify Version and Build number (e.g. Version = 1.0.0, Build = 1)</li>
+<li>Manually increment Build number for each archive.</li>
 </ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
+</li>
+<li>Under <strong>Signing &amp; Capabilities</strong>, select your <strong>Team</strong>.</li>
+<li>Archive your app via <strong>Product &gt; Archive</strong>.</li>
+<li>When archive completes, <strong>Organizer</strong> window opens.</li>
+<li>Select the new archive, then click <strong>Distribute App</strong>.</li>
+<li>Choose <strong>App Store Connect &gt; Upload</strong>.</li>
+<li>Follow the steps until you receive the <strong>"Upload succeeded"</strong> message.</li>
+</ul>
+<hr />
+<h2 id="3-configure-testflight-in-app-store-connect">3. Configure TestFlight in App Store Connect</h2>
 <ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
+<li>Go to <strong>App Store Connect &gt; My Apps &gt; Select your app</strong>.</li>
+<li>Open the <strong>TestFlight</strong> tab.</li>
+<li>Wait for your uploaded build to appear (may take a few minutes).</li>
+<li>For internal testing:<ul>
+<li>Go to <strong>Internal Testing &gt; click "+"</strong> to create a test group.</li>
+<li>Add testers to the group.</li>
+<li>Optionally enable automatic assignment of builds to this group.</li>
 </ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
+</li>
+<li>Approve the build.</li>
+<li>Invite <strong>Internal Testers</strong> (team members) or <strong>External Testers</strong> (outside testers).</li>
+<li>Note: External testers require a brief Apple review process (usually 1–2 days).</li>
+</ul>
+<hr />
+<h2 id="4-what-testers-receive">4. What Testers Receive</h2>
 <ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
+<li>Testers download the <strong>TestFlight</strong> app from the App Store.</li>
+<li>They are invited via their Apple ID email.</li>
+<li>Invitations contain a message like: "<strong>You’ve been invited to test [App Name].</strong>"</li>
+<li>After accepting, testers can install and test your app.</li>
 </ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
+<hr />
+<h2 id="notes">Notes</h2>
 <ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
+<li>The app does not need to be published on the App Store.</li>
+<li><strong>TestFlight</strong> allows up to <strong>10,000 testers</strong> per app.</li>
+<li>Each build can be tested for up to <strong>90 days</strong>.</li>
+<li>Crash and usage reports are available via TestFlight.</li>
 </ul>
+<hr />
+<h2 id="faq">FAQ</h2>
+<p><strong>Q:</strong> I get this error while archiving:</p>
+<blockquote>
+<ol>
+<li>No profiles for 'com.example.app.internal.NotificationService' were found<br />
+     &gt;  Xcode couldn't find any iOS App Store provisioning profiles matching 'com.example.app.internal.NotificationService'.</li>
+<li>Automatic signing cannot register bundle identifier "com.example.app.internal.NotificationService".<br />
+      &gt;  Automatic signing cannot register bundle identifiers with Apple. Register your bundle identifier on <a href="https://developer.apple.com/account">https://developer.apple.com/account</a> and then try again.</li>
+</ol>
+</blockquote>
+<p><strong>A:</strong> Your app's bundle ID <code>com.example.app.internal.NotificationService</code> is not registered as an App ID. Register it manually at <a href="https://developer.apple.com/account/resources/identifiers/list">https://developer.apple.com/account/resources/identifiers/list</a>.</p>
+<hr />
+<p><strong>Q:</strong> I get this validation error when archiving:</p>
+<blockquote>
+<p>Validation failed<br />
+Invalid large app icon. The large app icon in the asset catalog in your app can’t be transparent or contain an alpha channel. For details, visit: <a href="https://developer.apple.com/design/human-interface-guidelines/app-icons">https://developer.apple.com/design/human-interface-guidelines/app-icons</a>.</p>
+</blockquote>
+<p><strong>A:</strong> App Store does not accept app icons with transparency. Remove transparency or corner rounding in your icons (set corner radius to 0 and fill background with a solid color).</p>
+<hr />
 
 
 
@@ -1318,10 +1396,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

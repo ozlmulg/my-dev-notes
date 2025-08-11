@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../minikube/">
       
       
-        <link rel="next" href="../minikube/">
+        <link rel="next" href="../../mobile/android/android-firebase-integration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Kubeadm - My Dev Notes</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#kubeadm-installation" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Kubeadm
             
           </span>
         </div>
@@ -534,32 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kubectl/" class="md-nav__link">
         
   
   
@@ -570,80 +548,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -676,10 +580,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -690,6 +616,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-create-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create virtual machines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Activate kernel modules and disable swap.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-install-containerd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Install containerd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-kubeadm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install kubeadm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-kubernetes-cluster-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Kubernetes cluster setup
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1164,54 +1155,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#1-create-virtual-machines" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      1. Create virtual machines
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      2. Activate kernel modules and disable swap.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#3-install-containerd" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      3. Install containerd
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#4-install-kubeadm" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      4. Install kubeadm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#5-kubernetes-cluster-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
+      5. Kubernetes cluster setup
     </span>
   </a>
   
@@ -1233,43 +1215,86 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="kubeadm-installation">kubeadm Installation</h1>
+<p>You can find the kubernetes documentation <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">here.</a></p>
+<h2 id="1-create-virtual-machines">1. Create virtual machines</h2>
+<pre><code>$ multipass launch --name master -c 2 -m 2G -d 10G
+$ multipass launch --name node1 -c 2 -m 2G -d 10G
+</code></pre>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li>Connect to the master node and run <code>sudo hostnamectl set-hostname master</code>.<br />
+  Connect to node1 and run <code>sudo hostnamectl set-hostname node1</code>.</li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
-<ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
-</ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
-<ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
-</ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
-</ul>
+<h2 id="2-activate-kernel-modules-and-disable-swap">2. Activate kernel modules and disable swap.</h2>
+<pre><code>$ sudo modprobe overlay
+$ sudo modprobe br_netfilter
+</code></pre>
+<pre><code>$ cat &lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+</code></pre>
+<pre><code>$ cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-iptables  = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward                 = 1
+EOF
+</code></pre>
+<pre><code>$ sudo sysctl --system
+</code></pre>
+<pre><code>$ sudo swapoff -a
+$ free -m
+$ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+</code></pre>
+<h2 id="3-install-containerd">3. Install containerd</h2>
+<pre><code>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+$ sudo apt update
+$ sudo apt install containerd.io
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable --now containerd
+$ sudo systemctl start containerd
+$ sudo mkdir -p /etc/containerd
+$ sudo su -
+$ containerd config default | tee /etc/containerd/config.toml
+$ exit
+$ sudo sed -i 's/            SystemdCgroup = false/            SystemdCgroup = true/' /etc/containerd/config.toml
+$ sudo systemctl restart containerd
+
+</code></pre>
+<h2 id="4-install-kubeadm">4. Install kubeadm</h2>
+<pre><code>$ sudo ufw allow 6443/tcp
+$ sudo ufw allow 2379:2380/tcp
+$ sudo ufw allow 10250/tcp
+$ sudo ufw allow 10259/tcp
+$ sudo ufw allow 10257/tcp
+$ sudo apt-get update
+$ sudo apt-get install -y apt-transport-https ca-certificates curl
+$ sudo mkdir -p -m 755 /etc/apt/keyrings
+### Eğer Kubernetes 1.31'den başka bir versiyon yüklemek isterseniz aşağıdaki iki komuttaki v1.31 kısımlarını düzeltin ####
+$ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+$ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+$ sudo apt-get update
+$ sudo apt-get install -y kubelet kubeadm kubectl
+$ sudo apt-mark hold kubelet kubeadm kubectl
+</code></pre>
+<h2 id="5-kubernetes-cluster-setup">5. Kubernetes cluster setup</h2>
+<pre><code>$ sudo kubeadm config images pull
+
+$ sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=&lt;ip&gt; --control-plane-endpoint=&lt;ip&gt;
+</code></pre>
+<pre><code>$ mkdir -p $HOME/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+</code></pre>
+<pre><code>$ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
+$ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
+</code></pre>
+<pre><code>kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+kubectl taint nodes --all node-role.kubernetes.io/master-
+</code></pre>
 
 
 

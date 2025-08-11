@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../minikube/">
+        <link rel="next" href="../../git/git-cheatsheet/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Linux Cheatsheet - My Dev Notes</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#linux-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Linux Cheatsheet
             
           </span>
         </div>
@@ -221,18 +221,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -248,7 +250,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -259,10 +261,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../linux/linux-cheatsheet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Linux Cheatsheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -273,6 +297,350 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      watch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      ps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    <span class="md-ellipsis">
+      top
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      htop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      curl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      wget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      chmod
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chown" class="md-nav__link">
+    <span class="md-ellipsis">
+      chown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      scp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      rsync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#df" class="md-nav__link">
+    <span class="md-ellipsis">
+      df
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du" class="md-nav__link">
+    <span class="md-ellipsis">
+      du
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awk" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      tar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      zip / unzip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      ping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      netstat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      systemctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#journalctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      journalctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      uname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whoami" class="md-nav__link">
+    <span class="md-ellipsis">
+      whoami
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    <span class="md-ellipsis">
+      env
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      sleep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      date
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -494,20 +862,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -523,7 +889,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -534,32 +900,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -570,80 +914,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -656,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -679,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+      <a href="../../kubernetes/kubeadm/" class="md-nav__link">
         
   
   
@@ -1164,54 +1434,324 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#watch" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      watch
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#grep" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      grep
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#tail" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      tail
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#ps" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      ps
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#top" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      top
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#htop" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      htop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      curl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      wget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      chmod
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chown" class="md-nav__link">
+    <span class="md-ellipsis">
+      chown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      scp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      rsync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#df" class="md-nav__link">
+    <span class="md-ellipsis">
+      df
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du" class="md-nav__link">
+    <span class="md-ellipsis">
+      du
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awk" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      tar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zip-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      zip / unzip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      ping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      netstat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      systemctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#journalctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      journalctl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      uname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whoami" class="md-nav__link">
+    <span class="md-ellipsis">
+      whoami
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    <span class="md-ellipsis">
+      env
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      kill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      pkill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      sleep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      date
     </span>
   </a>
   
@@ -1233,42 +1773,198 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="linux-commands">Linux Commands</h1>
+<p>This document lists some of the most commonly used Linux commands by developers, with descriptions and usage examples.</p>
+<hr />
+<h2 id="watch">watch</h2>
+<p>Runs a command repeatedly, showing its output and errors. Useful for monitoring changes in real time.</p>
+<p>Example:<br />
+<code>watch ls -l</code></p>
+<hr />
+<h2 id="grep">grep</h2>
+<p>Searches for a pattern within files or input.</p>
+<p>Example:<br />
+<code>grep "error" /var/log/syslog</code></p>
+<hr />
+<h2 id="tail">tail</h2>
+<p>Shows the last part of a file.</p>
+<p>Example:<br />
+<code>tail -f /var/log/syslog</code></p>
+<hr />
+<h2 id="ps">ps</h2>
+<p>Displays information about running processes.</p>
+<p>Example:<br />
+<code>ps -u $(whoami)</code></p>
+<hr />
+<h2 id="top">top</h2>
+<p>Interactive process viewer showing system resource usage.</p>
+<p>Example:<br />
+<code>top</code></p>
+<hr />
+<h2 id="htop">htop</h2>
+<p>An enhanced, interactive process viewer (must be installed separately).</p>
+<p>Example:<br />
+<code>htop</code></p>
+<hr />
+<h2 id="curl">curl</h2>
+<p>Transfers data from or to a server using various protocols.</p>
+<p>Example:<br />
+<code>curl https://example.com</code></p>
+<hr />
+<h2 id="wget">wget</h2>
+<p>Downloads files from the internet.</p>
+<p>Example:<br />
+<code>wget https://example.com/file.zip</code></p>
+<hr />
+<h2 id="chmod">chmod</h2>
+<p>Changes file permissions.</p>
+<p>Example:<br />
+<code>chmod +x script.sh</code></p>
+<hr />
+<h2 id="chown">chown</h2>
+<p>Changes file owner and group.</p>
+<p>Example:<br />
+<code>chown user:group file.txt</code></p>
+<hr />
+<h2 id="ssh">ssh</h2>
+<p>Secure shell for logging into a remote machine.</p>
+<p>Example:<br />
+<code>ssh user@host</code></p>
+<hr />
+<h2 id="scp">scp</h2>
+<p>Securely copies files between hosts.</p>
+<p>Example:<br />
+<code>scp file.txt user@remote:/path/to/destination</code></p>
+<hr />
+<h2 id="rsync">rsync</h2>
+<p>Efficiently syncs files/directories between locations.</p>
+<p>Example:<br />
+<code>rsync -avz /local/dir user@remote:/remote/dir</code></p>
+<hr />
+<h2 id="df">df</h2>
+<p>Shows disk space usage.</p>
+<p>Example:<br />
+<code>df -h</code></p>
+<hr />
+<h2 id="du">du</h2>
+<p>Shows disk usage of files and directories.</p>
+<p>Example:<br />
+<code>du -h --max-depth=1</code></p>
+<hr />
+<h2 id="find">find</h2>
+<p>Searches for files and directories matching criteria.</p>
+<p>Example:<br />
+<code>find . -name "*.log"</code></p>
+<hr />
+<h2 id="sed">sed</h2>
+<p>Stream editor for filtering and transforming text.</p>
+<p>Example:<br />
+<code>sed 's/old/new/g' file.txt</code></p>
+<hr />
+<h2 id="awk">awk</h2>
+<p>Powerful text processing and pattern scanning language.</p>
+<p>Example:<br />
+<code>awk '{print $1}' file.txt</code></p>
+<hr />
+<h2 id="tar">tar</h2>
+<p>Archives and extracts files.</p>
+<p>Example:<br />
+Create archive:<br />
+<code>tar -cvf archive.tar folder/</code><br />
+Extract archive:<br />
+<code>tar -xvf archive.tar</code></p>
+<hr />
+<h2 id="zip-unzip">zip / unzip</h2>
+<p>Compress and decompress files.</p>
+<p>Example:<br />
+<code>zip archive.zip file1 file2</code><br />
+<code>unzip archive.zip</code></p>
+<hr />
+<h2 id="ping">ping</h2>
+<p>Tests network connectivity.</p>
+<p>Example:<br />
+<code>ping google.com</code></p>
+<hr />
+<h2 id="netstat">netstat</h2>
+<p>Displays network connections, routing tables, interface stats.</p>
+<p>Example:<br />
+<code>netstat -tuln</code></p>
+<hr />
+<h2 id="ip">ip</h2>
+<p>Shows/manages network interfaces and routing.</p>
+<p>Example:<br />
+<code>ip addr show</code></p>
+<hr />
+<h2 id="systemctl">systemctl</h2>
+<p>Controls systemd system and service manager.</p>
+<p>Example:<br />
+<code>systemctl status nginx</code><br />
+<code>systemctl restart nginx</code></p>
+<hr />
+<h2 id="journalctl">journalctl</h2>
+<p>Views systemd logs.</p>
+<p>Example:<br />
+<code>journalctl -u nginx.service</code></p>
+<hr />
+<h2 id="uname">uname</h2>
+<p>Displays system information.</p>
+<p>Example:<br />
+<code>uname -a</code></p>
+<hr />
+<h2 id="whoami">whoami</h2>
+<p>Shows current logged in user.</p>
+<p>Example:<br />
+<code>whoami</code></p>
+<hr />
+<h2 id="history">history</h2>
+<p>Shows command history.</p>
+<p>Example:<br />
+<code>history</code></p>
+<hr />
+<h2 id="clear">clear</h2>
+<p>Clears the terminal screen.</p>
+<p>Example:<br />
+<code>clear</code></p>
+<hr />
+<h2 id="env">env</h2>
+<p>Shows environment variables.</p>
+<p>Example:<br />
+<code>env</code></p>
+<hr />
+<h2 id="export">export</h2>
+<p>Sets environment variables.</p>
+<p>Example:<br />
+<code>export PATH=$PATH:/new/path</code></p>
+<hr />
+<h2 id="alias">alias</h2>
+<p>Creates command shortcuts.</p>
+<p>Example:<br />
+<code>alias ll='ls -la'</code></p>
+<hr />
+<h2 id="kill">kill</h2>
+<p>Terminates processes by PID.</p>
+<p>Example:<br />
+<code>kill 1234</code></p>
+<hr />
+<h2 id="pkill">pkill</h2>
+<p>Kills processes by name.</p>
+<p>Example:<br />
+<code>pkill nginx</code></p>
+<hr />
+<h2 id="sleep">sleep</h2>
+<p>Pauses execution for specified seconds.</p>
+<p>Example:<br />
+<code>sleep 5</code></p>
+<hr />
+<h2 id="date">date</h2>
+<p>Shows or sets the system date/time.</p>
+<p>Example:<br />
+<code>date</code></p>
+<hr />
+<h1 id="notes">Notes</h1>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
-</ul>
-<h2 id="describe-resources">Describe Resources</h2>
-<ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
-</ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
-<ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
-</ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
+<li>Most commands support many options and flags; check their man pages (e.g., <code>man grep</code>) for details.</li>
+<li>Some tools like <code>htop</code> or <code>rsync</code> may require installation depending on your Linux distro.</li>
 </ul>
 
 

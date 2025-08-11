@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-compose/">
+        <link rel="prev" href="../kafkaui-via-docker/">
       
-      
-        <link rel="next" href="../minikube/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Multi Gitter - My Dev Notes</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-command-reference" class="md-skip">
+        <a href="#multi-repository-pr-automation-with-multi-gitter" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Multi Gitter
             
           </span>
         </div>
@@ -494,20 +492,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -523,7 +519,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -534,32 +530,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -570,80 +544,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -656,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -679,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+      <a href="../../kubernetes/kubeadm/" class="md-nav__link">
         
   
   
@@ -1027,18 +927,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1054,7 +956,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -1068,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -1091,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -1111,10 +1013,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Multi Gitter
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1125,6 +1049,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-multi-gitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Multi-Gitter?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-your-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare Your Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-delete-config-files-in-multiple-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Delete Config Files in Multiple Repos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-update-codeowners-across-multiple-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update CODEOWNERS Across Multiple Repos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Scripts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1164,54 +1186,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#why-use-multi-gitter" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      Why Use Multi-Gitter?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#example-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      Example Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      Installation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+  <a href="#prepare-your-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      Prepare Your Scripts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
+  <a href="#usage-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling and Updating
+      Usage Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-delete-config-files-in-multiple-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Delete Config Files in Multiple Repos
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#2-update-codeowners-across-multiple-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update CODEOWNERS Across Multiple Repos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#sample-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      Sample Scripts
     </span>
   </a>
   
@@ -1233,43 +1279,123 @@
 
 
 
-<h1 id="kubectl-command-reference">kubectl Command Reference</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="multi-repository-pr-automation-with-multi-gitter">Multi-Repository PR Automation with Multi-Gitter</h1>
+<p>This document introduces a powerful tool called <strong>Multi-Gitter</strong>, perfect for teams like DevOps or DevEx who need to
+apply changes across many repositories efficiently.</p>
+<p>Multi-Gitter runs a script on multiple repositories, automatically creating Pull Requests (PRs) with custom titles and
+bodies. This allows teams to review and merge changes consistently across all relevant repos.</p>
+<hr />
+<h2 id="why-use-multi-gitter">Why Use Multi-Gitter?</h2>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li>Automate repetitive changes across multiple repositories.</li>
+<li>Keep repo configurations consistent.</li>
+<li>Easily update or remove files (e.g., config files, CODEOWNERS).</li>
+<li>Facilitate team collaboration with reviewable PRs.</li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
+<hr />
+<h2 id="example-use-cases">Example Use Cases</h2>
 <ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
+<li>Removing deprecated config files from workflow directories in multiple repos.</li>
+<li>Updating CODEOWNERS files to reflect new team ownership.</li>
+<li>Bulk modifications related to platform migrations or tooling upgrades.</li>
 </ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
-<ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
-</ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
-</ul>
+<hr />
+<h2 id="installation">Installation</h2>
+<p>On macOS, install via Homebrew:</p>
+<pre><code class="language-bash">brew install lindell/multi-gitter/multi-gitter
+</code></pre>
+<p>If you encounter errors related to Command Line Tools, run:</p>
+<pre><code class="language-bash">sudo rm -rf /Library/Developer/CommandLineTools
+sudo xcode-select --install
+</code></pre>
+<h2 id="prepare-your-scripts">Prepare Your Scripts</h2>
+<p>Make sure your shell scripts have execute permission:</p>
+<pre><code class="language-bash">chmod +x ./update_codeowners.sh
+</code></pre>
+<h2 id="usage-examples">Usage Examples</h2>
+<h3 id="1-delete-config-files-in-multiple-repos">1. Delete Config Files in Multiple Repos</h3>
+<p>Dry-run to preview:</p>
+<pre><code class="language-bash">multi-gitter run ./delete_config.sh \
+--token YOUR_GITHUB_TOKEN \
+--repo user/repo1,user/repo2,user/repo3 \
+--branch feature/remove-config \
+--pr-title &quot;Remove config.yml from workflows&quot; \
+--pr-body &quot;This PR removes the unnecessary config.yml file from workflow directories.&quot; \
+--dry-run
+</code></pre>
+<p>Execute actual PR creation:</p>
+<pre><code class="language-bash">multi-gitter run ./delete_config.sh \
+--token YOUR_GITHUB_TOKEN \
+--repo user/repo1,user/repo2,user/repo3 \
+--branch feature/remove-config \
+--pr-title &quot;Remove config.yml from workflows&quot; \
+--pr-body &quot;This PR removes the unnecessary config.yml file from workflow directories.&quot;
+</code></pre>
+<h3 id="2-update-codeowners-across-multiple-repos">2. Update CODEOWNERS Across Multiple Repos</h3>
+<p>Dry-run example:</p>
+<pre><code class="language-bash">multi-gitter run ./update_codeowners.sh \
+--token YOUR_GITHUB_TOKEN \
+--repo user/repo1,user/repo2,user/repo3 \
+--branch feature/update-codeowners \
+--pr-title &quot;Update CODEOWNERS&quot; \
+--pr-body &quot;This PR updates the CODEOWNERS file with correct team assignments.&quot; \
+--dry-run
+</code></pre>
+<h2 id="sample-scripts">Sample Scripts</h2>
+<p><strong><em>delete_config.sh:</em></strong></p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Check if config.yml exists and remove it
+if [ -f &quot;.github/config.yml&quot; ]; then
+  git rm .github/config.yml
+else
+  echo &quot;config.yml not found, skipping...&quot;
+fi
+</code></pre>
+<p><strong><em>update_codeowners.sh:</em></strong></p>
+<pre><code class="language-bash">#!/bin/bash
+
+repo_name=$REPOSITORY
+
+ORG_NAME=&quot;your-org&quot;
+CODEOWNERS_FILE=&quot;.github/CODEOWNERS&quot;
+
+# Example: Clear CODEOWNERS for a specific repo
+if [[ &quot;$repo_name&quot; == &quot;your-org/special-repo&quot; ]]; then
+  echo &quot;Clearing CODEOWNERS for $repo_name...&quot;
+  &gt; $CODEOWNERS_FILE
+  git add $CODEOWNERS_FILE
+  exit 0
+fi
+
+# Assign teams based on repo name
+if [[ &quot;$repo_name&quot; == &quot;your-org/repo1&quot; ]]; then
+  team=&quot;@${ORG_NAME}/team1&quot;
+elif [[ &quot;$repo_name&quot; == &quot;your-org/repo2&quot; ]]; then
+  team=&quot;@${ORG_NAME}/team2&quot;
+elif [[ &quot;$repo_name&quot; == &quot;your-org/repo3&quot; ]]; then
+  team=&quot;@${ORG_NAME}/team3&quot;
+else
+  echo &quot;No team assignment found for $repo_name, skipping...&quot;
+  exit 0
+fi
+
+echo &quot;Updating CODEOWNERS for $repo_name with team $team...&quot;
+
+echo &quot;* $team&quot; &gt; $CODEOWNERS_FILE
+
+git add $CODEOWNERS_FILE
+</code></pre>
+<p><strong><em>delete_release.sh:</em></strong></p>
+<pre><code class="language-bash">#!/bin/bash
+
+if [ -f &quot;.github/release.yml&quot; ]; then
+  echo &quot;Found release.yml. Removing...&quot;
+  git rm .github/release.yml
+else
+  echo &quot;release.yml not found, skipping...&quot;
+fi
+</code></pre>
 
 
 
