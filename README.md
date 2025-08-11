@@ -34,17 +34,22 @@ professional books to read.
    mkdocs serve
    ```
 
-5. To deploy the site to GitHub Pages:
+5. Build the site locally:
+   ```bash
+   mkdocs build
+   ```
+
+6. To deploy the site to GitHub Pages:
    ```bash
    mkdocs gh-deploy
    ```
 
-6. To deactivate virtual environment:
+7. To deactivate virtual environment:
    ```bash
    deactivate
    ```
 
-7. For "Address already in use" error:
+8. For "Address already in use" error:
    ```bash
    lsof -i :8000
    kill -9 PID
