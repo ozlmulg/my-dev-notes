@@ -1,6 +1,4 @@
-# nvm & npm Setup and Usage Guide
-
-## Introduction
+# nvm & npm - Node Version & Package Manager
 
 **nvm** (Node Version Manager) allows you to install and switch between multiple Node.js versions easily.  
 **npm** (Node Package Manager) is used to manage JavaScript packages for Node.js.
@@ -42,37 +40,37 @@ source ~/.bash_profile
 
 ## 3. Basic Commands
 
-### Check nvm version
+Check nvm version:
 
 ```bash
 nvm --version
 ```
 
-### Install a specific Node.js version
+Install a specific Node.js version:
 
 ```bash
 nvm install 16.20.2
 ```
 
-### List installed Node.js versions
+List installed Node.js versions:
 
 ```bash
 nvm list
 ```
 
-### List available remote versions
+List available remote versions:
 
 ```bash
 nvm list-remote
 ```
 
-### Use a specific version
+Use a specific version:
 
 ```bash
 nvm use 16.20.2
 ```
 
-### Set a default version
+Set a default version:
 
 ```bash
 nvm alias default 16.20.2
@@ -93,7 +91,7 @@ npm -v # npm --version
 
 ## 5. Using `.nvmrc` and `.npmrc`
 
-### `.nvmrc`
+### 5.1 `.nvmrc`
 
 If your project contains a `.nvmrc` file:
 
@@ -109,7 +107,9 @@ nvm use
 
 to automatically switch to that version.
 
-### `.npmrc`
+### 5.2 `.npmrc`
+
+`.npmrc` is a configuration file that customizes npm behavior, such as registry URLs and authentication tokens.
 
 Example `.npmrc` for private GitHub packages:
 
@@ -122,14 +122,14 @@ Example `.npmrc` for private GitHub packages:
 
 ## 6. Example Makefile Commands
 
-### Generate `.npmrc`
+Generate `.npmrc`:
 
 ```make
 init-npmrc: ## Generate npmrc file to access @yourorg npm packages
 	echo -e "@yourorg:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >${MAIN_POM_FOLDER}/app/test-react-client/.npmrc
 ```
 
-### Install React Client
+Install React Client:
 
 ```make
 react-install: ## Install react client
@@ -140,7 +140,7 @@ react-install: ## Install react client
 	bash -i -c "nvm use && npm install"
 ```
 
-### Run React Client
+Run React Client:
 
 ```make
 react-run: ## Run react client
@@ -153,14 +153,14 @@ react-run: ## Run react client
 
 ## 7. Useful Commands
 
-### Kill a process on port 3000
+Kill a process on port 3000:
 
 ```bash
 lsof -i tcp:3000
 kill -9 <PID>
 ```
 
-### Webpack Installation
+Webpack Installation:
 
 ```bash
 npm install --save-dev webpack@4
