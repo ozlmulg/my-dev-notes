@@ -1,0 +1,100 @@
+# Linux Network Commands
+
+This document lists some of the most commonly used Linux Network commands by developers, with descriptions and usage
+examples.
+
+---
+
+## hostname
+
+Shows or sets the system's hostname.
+
+Example:  
+`hostname`
+
+---
+
+## nslookup
+
+Queries DNS servers to obtain domain name or IP address mapping.
+
+Example:  
+`nslookup example.com`
+
+---
+
+## dig
+
+DNS lookup utility, more flexible than nslookup.
+This command is very useful for debugging DNS issues and checking DNS propagation.
+
+Example:  
+`dig example.com`
+
+`dig example.com @111.11.11.11` # Querying a specific DNS server
+
+---
+
+## ifconfig
+
+Displays or configures network interfaces (deprecated in favor of `ip` command).
+
+Example:  
+`ifconfig`
+
+---
+
+## wget
+
+Non-interactive network downloader, useful for downloading files from the web.
+
+Example:  
+`wget https://example.com/file.zip`
+
+---
+
+## ping
+
+Sends ICMP echo requests to test network connectivity to a host.
+
+Example:  
+`ping google.com`
+
+---
+
+## curl
+
+Transfers data from or to a server, supporting multiple protocols.
+
+Example:  
+`curl https://example.com`
+
+---
+
+## ip
+
+Modern tool to show/manipulate routing, devices, policy routing, and tunnels.
+
+Example:  
+`ip addr show`
+
+---
+
+## traceroute
+
+Shows the path packets take to reach a host.
+
+Example:  
+`traceroute google.com`
+
+---
+
+## netstat
+
+Displays network connections, routing tables, interface statistics, etc.
+
+Example:  
+`netstat -tuln`
+
+---
+

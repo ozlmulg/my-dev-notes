@@ -11,6 +11,8 @@ Runs a command repeatedly, showing its output and errors. Useful for monitoring 
 Example:  
 `watch ls -l`
 
+`watch -n 5 ls -l`
+
 ---
 
 ## grep
@@ -55,24 +57,6 @@ An enhanced, interactive process viewer (must be installed separately).
 
 Example:  
 `htop`
-
----
-
-## curl
-
-Transfers data from or to a server using various protocols.
-
-Example:  
-`curl https://example.com`
-
----
-
-## wget
-
-Downloads files from the internet.
-
-Example:  
-`wget https://example.com/file.zip`
 
 ---
 
@@ -185,33 +169,6 @@ Compress and decompress files.
 Example:  
 `zip archive.zip file1 file2`  
 `unzip archive.zip`
-
----
-
-## ping
-
-Tests network connectivity.
-
-Example:  
-`ping google.com`
-
----
-
-## netstat
-
-Displays network connections, routing tables, interface stats.
-
-Example:  
-`netstat -tuln`
-
----
-
-## ip
-
-Shows/manages network interfaces and routing.
-
-Example:  
-`ip addr show`
 
 ---
 
@@ -339,6 +296,15 @@ Displays the current environment variables.
 
 Example:  
 `printenv`
+
+---
+
+## pwd
+
+`pwd` (Print Working Directory) displays the current directory you are in within the terminal.
+
+Example:  
+`pwd`
 
 ---
 
