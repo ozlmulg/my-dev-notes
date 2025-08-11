@@ -8,7 +8,7 @@ This document lists some of the most commonly used Linux commands by developers,
 
 Runs a command repeatedly, showing its output and errors. Useful for monitoring changes in real time.
 
-Example:  
+Usage:  
 `watch ls -l`
 
 `watch -n 5 ls -l`
@@ -19,7 +19,7 @@ Example:
 
 Searches for a pattern within files or input.
 
-Example:  
+Usage:  
 `grep "error" /var/log/syslog`
 
 ---
@@ -28,7 +28,7 @@ Example:
 
 Shows the last part of a file.
 
-Example:  
+Usage:  
 `tail -f /var/log/syslog`
 
 ---
@@ -37,7 +37,7 @@ Example:
 
 Displays information about running processes.
 
-Example:  
+Usage:  
 `ps -u $(whoami)`
 
 ---
@@ -46,7 +46,7 @@ Example:
 
 Interactive process viewer showing system resource usage.
 
-Example:  
+Usage:  
 `top`
 
 ---
@@ -55,7 +55,7 @@ Example:
 
 An enhanced, interactive process viewer (must be installed separately).
 
-Example:  
+Usage:  
 `htop`
 
 ---
@@ -64,7 +64,7 @@ Example:
 
 Changes file permissions.
 
-Example:  
+Usage:  
 `chmod +x script.sh`
 
 ---
@@ -73,7 +73,7 @@ Example:
 
 Changes file owner and group.
 
-Example:  
+Usage:  
 `chown user:group file.txt`
 
 ---
@@ -82,7 +82,7 @@ Example:
 
 Secure shell for logging into a remote machine.
 
-Example:  
+Usage:  
 `ssh user@host`
 
 ---
@@ -91,7 +91,7 @@ Example:
 
 Securely copies files between hosts.
 
-Example:  
+Usage:  
 `scp file.txt user@remote:/path/to/destination`
 
 ---
@@ -100,7 +100,7 @@ Example:
 
 Efficiently syncs files/directories between locations.
 
-Example:  
+Usage:  
 `rsync -avz /local/dir user@remote:/remote/dir`
 
 ---
@@ -109,7 +109,7 @@ Example:
 
 Shows disk space usage.
 
-Example:  
+Usage:  
 `df -h`
 
 ---
@@ -118,7 +118,7 @@ Example:
 
 Shows disk usage of files and directories.
 
-Example:  
+Usage:  
 `du -h --max-depth=1`
 
 ---
@@ -127,7 +127,7 @@ Example:
 
 Searches for files and directories matching criteria.
 
-Example:  
+Usage:  
 `find . -name "*.log"`
 
 ---
@@ -136,7 +136,7 @@ Example:
 
 Stream editor for filtering and transforming text.
 
-Example:  
+Usage:  
 `sed 's/old/new/g' file.txt`
 
 ---
@@ -145,7 +145,7 @@ Example:
 
 Powerful text processing and pattern scanning language.
 
-Example:  
+Usage:  
 `awk '{print $1}' file.txt`
 
 ---
@@ -154,7 +154,7 @@ Example:
 
 Archives and extracts files.
 
-Example:  
+Usage:  
 Create archive:  
 `tar -cvf archive.tar folder/`  
 Extract archive:  
@@ -166,7 +166,7 @@ Extract archive:
 
 Compress and decompress files.
 
-Example:  
+Usage:  
 `zip archive.zip file1 file2`  
 `unzip archive.zip`
 
@@ -176,7 +176,7 @@ Example:
 
 Controls systemd system and service manager.
 
-Example:  
+Usage:  
 `systemctl status nginx`  
 `systemctl restart nginx`
 
@@ -186,17 +186,8 @@ Example:
 
 Views systemd logs.
 
-Example:  
+Usage:  
 `journalctl -u nginx.service`
-
----
-
-## uname
-
-Displays system information.
-
-Example:  
-`uname -a`
 
 ---
 
@@ -204,7 +195,7 @@ Example:
 
 Shows current logged in user.
 
-Example:  
+Usage:  
 `whoami`
 
 ---
@@ -213,7 +204,7 @@ Example:
 
 Shows command history.
 
-Example:  
+Usage:  
 `history`
 
 ---
@@ -222,7 +213,7 @@ Example:
 
 Clears the terminal screen.
 
-Example:  
+Usage:  
 `clear`
 
 ---
@@ -231,7 +222,7 @@ Example:
 
 Shows environment variables.
 
-Example:  
+Usage:  
 `env`
 
 ---
@@ -240,7 +231,7 @@ Example:
 
 Sets environment variables.
 
-Example:  
+Usage:  
 `export PATH=$PATH:/new/path`
 
 ---
@@ -249,7 +240,7 @@ Example:
 
 Creates command shortcuts.
 
-Example:  
+Usage:  
 `alias ll='ls -la'`
 
 ---
@@ -258,7 +249,7 @@ Example:
 
 Terminates processes by PID.
 
-Example:  
+Usage:  
 `kill 1234`
 
 ---
@@ -267,7 +258,7 @@ Example:
 
 Kills processes by name.
 
-Example:  
+Usage:  
 `pkill nginx`
 
 ---
@@ -276,7 +267,7 @@ Example:
 
 Pauses execution for specified seconds.
 
-Example:  
+Usage:  
 `sleep 5`
 
 ---
@@ -285,7 +276,7 @@ Example:
 
 Shows or sets the system date/time.
 
-Example:  
+Usage:  
 `date`
 
 ---
@@ -294,7 +285,7 @@ Example:
 
 Displays the current environment variables.
 
-Example:  
+Usage:  
 `printenv`
 
 ---
@@ -303,8 +294,43 @@ Example:
 
 `pwd` (Print Working Directory) displays the current directory you are in within the terminal.
 
-Example:  
+Usage:  
 `pwd`
+
+---
+
+## arch
+
+`arch` prints the architecture of the machine you are currently using.
+
+Usage:  
+`arch`
+
+Example output:  
+`x86_64` or `arm64`
+
+---
+
+## uname
+
+Displays system information.
+
+Usage:  
+`uname -a`
+
+`uname -m` # Displays machine hardware name like `x86_64` or `arm64`
+
+---
+
+## which
+
+`which` shows the full path of the executable that would run when you type the command.
+
+Usage:  
+`which brew`
+
+Example output:  
+`/usr/local/bin/brew`
 
 ---
 

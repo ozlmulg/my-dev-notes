@@ -9,7 +9,7 @@ examples.
 
 Shows or sets the system's hostname.
 
-Example:  
+Usage:
 `hostname`
 
 ---
@@ -18,7 +18,7 @@ Example:
 
 Queries DNS servers to obtain domain name or IP address mapping.
 
-Example:  
+Usage:
 `nslookup example.com`
 
 ---
@@ -28,7 +28,7 @@ Example:
 DNS lookup utility, more flexible than nslookup.
 This command is very useful for debugging DNS issues and checking DNS propagation.
 
-Example:  
+Usage:
 `dig example.com`
 
 `dig example.com @111.11.11.11` # Querying a specific DNS server
@@ -39,7 +39,7 @@ Example:
 
 Displays or configures network interfaces (deprecated in favor of `ip` command).
 
-Example:  
+Usage:
 `ifconfig`
 
 ---
@@ -48,7 +48,7 @@ Example:
 
 Non-interactive network downloader, useful for downloading files from the web.
 
-Example:  
+Usage:
 `wget https://example.com/file.zip`
 
 ---
@@ -57,7 +57,7 @@ Example:
 
 Sends ICMP echo requests to test network connectivity to a host.
 
-Example:  
+Usage:
 `ping google.com`
 
 ---
@@ -66,7 +66,7 @@ Example:
 
 Transfers data from or to a server, supporting multiple protocols.
 
-Example:  
+Usage:
 `curl https://example.com`
 
 ---
@@ -75,7 +75,7 @@ Example:
 
 Modern tool to show/manipulate routing, devices, policy routing, and tunnels.
 
-Example:  
+Usage:
 `ip addr show`
 
 ---
@@ -84,7 +84,7 @@ Example:
 
 Shows the path packets take to reach a host.
 
-Example:  
+Usage:
 `traceroute google.com`
 
 ---
@@ -93,7 +93,7 @@ Example:
 
 Displays network connections, routing tables, interface statistics, etc.
 
-Example:  
+Usage:
 `netstat -tuln`
 
 ---
