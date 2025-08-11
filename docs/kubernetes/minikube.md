@@ -55,15 +55,26 @@ minikube delete
 
 ---
 
+## Creating a service url in Minikube
+
+```bash
+minikube service --url <service-name>
+```
+
+- Starts a service in Minikube and provides the URL to access it. (e.g. http://127.0.0.1:33901)
+
+---
+
 ## Summary
 
-| Command                          | Description                       |
-|----------------------------------|-----------------------------------|
-| `brew install minikube`          | Install Minikube                  |
-| `minikube start --driver=docker` | Start Minikube with Docker driver |
-| `minikube status`                | Check the status of Minikube      |
-| `minikube stop`                  | Stop the Minikube cluster         |
-| `minikube delete`                | Delete the Minikube cluster       |
+| Command                                 | Description                       |
+|-----------------------------------------|-----------------------------------|
+| `brew install minikube`                 | Install Minikube                  |
+| `minikube start --driver=docker`        | Start Minikube with Docker driver |
+| `minikube status`                       | Check the status of Minikube      |
+| `minikube stop`                         | Stop the Minikube cluster         |
+| `minikube delete`                       | Delete the Minikube cluster       |
+| `minikube service --url <service-name>` | Create a service url              |
 
 ---
 
