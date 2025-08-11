@@ -655,6 +655,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creating-a-service-url-in-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a service url in Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -1209,6 +1218,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creating-a-service-url-in-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a service url in Minikube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -1272,6 +1290,13 @@ brief explanations.</p>
 <li>Deletes the Minikube cluster and all its data.</li>
 </ul>
 <hr />
+<h2 id="creating-a-service-url-in-minikube">Creating a service url in Minikube</h2>
+<pre><code class="language-bash">minikube service --url &lt;service-name&gt;
+</code></pre>
+<ul>
+<li>Starts a service in Minikube and provides the URL to access it. (e.g. http://127.0.0.1:33901)</li>
+</ul>
+<hr />
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -1300,6 +1325,10 @@ brief explanations.</p>
 <tr>
 <td><code>minikube delete</code></td>
 <td>Delete the Minikube cluster</td>
+</tr>
+<tr>
+<td><code>minikube service --url &lt;service-name&gt;</code></td>
+<td>Create a service url</td>
 </tr>
 </tbody>
 </table>
