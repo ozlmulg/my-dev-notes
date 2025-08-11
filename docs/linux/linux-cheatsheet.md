@@ -154,11 +154,12 @@ Usage:
 
 Archives and extracts files.
 
-Usage:  
+Usage:
+
 - Create archive:  
-`tar -cvf archive.tar folder/`  
+  `tar -cvf archive.tar folder/`
 - Extract archive:  
-`tar -xvf archive.tar`
+  `tar -xvf archive.tar`
 
 ---
 
@@ -245,12 +246,30 @@ Usage:
 
 ---
 
+## lsof
+
+`lsof` (List Open Files) lists information about files opened by processes, useful for finding which process is using a
+specific file or network port.
+
+Usage:
+
+```bash
+lsof -i tcp:3000
+lsof -i :8000
+```
+
+---
+
 ## kill
 
 Terminates processes by PID.
 
-Usage:  
-`kill 1234`
+Usage:
+
+```bash
+kill 1234
+kill -9 <PID> # Force kill
+```
 
 ---
 
