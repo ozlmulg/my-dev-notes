@@ -62,6 +62,8 @@ nav:
       - Github Actions: git/github-actions.md
   - Maven:
       - Maven Wrapper: maven/maven-wrapper.md
+  - Java:
+      - Jenv: java/jenv.md
   - Docker:
       - Docker CLI: docker/docker-cli.md
       - Docker Cheatsheet: docker/docker-cheatsheet.md
@@ -70,6 +72,10 @@ nav:
       - Kubectl: kubernetes/kubectl.md
       - Minikube: kubernetes/minikube.md
       - Kubeadm: kubernetes/kubeadm.md
+  - Terraform:
+      - tfenv: terraform/tfenv.md
+  - Node.js:
+      - nvm & npm: nodejs/nvm-npm.md
   - Mobile:
       - Android:
           - Android Firebase Integration: mobile/android/android-firebase-integration.md
