@@ -857,6 +857,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lsof" class="md-nav__link">
+    <span class="md-ellipsis">
+      lsof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kill" class="md-nav__link">
     <span class="md-ellipsis">
       kill
@@ -2390,6 +2399,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lsof" class="md-nav__link">
+    <span class="md-ellipsis">
+      lsof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kill" class="md-nav__link">
     <span class="md-ellipsis">
       kill
@@ -2572,11 +2590,13 @@
 <hr />
 <h2 id="tar">tar</h2>
 <p>Archives and extracts files.</p>
-<p>Usage:<br />
-- Create archive:<br />
-<code>tar -cvf archive.tar folder/</code><br />
-- Extract archive:<br />
-<code>tar -xvf archive.tar</code></p>
+<p>Usage:</p>
+<ul>
+<li>Create archive:<br />
+<code>tar -cvf archive.tar folder/</code></li>
+<li>Extract archive:<br />
+<code>tar -xvf archive.tar</code></li>
+</ul>
 <hr />
 <h2 id="zip-unzip">zip / unzip</h2>
 <p>Compress and decompress files.</p>
@@ -2625,10 +2645,20 @@
 <p>Usage:<br />
 <code>alias ll='ls -la'</code></p>
 <hr />
+<h2 id="lsof">lsof</h2>
+<p><code>lsof</code> (List Open Files) lists information about files opened by processes, useful for finding which process is using a
+specific file or network port.</p>
+<p>Usage:</p>
+<pre><code class="language-bash">lsof -i tcp:3000
+lsof -i :8000
+</code></pre>
+<hr />
 <h2 id="kill">kill</h2>
 <p>Terminates processes by PID.</p>
-<p>Usage:<br />
-<code>kill 1234</code></p>
+<p>Usage:</p>
+<pre><code class="language-bash">kill 1234
+kill -9 &lt;PID&gt; # Force kill
+</code></pre>
 <hr />
 <h2 id="pkill">pkill</h2>
 <p>Kills processes by name.</p>
