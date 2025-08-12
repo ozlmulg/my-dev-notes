@@ -437,6 +437,28 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Slack
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -627,6 +649,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -699,6 +725,52 @@
   
   <span class="md-ellipsis">
     Github Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/tmate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tmate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/list-github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Github Actions
     
   </span>
   
@@ -1644,6 +1716,158 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Slack
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Slack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-reminder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Reminder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Message
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack User Group Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Github Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -1673,10 +1897,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   
@@ -1689,8 +1913,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -1968,22 +2192,20 @@
 <hr />
 <h2 id="3-run-kafka-ui-with-docker">3. Run Kafka UI with Docker</h2>
 <p>Run the Kafka UI Docker container, replacing <code>&lt;CLUSTER_ID&gt;</code> and <code>&lt;KAFKA_BOOTSTRAP_SERVER&gt;</code> with your values:</p>
-<pre><code>    docker run -d -p 8080:8080
-    -e KAFKA_CLUSTERS_0_NAME=&lt;CLUSTER_ID&gt;
-    -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=&lt;KAFKA_BOOTSTRAP_SERVER&gt;
-    provectuslabs/kafka-ui
+<pre><code>docker run -d -p 8080:8080
+-e KAFKA_CLUSTERS_0_NAME=&lt;CLUSTER_ID&gt;
+-e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=&lt;KAFKA_BOOTSTRAP_SERVER&gt;
+provectuslabs/kafka-ui
 </code></pre>
 <p>Example:</p>
-<pre><code>    docker run -d -p 8080:8080
-    -e KAFKA_CLUSTERS_0_NAME=abcd1234ClusterId
-    -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=my-cluster.kafka.local:9094
-    provectuslabs/kafka-ui
+<pre><code>docker run -d -p 8080:8080
+-e KAFKA_CLUSTERS_0_NAME=abcd1234ClusterId
+-e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=my-cluster.kafka.local:9094
+provectuslabs/kafka-ui
 </code></pre>
 <hr />
 <h2 id="4-access-kafka-ui">4. Access Kafka UI</h2>
-<p>Once the container is running, open your browser and navigate to:</p>
-<pre><code>http://localhost:8080
-</code></pre>
+<p>Once the container is running, open your browser and navigate to: <code>http://localhost:8080</code></p>
 <p>You will see the Kafka UI interface where you can:</p>
 <ul>
 <li>Browse topics</li>
@@ -1995,13 +2217,8 @@
 <h2 id="notes">Notes</h2>
 <ul>
 <li><strong>Docker</strong> must be installed and running on your local machine.</li>
-<li>
-<p>Ensure that <strong>port 8080</strong> is not already in use. You can check by running:</p>
-<p>lsof -i:8080</p>
-</li>
-<li>
-<p>Replace placeholder values (<code>&lt;CLUSTER_ID&gt;</code> and <code>&lt;KAFKA_BOOTSTRAP_SERVER&gt;</code>) with actual values from your environment.</p>
-</li>
+<li>Ensure that <strong>port 8080</strong> is not already in use. You can check by running: <code>lsof -i:8080</code></li>
+<li>Replace placeholder values (<code>&lt;CLUSTER_ID&gt;</code> and <code>&lt;KAFKA_BOOTSTRAP_SERVER&gt;</code>) with actual values from your environment.</li>
 </ul>
 
 

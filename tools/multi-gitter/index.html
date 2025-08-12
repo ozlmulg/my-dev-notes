@@ -435,6 +435,28 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Slack
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -625,6 +647,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -697,6 +723,52 @@
   
   <span class="md-ellipsis">
     Github Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/tmate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tmate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/list-github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List Github Actions
     
   </span>
   
@@ -1642,6 +1714,158 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Slack
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Slack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-reminder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Reminder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Message
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack User Group Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Github Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -1671,10 +1895,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   
@@ -1687,8 +1911,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -2073,17 +2297,30 @@ sudo xcode-select --install
 --dry-run
 </code></pre>
 <h2 id="sample-scripts">Sample Scripts</h2>
-<p><strong><em>delete_config.sh:</em></strong></p>
+<p><strong><em>Delete config.yml:</em></strong></p>
+<details>
+<summary>delete_config.sh</summary>
+
+
 <pre><code class="language-bash">#!/bin/bash
 
 # Check if config.yml exists and remove it
 if [ -f &quot;.github/config.yml&quot; ]; then
+  echo &quot;Found config.yml. Removing...&quot;
   git rm .github/config.yml
 else
   echo &quot;config.yml not found, skipping...&quot;
 fi
 </code></pre>
-<p><strong><em>update_codeowners.sh:</em></strong></p>
+
+
+</details>
+
+<p><strong><em>Update codeowners:</em></strong></p>
+<details>
+<summary>update_codeowners.sh</summary>
+
+
 <pre><code class="language-bash">#!/bin/bash
 
 repo_name=$REPOSITORY
@@ -2117,16 +2354,9 @@ echo &quot;* $team&quot; &gt; $CODEOWNERS_FILE
 
 git add $CODEOWNERS_FILE
 </code></pre>
-<p><strong><em>delete_release.sh:</em></strong></p>
-<pre><code class="language-bash">#!/bin/bash
 
-if [ -f &quot;.github/release.yml&quot; ]; then
-  echo &quot;Found release.yml. Removing...&quot;
-  git rm .github/release.yml
-else
-  echo &quot;release.yml not found, skipping...&quot;
-fi
-</code></pre>
+
+</details>
 
 
 
