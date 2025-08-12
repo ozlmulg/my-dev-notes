@@ -78,6 +78,7 @@ multi-gitter run ./delete_config.sh \
 ### 2. Update CODEOWNERS Across Multiple Repos
 
 Dry-run example:
+
 ```bash
 multi-gitter run ./update_codeowners.sh \
 --token YOUR_GITHUB_TOKEN \
@@ -90,20 +91,29 @@ multi-gitter run ./update_codeowners.sh \
 
 ## Sample Scripts
 
-***delete_config.sh:***
+***Delete config.yml:***
+
+<details>
+<summary>delete_config.sh</summary>
 
 ```bash
 #!/bin/bash
 
 # Check if config.yml exists and remove it
 if [ -f ".github/config.yml" ]; then
+  echo "Found config.yml. Removing..."
   git rm .github/config.yml
 else
   echo "config.yml not found, skipping..."
 fi
 ```
 
-***update_codeowners.sh:***
+</details>
+
+***Update codeowners:***
+
+<details>
+<summary>update_codeowners.sh</summary>
 
 ```bash
 #!/bin/bash
@@ -140,17 +150,7 @@ echo "* $team" > $CODEOWNERS_FILE
 git add $CODEOWNERS_FILE
 ```
 
-***delete_release.sh:***
+</details>
 
-```bash
-#!/bin/bash
-
-if [ -f ".github/release.yml" ]; then
-  echo "Found release.yml. Removing..."
-  git rm .github/release.yml
-else
-  echo "release.yml not found, skipping..."
-fi
-```
 
 

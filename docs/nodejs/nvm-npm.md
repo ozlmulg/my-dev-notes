@@ -132,7 +132,7 @@ init-npmrc: ## Generate npmrc file to access @yourorg npm packages
 Install React Client:
 
 ```make
-react-install: ## Install react client
+react-build: ## Build react client
 	rm -rf ${MAIN_POM_FOLDER}/app/test-react-client/node \
 	       ${MAIN_POM_FOLDER}/app/test-react-client/node_modules
 	make init-npmrc

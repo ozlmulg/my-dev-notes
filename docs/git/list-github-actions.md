@@ -23,6 +23,9 @@ If you want to list jobs and steps from a single GitHub Actions workflow file:
 
 ### **Script**
 
+<details>
+<summary>list_github_actions.py</summary>
+
 ```python
 import argparse
 import yaml
@@ -46,6 +49,8 @@ if __name__ == "__main__":
     main(args.filepath)
 ```
 
+</details>
+
 ### **Run**
 
 ```bash
@@ -59,6 +64,9 @@ python3 list_github_actions.py .github/workflows/test-workflow.yaml
 If you want to scan all workflow files inside a folder:
 
 ### **Script**
+
+<details>
+<summary>list_github_actions.py</summary>
 
 ```python
 import argparse
@@ -91,6 +99,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     main(args.folderpath)
 ```
+
+</details>
 
 ### **Run**
 

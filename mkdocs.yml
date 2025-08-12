@@ -89,6 +89,11 @@ nav:
           - iOS Google Maps Integration: mobile/ios/ios-google-maps-integration.md
           - iOS Test Flight Integration: mobile/ios/ios-test-flight-integration.md
           - iOS Push Notification Integration: mobile/ios/ios-push-notification-integration.md
+  - Slack:
+      - Slack Reminder: slack/slack-reminder.md
+      - Slack Message: slack/slack-message.md
+      - Slack User Group Creation: slack/slack-user-group-creation.md
+      - Slack Github Workflows: slack/slack-github-workflows.md
   - Tools:
       - Apicurio: tools/apicurio-via-docker.md
       - KafkaUI: tools/kafkaui-via-docker.md
