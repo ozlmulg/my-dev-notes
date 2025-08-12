@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../postgresql-cheatsheet/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../../mobile/android/android-firebase-integration/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>My Dev Notes</title>
+        <title>PostgreSQL JSONB Operations - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#postgresql-jsonb-operations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              PostgreSQL JSONB Operations
             
           </span>
         </div>
@@ -203,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -224,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/linux/linux-cheatsheet/" class="md-tabs__link">
+        <a href="../../../linux/linux-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -246,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -268,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -290,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -312,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/docker/docker-cli/" class="md-tabs__link">
+        <a href="../../../docker/docker-cli/" class="md-tabs__link">
           
   
   
@@ -334,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/kubernetes/kubectl/" class="md-tabs__link">
+        <a href="../../../kubernetes/kubectl/" class="md-tabs__link">
           
   
   
@@ -356,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/terraform/tfenv/" class="md-tabs__link">
+        <a href="../../../terraform/tfenv/" class="md-tabs__link">
           
   
   
@@ -378,7 +387,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -396,6 +405,8 @@
   
   
   
+    
+  
   
     
     
@@ -403,11 +414,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -439,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -464,7 +477,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -486,7 +499,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -522,7 +535,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -540,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -611,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -634,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-network-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-network-cheatsheet/" class="md-nav__link">
         
   
   
@@ -717,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -740,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -763,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -786,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -863,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -940,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1021,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -1044,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1067,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
@@ -1148,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubectl/" class="md-nav__link">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -1171,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/minikube/" class="md-nav__link">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -1194,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubeadm/" class="md-nav__link">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
         
   
   
@@ -1271,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1348,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1375,8 +1388,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1388,19 +1403,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1413,7 +1431,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Database
@@ -1437,17 +1455,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="">
             
   
   
@@ -1474,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1502,8 +1523,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1516,18 +1539,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
             
   
   
@@ -1540,7 +1566,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             PostgreSQL
@@ -1554,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1574,10 +1600,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL JSONB Operations
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1588,6 +1636,221 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-jsonb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to JSONB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-jsonb-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic JSONB Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-jsonb-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing JSONB Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing JSONB Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-with-and-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access with -&gt; and -&gt;&gt; operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-nested-json-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access nested JSON objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-json-array-elements-by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access JSON array elements by index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonb-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONB Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonb-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONB Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONB Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expand-json-array-elements-jsonb_array_elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand JSON array elements: jsonb_array_elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-json-object-into-keyvalue-pairs-jsonb_each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand JSON object into key/value pairs: jsonb_each
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-json-object-keys-jsonb_object_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get JSON object keys: jsonb_object_keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-jsonb-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating JSONB Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating JSONB Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-or-update-keyvalue-with-jsonb_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set or update key/value with jsonb_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-key-with-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove key with - operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenate-two-jsonb-objects-with-merge-jsonb-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concatenate two JSONB objects with || (Merge JSONB objects)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing-jsonb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing JSONB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexing JSONB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gin-index-for-containment-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIN index for containment queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-jsonb-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced JSONB Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1717,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1740,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -1763,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1786,7 +2049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1870,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1893,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1916,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -1939,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2030,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2053,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2076,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2099,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2180,7 +2443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2203,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2226,7 +2489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2266,6 +2529,211 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-jsonb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to JSONB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-jsonb-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic JSONB Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-jsonb-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing JSONB Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing JSONB Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-with-and-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access with -&gt; and -&gt;&gt; operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-nested-json-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access nested JSON objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-json-array-elements-by-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access JSON array elements by index
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonb-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONB Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonb-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONB Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONB Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expand-json-array-elements-jsonb_array_elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand JSON array elements: jsonb_array_elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-json-object-into-keyvalue-pairs-jsonb_each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expand JSON object into key/value pairs: jsonb_each
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-json-object-keys-jsonb_object_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get JSON object keys: jsonb_object_keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-jsonb-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating JSONB Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating JSONB Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-or-update-keyvalue-with-jsonb_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set or update key/value with jsonb_set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-key-with-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove key with - operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenate-two-jsonb-objects-with-merge-jsonb-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concatenate two JSONB objects with || (Merge JSONB objects)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing-jsonb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing JSONB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexing JSONB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gin-index-for-containment-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      GIN index for containment queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-jsonb-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced JSONB Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2277,8 +2745,173 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="postgresql-jsonb-operations">PostgreSQL JSONB Operations</h1>
+<p>This document covers common PostgreSQL JSONB operations with practical examples. It serves as a reference for querying,
+modifying, and manipulating JSONB data.</p>
+<hr />
+<h2 id="introduction-to-jsonb">Introduction to JSONB</h2>
+<p>JSONB is a binary JSON data type introduced in PostgreSQL 9.4 that stores JSON data in a decomposed binary format,
+enabling efficient access and manipulation.</p>
+<p>Advantages of JSONB over JSON:</p>
+<ul>
+<li>Faster access and querying.</li>
+<li>Supports indexing.</li>
+<li>Allows modification of parts of JSON data.</li>
+</ul>
+<hr />
+<h2 id="basic-jsonb-queries">Basic JSONB Queries</h2>
+<p>Assuming a table <code>documents</code> with a JSONB column <code>data</code>.</p>
+<pre><code class="language-postgresql">-- Select all rows
+SELECT *
+FROM documents;
+
+-- Select JSONB column
+SELECT data
+FROM documents;
+</code></pre>
+<hr />
+<h2 id="accessing-jsonb-elements">Accessing JSONB Elements</h2>
+<h3 id="access-with-and-operators">Access with <code>-&gt;</code> and <code>-&gt;&gt;</code> operators</h3>
+<ul>
+<li><code>-&gt;</code> returns JSON object/array</li>
+<li><code>-&gt;&gt;</code> returns text</li>
+</ul>
+<pre><code class="language-postgresql">-- Get JSON object field
+SELECT data -&gt; 'name'
+FROM documents;
+
+-- Get JSON object field as text
+SELECT data -&gt;&gt; 'name'
+FROM documents;
+</code></pre>
+<h3 id="access-nested-json-objects">Access nested JSON objects</h3>
+<pre><code class="language-postgresql">SELECT data -&gt; 'address' -&gt;&gt; 'city' AS city
+FROM documents;
+</code></pre>
+<h3 id="access-json-array-elements-by-index">Access JSON array elements by index</h3>
+<pre><code class="language-postgresql">SELECT data -&gt; 'items' -&gt;&gt; 0 AS first_item
+FROM documents;
+</code></pre>
+<h2 id="jsonb-operators">JSONB Operators</h2>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>?</code></td>
+<td>Does key exist?</td>
+<td><code>data ? 'name'</code></td>
+</tr>
+<tr>
+<td><code>?|</code></td>
+<td>Do any of these keys exist?</td>
+<td><code>data ?| array['name','age']</code></td>
+</tr>
+<tr>
+<td><code>?&amp;</code></td>
+<td>Do all of these keys exist?</td>
+<td><code>data ?&amp; array['name','age']</code></td>
+</tr>
+<tr>
+<td><code>@&gt;</code></td>
+<td>Contains JSONB</td>
+<td><code>data @&gt; '{"name":"John"}'</code></td>
+</tr>
+<tr>
+<td><code>&lt;@</code></td>
+<td>Contained by JSONB</td>
+<td><code>'{"name":"John"}'::jsonb &lt;@ data</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="jsonb-functions">JSONB Functions</h2>
+<h3 id="expand-json-array-elements-jsonb_array_elements">Expand JSON array elements: <code>jsonb_array_elements</code></h3>
+<p>Expands a JSONB array to a set of JSONB values.</p>
+<pre><code class="language-postgresql">SELECT jsonb_array_elements(data -&gt; 'items') AS item
+FROM documents;
+</code></pre>
+<h3 id="expand-json-object-into-keyvalue-pairs-jsonb_each">Expand JSON object into key/value pairs: <code>jsonb_each</code></h3>
+<p>Expands the outermost JSONB object into set of key/value pairs.</p>
+<pre><code class="language-postgresql">SELECT key, value
+FROM jsonb_each(data);
+</code></pre>
+<h3 id="get-json-object-keys-jsonb_object_keys">Get JSON object keys: <code>jsonb_object_keys</code></h3>
+<p>Returns set of keys in JSONB object.</p>
+<pre><code class="language-postgresql">SELECT jsonb_object_keys(data)
+FROM documents;
+</code></pre>
+<hr />
+<h2 id="updating-jsonb-data">Updating JSONB Data</h2>
+<h3 id="set-or-update-keyvalue-with-jsonb_set">Set or update key/value with <code>jsonb_set</code></h3>
+<pre><code class="language-postgresql">UPDATE documents
+SET data = jsonb_set(data, '{name}', '&quot;Jane&quot;')
+WHERE id = 1;
+</code></pre>
+<h3 id="remove-key-with-operator">Remove key with - operator</h3>
+<pre><code class="language-postgresql">UPDATE documents
+SET data = data - 'age'
+WHERE id = 1;
+</code></pre>
+<h3 id="concatenate-two-jsonb-objects-with-merge-jsonb-objects">Concatenate two JSONB objects with <code>||</code> (Merge JSONB objects)</h3>
+<pre><code class="language-postgresql">UPDATE documents
+SET data = data || '{&quot;new_key&quot;: &quot;new_value&quot;}'
+WHERE id = 1;
+</code></pre>
+<hr />
+<h2 id="indexing-jsonb">Indexing JSONB</h2>
+<p>To speed up queries, create indexes on JSONB columns.</p>
+<h3 id="gin-index-for-containment-queries">GIN index for containment queries</h3>
+<pre><code class="language-postgresql">CREATE INDEX idx_data_gin ON documents USING gin(data);
+</code></pre>
+<hr />
+<h2 id="advanced-jsonb-examples">Advanced JSONB Examples</h2>
+<p><strong>Example: Filter rows where JSONB contains a key with specific value:</strong></p>
+<pre><code class="language-postgresql">SELECT *
+FROM documents
+WHERE data @&gt; '{&quot;status&quot;: &quot;active&quot;}';
+</code></pre>
+<p><strong>Example: Extract all keys and values from JSONB object:</strong></p>
+<pre><code class="language-postgresql">SELECT key, value
+FROM documents, jsonb_each(data);
+</code></pre>
+<p><strong>Example: Get all elements of a JSONB array:</strong></p>
+<pre><code class="language-postgresql">SELECT jsonb_array_elements(data -&gt; 'tags') AS tag
+FROM documents;
+</code></pre>
+<p><strong>Example: Update nested JSON key:</strong></p>
+<pre><code class="language-postgresql">UPDATE documents
+SET data = jsonb_set(data, '{address,city}', '&quot;New York&quot;')
+WHERE id = 2;
+</code></pre>
+<hr />
+<h2 id="helpful-resources">Helpful Resources</h2>
+<p>This concludes the essential JSONB operations reference in PostgreSQL.
+For further details, refer to the official PostgreSQL documentation on JSONB:</p>
+<p><a href="https://www.postgresql.org/docs/current/functions-json.html">https://www.postgresql.org/docs/current/functions-json.html</a>
+<a href="https://www.postgresql.org/docs/current/datatype-json.html">https://www.postgresql.org/docs/current/datatype-json.html</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2343,10 +2976,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

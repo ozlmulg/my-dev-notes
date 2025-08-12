@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../mysql/mysql-cheatsheet/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../postgresql-jsonb-operations/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>My Dev Notes</title>
+        <title>PostgreSQL Cheatsheet - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#postgresql-cheatsheet" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              PostgreSQL Cheatsheet
             
           </span>
         </div>
@@ -203,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -224,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/linux/linux-cheatsheet/" class="md-tabs__link">
+        <a href="../../../linux/linux-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -246,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -268,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -290,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -312,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/docker/docker-cli/" class="md-tabs__link">
+        <a href="../../../docker/docker-cli/" class="md-tabs__link">
           
   
   
@@ -334,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/kubernetes/kubectl/" class="md-tabs__link">
+        <a href="../../../kubernetes/kubectl/" class="md-tabs__link">
           
   
   
@@ -356,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/terraform/tfenv/" class="md-tabs__link">
+        <a href="../../../terraform/tfenv/" class="md-tabs__link">
           
   
   
@@ -378,7 +387,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -396,6 +405,8 @@
   
   
   
+    
+  
   
     
     
@@ -403,11 +414,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -439,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -464,7 +477,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -486,7 +499,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -522,7 +535,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -540,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -611,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -634,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-network-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-network-cheatsheet/" class="md-nav__link">
         
   
   
@@ -717,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -740,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -763,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -786,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -863,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -940,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1021,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -1044,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1067,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
@@ -1148,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubectl/" class="md-nav__link">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -1171,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/minikube/" class="md-nav__link">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -1194,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubeadm/" class="md-nav__link">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
         
   
   
@@ -1271,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1348,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1375,8 +1388,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1388,19 +1403,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1413,7 +1431,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Database
@@ -1437,17 +1455,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="">
             
   
   
@@ -1474,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1502,8 +1523,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1516,18 +1539,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
             
   
   
@@ -1540,7 +1566,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             PostgreSQL
@@ -1551,10 +1577,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    PostgreSQL Cheatsheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1565,6 +1613,182 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-basic-postgresql-user-database-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Basic PostgreSQL User &amp; Database Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Basic PostgreSQL User &amp; Database Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 User Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-database-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Database Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-running-sql-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Running SQL Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-managing-sequences-auto-increment-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Managing Sequences (Auto-Increment IDs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-monitoring-managing-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Monitoring &amp; Managing Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-postgresql-system-catalog-and-information-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. PostgreSQL System Catalog and Information Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. PostgreSQL System Catalog and Information Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-roles-and-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Roles and Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-databases-tables-and-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Databases, Tables, and Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-information_schema-for-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using information_schema for Privileges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showing-server-settings-and-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing Server Settings and Extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-role-privilege-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Role &amp; Privilege Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-performance-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Performance &amp; Maintenance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-useful-sql-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Useful SQL Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1577,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -1717,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1740,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -1763,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1786,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1870,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1893,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1916,7 +2140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -1939,7 +2163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2030,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2053,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2076,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2099,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2180,7 +2404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2203,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2226,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2266,6 +2490,172 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-basic-postgresql-user-database-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Basic PostgreSQL User &amp; Database Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Basic PostgreSQL User &amp; Database Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 User Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-database-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Database Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-running-sql-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Running SQL Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-managing-sequences-auto-increment-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Managing Sequences (Auto-Increment IDs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-monitoring-managing-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Monitoring &amp; Managing Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-postgresql-system-catalog-and-information-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. PostgreSQL System Catalog and Information Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. PostgreSQL System Catalog and Information Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-roles-and-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Roles and Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-databases-tables-and-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Databases, Tables, and Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-information_schema-for-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using information_schema for Privileges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#showing-server-settings-and-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Showing Server Settings and Extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-role-privilege-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Role &amp; Privilege Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-performance-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Performance &amp; Maintenance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-useful-sql-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Useful SQL Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helpful-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helpful Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2277,8 +2667,194 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="postgresql-cheatsheet">PostgreSQL Cheatsheet</h1>
+<p>This guide is designed to provide a clear, concise overview of common PostgreSQL tasks and commands, suitable for
+developers and DBAs transitioning from MySQL or other database systems.</p>
+<h2 id="1-installation">1. Installation</h2>
+<pre><code class="language-bash">brew install postgresql
+
+# Restart PostgreSQL service after upgrade
+brew services restart postgresql
+
+# Start PostgreSQL manually without background service
+/usr/local/opt/postgresql/bin/postgres -D /usr/local/var/postgres
+
+# If PostgreSQL fails to start, remove stale PID file
+rm /usr/local/var/postgres/postmaster.pid
+
+# Stop PostgreSQL service
+brew services stop postgresql
+</code></pre>
+<hr />
+<h2 id="2-basic-postgresql-user-database-management">2. Basic PostgreSQL User &amp; Database Management</h2>
+<p>Connect to the default <code>postgres</code> database:</p>
+<pre><code class="language-bash">psql postgres
+</code></pre>
+<h3 id="21-user-management">2.1 User Management</h3>
+<pre><code class="language-postgresql">-- Create a new user with encrypted password
+CREATE USER username WITH ENCRYPTED PASSWORD 'password';
+
+-- Alter user to have superuser privileges
+ALTER USER username WITH SUPERUSER;
+
+-- Allow user to create databases
+ALTER USER username CREATEDB;
+</code></pre>
+<h3 id="22-database-management">2.2 Database Management</h3>
+<pre><code class="language-postgresql">-- Create a new database owned by a specific user
+CREATE DATABASE dbname WITH OWNER username;
+
+-- Change the owner of a database
+ALTER DATABASE dbname OWNER TO username;
+
+-- Grant all privileges on a database to a user
+GRANT ALL PRIVILEGES ON DATABASE dbname TO username;
+</code></pre>
+<hr />
+<h2 id="3-running-sql-scripts">3. Running SQL Scripts</h2>
+<p>Execute a SQL file from command line:</p>
+<pre><code class="language-bash">psql -U username -d dbname -f path/to/script.sql
+</code></pre>
+<hr />
+<h2 id="4-managing-sequences-auto-increment-ids">4. Managing Sequences (Auto-Increment IDs)</h2>
+<pre><code class="language-postgresql">-- Set sequence value manually
+SELECT setval('sequence_name', 100000);
+
+-- Get next sequence value
+SELECT nextval(pg_get_serial_sequence('table_name', 'column_name')) AS next_id;
+
+-- Get current sequence value
+SELECT currval(pg_get_serial_sequence('table_name', 'column_name')) AS current_id;
+
+-- Check last value from a sequence
+SELECT last_value
+FROM sequence_name;
+</code></pre>
+<hr />
+<h2 id="5-monitoring-managing-connections">5. Monitoring &amp; Managing Connections</h2>
+<pre><code class="language-postgresql">-- View active connections to a specific database
+SELECT *
+FROM pg_stat_activity
+WHERE datname = 'your_database';
+
+-- Cancel a running query by PID
+SELECT pg_cancel_backend(pid);
+
+-- Terminate a connection forcefully by PID
+SELECT pg_terminate_backend(pid);
+</code></pre>
+<p>Use system commands to find PostgreSQL processes:</p>
+<pre><code class="language-bash">ps -ef | grep postgres
+sudo kill -9 &lt;PID&gt;
+</code></pre>
+<hr />
+<h2 id="6-postgresql-system-catalog-and-information-queries">6. PostgreSQL System Catalog and Information Queries</h2>
+<h3 id="viewing-roles-and-users">Viewing Roles and Users</h3>
+<pre><code class="language-postgresql">SELECT *
+FROM pg_catalog.pg_user;
+
+SELECT *
+FROM pg_catalog.pg_roles;
+
+SELECT DISTINCT rolname
+FROM pg_catalog.pg_roles;
+</code></pre>
+<h3 id="viewing-databases-tables-and-groups">Viewing Databases, Tables, and Groups</h3>
+<pre><code class="language-postgresql">SELECT *
+FROM pg_catalog.pg_database;
+
+SELECT *
+FROM pg_catalog.pg_tables;
+
+SELECT *
+FROM pg_catalog.pg_group;
+
+SELECT *
+FROM pg_catalog.pg_namespace;
+
+SELECT *
+FROM pg_catalog.pg_default_acl;
+</code></pre>
+<h3 id="using-information_schema-for-privileges">Using information_schema for Privileges</h3>
+<pre><code class="language-postgresql">SELECT *
+FROM information_schema.role_table_grants;
+
+SELECT *
+FROM information_schema.role_table_grants
+WHERE grantee LIKE '%psqladmin%';
+</code></pre>
+<h3 id="showing-server-settings-and-extensions">Showing Server Settings and Extensions</h3>
+<pre><code class="language-postgresql">SHOW wal_level; -- Should be 'logical' for logical replication
+SHOW max_worker_processes; -- Typically 16
+SHOW azure.extensions;
+SHOW session_replication_role;
+</code></pre>
+<hr />
+<h2 id="7-role-privilege-management">7. Role &amp; Privilege Management</h2>
+<pre><code class="language-postgresql">-- Grant default privileges on new tables in a schema to a role
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+    GRANT SELECT ON TABLES TO role_name;
+
+-- Revoke default privileges on new tables
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+    REVOKE SELECT ON TABLES FROM role_name;
+
+-- Example granting multiple privileges
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+    GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO role_name;
+</code></pre>
+<hr />
+<h2 id="8-performance-maintenance">8. Performance &amp; Maintenance</h2>
+<pre><code class="language-postgresql">-- Analyze query plan and execution time
+EXPLAIN ANALYZE
+SELECT *
+FROM your_table;
+
+-- Perform vacuum full to reclaim storage
+VACUUM FULL your_table;
+</code></pre>
+<hr />
+<h2 id="9-useful-sql-snippets">9. Useful SQL Snippets</h2>
+<pre><code class="language-postgresql">-- Generate a random number within a range
+SELECT floor(random() * (max_value - min_value + 1) + min_value);
+
+-- Select random rows from a table
+SELECT *
+FROM your_table
+ORDER BY random()
+LIMIT 100;
+
+-- Use SET LOCAL within a transaction
+BEGIN;
+SET LOCAL some.custom_variable = 'value';
+-- your SQL commands here
+COMMIT;
+</code></pre>
+<hr />
+<h2 id="helpful-resources">Helpful Resources</h2>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/">PostgreSQL Official Documentation</a></li>
+<li><a href="https://stackoverflow.com/questions/9736085/run-a-postgresql-sql-file-using-command-line-arguments">StackOverflow: Run PostgreSQL SQL file via CLI</a></li>
+<li><a href="https://www.postgresql.org/docs/current/sql-grant.html">Managing Roles &amp; Permissions</a></li>
+<li><a href="https://www.postgresql.org/docs/current/sql-alterdefaultprivileges.html">PostgreSQL ALTER DEFAULT PRIVILEGES</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2343,10 +2919,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

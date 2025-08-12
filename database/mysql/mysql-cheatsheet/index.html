@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../../nodejs/nvm-npm/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../postgresql/postgresql-cheatsheet/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>My Dev Notes</title>
+        <title>MySQL Cheatsheet - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mysql-cheatsheet" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              MySQL Cheatsheet
             
           </span>
         </div>
@@ -203,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -224,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/linux/linux-cheatsheet/" class="md-tabs__link">
+        <a href="../../../linux/linux-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -246,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -268,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -290,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -312,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/docker/docker-cli/" class="md-tabs__link">
+        <a href="../../../docker/docker-cli/" class="md-tabs__link">
           
   
   
@@ -334,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/kubernetes/kubectl/" class="md-tabs__link">
+        <a href="../../../kubernetes/kubectl/" class="md-tabs__link">
           
   
   
@@ -356,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/terraform/tfenv/" class="md-tabs__link">
+        <a href="../../../terraform/tfenv/" class="md-tabs__link">
           
   
   
@@ -378,7 +387,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -396,6 +405,8 @@
   
   
   
+    
+  
   
     
     
@@ -403,11 +414,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -439,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -464,7 +477,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -486,7 +499,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -522,7 +535,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -540,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -611,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-cheatsheet/" class="md-nav__link">
         
   
   
@@ -634,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/linux/linux-network-cheatsheet/" class="md-nav__link">
+      <a href="../../../linux/linux-network-cheatsheet/" class="md-nav__link">
         
   
   
@@ -717,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -740,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -763,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -786,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -863,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -940,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1021,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cli/" class="md-nav__link">
+      <a href="../../../docker/docker-cli/" class="md-nav__link">
         
   
   
@@ -1044,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1067,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   
@@ -1148,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubectl/" class="md-nav__link">
+      <a href="../../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
@@ -1171,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/minikube/" class="md-nav__link">
+      <a href="../../../kubernetes/minikube/" class="md-nav__link">
         
   
   
@@ -1194,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes/kubeadm/" class="md-nav__link">
+      <a href="../../../kubernetes/kubeadm/" class="md-nav__link">
         
   
   
@@ -1271,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1348,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1375,8 +1388,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1388,19 +1403,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1413,7 +1431,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Database
@@ -1424,8 +1442,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1436,18 +1456,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
         
           
-          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="">
             
   
   
@@ -1460,7 +1483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_1">
             <span class="md-nav__icon md-icon"></span>
             MySQL
@@ -1471,10 +1494,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/database/mysql/mysql-cheatsheet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MySQL Cheatsheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1485,6 +1530,383 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uninstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Uninstallation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-common-mysql-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Common MySQL Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Common MySQL Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-stop-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start / Stop Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-mysql-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show MySQL Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-process-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Process Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Process Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-process-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Process List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-only-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Only Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-a-query-rds-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kill a Query (RDS Example)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-innodb-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show InnoDB Transactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-active-processes-excluding-sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Active Processes (excluding sleep)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-deadlock-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Deadlock Info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-index-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Index Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Index Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-usage-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Usage Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality &amp; Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-unused-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Unused Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-redundant-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Redundant Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-index-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Index Statistics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-slow-query-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Slow Query Log
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Slow Query Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-configure-slow-query-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable &amp; Configure Slow Query Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-slow-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Slow Queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. File Upload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Time Zone
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Time Zone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-current-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Current Time Zone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-connection-string-with-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Connection String with Time Zone
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Password Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Password Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-user-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change User Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-root-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Root Password
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-table-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Table Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Table Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomic-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomic Rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioning-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-random-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Random Row
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-reset-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Reset Auto Increment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1517,17 +1939,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
             
   
   
@@ -1554,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../../postgresql/postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1577,7 +2002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../../postgresql/postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -1717,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1740,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -1763,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1786,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -1870,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -1893,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -1916,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -1939,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2030,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2053,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2076,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2099,7 +2524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2180,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2203,7 +2628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2226,7 +2651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2266,6 +2691,373 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uninstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Uninstallation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-common-mysql-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Common MySQL Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Common MySQL Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-stop-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start / Stop Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-mysql-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show MySQL Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-process-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Process Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Process Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-process-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Process List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-only-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Only Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-a-query-rds-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kill a Query (RDS Example)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-innodb-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show InnoDB Transactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-active-processes-excluding-sleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Active Processes (excluding sleep)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-deadlock-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Deadlock Info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-index-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Index Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Index Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-usage-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Usage Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardinality &amp; Size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-unused-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Unused Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-redundant-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Redundant Indexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-index-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Index Statistics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-slow-query-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Slow Query Log
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Slow Query Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-configure-slow-query-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable &amp; Configure Slow Query Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-slow-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Slow Queries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. File Upload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Time Zone
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Time Zone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-current-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Current Time Zone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-connection-string-with-time-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Connection String with Time Zone
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Password Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Password Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-user-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change User Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-root-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset Root Password
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-table-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Table Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Table Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomic-rename" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomic Rename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioning-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-random-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Random Row
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-reset-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Reset Auto Increment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2277,8 +3069,234 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="mysql-cheatsheet">MySQL Cheatsheet</h1>
+<p>This document contains useful commands, configurations, and troubleshooting tips for MySQL.</p>
+<h2 id="1-installation">1. Installation</h2>
+<p>Install MySQL via Homebrew:</p>
+<details>
+<summary>Click to expand</summary>
+
+
+<pre><code class="language-bash">brew install mysql@8.0
+echo 'export PATH=&quot;/usr/local/opt/mysql@8.0/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile
+export PATH=&quot;/usr/local/opt/mysql@8.0/bin:$PATH&quot;
+source ~/.bash_profile
+</code></pre>
+
+
+</details>
+
+<p>Check version:</p>
+<pre><code class="language-bash">$ mysql --version
+mysql  Ver 8.0.43 for macos14.7 on x86_64 (Homebrew)
+</code></pre>
+<hr />
+<h2 id="2-uninstallation">2. Uninstallation</h2>
+<p>Uninstall MySQL Completely:</p>
+<details>
+<summary>Click to expand</summary>
+
+
+<pre><code class="language-bash">brew uninstall mysql
+brew uninstall mysql-client
+brew uninstall --ignore-dependencies mysql-client
+brew cleanup
+
+sudo rm -rf /usr/local/var/mysql
+sudo rm -rf /usr/local/mysql*
+sudo rm -rf /usr/local/mysql-client*
+sudo rm -rf /Library/StartupItems/MySQLCOM
+sudo rm -rf /Library/PreferencePanes/My*
+sudo rm -rf /Library/Receipts/mysql*
+sudo rm -rf /Library/Receipts/MySQL*
+</code></pre>
+
+
+</details>
+
+<p>Reference: <a href="https://gist.github.com/vitorbritto/0555879fe4414d18569d">Remove MySQL completely</a></p>
+<hr />
+<h2 id="3-common-mysql-commands">3. Common MySQL Commands</h2>
+<h3 id="start-stop-server">Start / Stop Server</h3>
+<pre><code class="language-bash">mysql.server start
+mysql.server stop
+</code></pre>
+<h3 id="login">Login</h3>
+<pre><code class="language-bash">mysql -u root -p
+</code></pre>
+<h3 id="show-mysql-version">Show MySQL Version</h3>
+<pre><code class="language-mysql">SHOW VARIABLES LIKE &quot;%version%&quot;;
+</code></pre>
+<hr />
+<h2 id="4-process-management">4. Process Management</h2>
+<h3 id="show-process-list">Show Process List</h3>
+<pre><code class="language-mysql">SHOW PROCESSLIST;
+</code></pre>
+<h3 id="show-only-queries">Show Only Queries</h3>
+<pre><code class="language-mysql">SELECT *
+FROM INFORMATION_SCHEMA.PROCESSLIST
+WHERE COMMAND = 'Query'
+ORDER BY TIME DESC;
+</code></pre>
+<h3 id="kill-a-query-rds-example">Kill a Query (RDS Example)</h3>
+<pre><code class="language-mysql">CALL mysql.rds_kill(query_id);
+</code></pre>
+<h3 id="show-innodb-transactions">Show InnoDB Transactions</h3>
+<pre><code class="language-mysql">SELECT *
+FROM INFORMATION_SCHEMA.INNODB_TRX;
+</code></pre>
+<h3 id="show-active-processes-excluding-sleep">Show Active Processes (excluding sleep)</h3>
+<pre><code class="language-mysql">SELECT *
+FROM information_schema.processlist
+WHERE command &lt;&gt; 'Sleep' AND (db IN ('example_db') OR db IS NULL);
+</code></pre>
+<hr />
+<h2 id="5-deadlock-info">5. Deadlock Info</h2>
+<pre><code class="language-mysql">SHOW ENGINE INNODB STATUS;
+</code></pre>
+<hr />
+<h2 id="6-index-management">6. Index Management</h2>
+<h3 id="show-indexes">Show Indexes</h3>
+<pre><code class="language-mysql">SHOW INDEX FROM example_db.example_table;
+</code></pre>
+<h3 id="index-usage-statistics">Index Usage Statistics</h3>
+<pre><code class="language-mysql">SELECT INDEX_NAME, COUNT_STAR, COUNT_READ, COUNT_WRITE
+FROM performance_schema.table_io_waits_summary_by_index_usage
+WHERE OBJECT_SCHEMA = 'example_db' AND OBJECT_NAME = 'example_table'
+ORDER BY COUNT_STAR;
+</code></pre>
+<h3 id="cardinality-size">Cardinality &amp; Size</h3>
+<pre><code class="language-mysql">SELECT TABLE_NAME, INDEX_NAME, CARDINALITY, INDEX_TYPE
+FROM information_schema.STATISTICS
+WHERE TABLE_SCHEMA = 'example_db' AND TABLE_NAME = 'example_table';
+</code></pre>
+<h3 id="find-unused-indexes">Find Unused Indexes</h3>
+<pre><code class="language-mysql">SELECT *
+FROM sys.schema_unused_indexes
+WHERE object_schema = 'example_db' AND object_name = 'example_table';
+</code></pre>
+<h3 id="find-redundant-indexes">Find Redundant Indexes</h3>
+<pre><code class="language-mysql">SELECT *
+FROM sys.schema_redundant_indexes
+WHERE table_schema = 'example_db' AND table_name = 'example_table';
+</code></pre>
+<h3 id="check-index-statistics">Check Index Statistics</h3>
+<pre><code class="language-mysql">SELECT *
+FROM sys.schema_index_statistics
+WHERE table_schema = 'example_db' AND table_name = 'example_table';
+</code></pre>
+<hr />
+<h2 id="7-slow-query-log">7. Slow Query Log</h2>
+<h3 id="enable-configure-slow-query-log">Enable &amp; Configure Slow Query Log</h3>
+<p><code>my.cnf</code> sample:</p>
+<pre><code class="language-ini"># Log queries not using indexes
+log_queries_not_using_indexes = 0
+
+# Enable slow query log
+slow_query_log = 1
+
+# Threshold for slow queries (seconds)
+long_query_time = 3
+
+# File to store slow queries
+slow-query-log-file = /var/lib/mysql/logs/slow.log
+</code></pre>
+<h3 id="view-slow-queries">View Slow Queries</h3>
+<pre><code class="language-mysql">-- Show slow log entries for a specific DB
+SELECT *
+FROM mysql.slow_log
+WHERE db = 'example_db'
+ORDER BY start_time DESC;
+</code></pre>
+<hr />
+<h2 id="8-file-upload">8. File Upload</h2>
+<pre><code class="language-mysql">LOAD DATA LOCAL INFILE '/path/to/file.csv'
+    INTO TABLE example_schema.example_table
+    FIELDS TERMINATED BY ';'
+    OPTIONALLY ENCLOSED BY '&quot;'
+    LINES TERMINATED BY '\n'
+    IGNORE 1 LINES;
+
+SHOW WARNINGS;
+</code></pre>
+<hr />
+<h2 id="9-time-zone">9. Time Zone</h2>
+<h3 id="check-current-time-zone">Check Current Time Zone</h3>
+<pre><code class="language-mysql">SELECT @@time_zone;
+</code></pre>
+<h3 id="example-connection-string-with-time-zone">Example Connection String with Time Zone</h3>
+<pre><code># Asia/Baghdad
+jdbc:mysql://example_host:3306/example_db?useSSL=false&amp;serverTimezone=Asia/Baghdad
+
+# GMT+3
+jdbc:mysql://example_host:3306/example_db?useSSL=false&amp;serverTimezone=GMT%2B3
+</code></pre>
+<hr />
+<h2 id="10-password-management">10. Password Management</h2>
+<h3 id="change-user-password">Change User Password</h3>
+<pre><code>mysql -u root
+
+ALTER USER 'example_user'@'localhost' IDENTIFIED BY 'new_password';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '';
+
+FLUSH PRIVILEGES;
+
+mysql -u root -h localhost -p
+mysql.server restart
+</code></pre>
+<p>Reference: <a href="https://www.cyberciti.biz/faq/mysql-change-user-password/">Change MySQL Password</a></p>
+<h3 id="reset-root-password">Reset Root Password</h3>
+<pre><code class="language-mysql">UPDATE mysql.user
+SET authentication_string=NULL
+WHERE User = 'root';
+FLUSH PRIVILEGES;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'new_password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+</code></pre>
+<p>Reference: <a href="https://gist.github.com/zubaer-ahammed/c81c9a0e37adc1cb9a6cdc61c4190f52">Password Reset Gist</a></p>
+<hr />
+<h2 id="11-table-operations">11. Table Operations</h2>
+<h3 id="atomic-rename">Atomic Rename</h3>
+<pre><code class="language-mysql">RENAME TABLE old_table TO old_table_backup, new_table TO old_table;
+</code></pre>
+<h3 id="partitioning-example">Partitioning Example</h3>
+<pre><code class="language-mysql">ALTER TABLE example_table
+REORGANIZE PARTITION p_max INTO (
+    PARTITION p_20201023 VALUES LESS THAN ('2020-10-24'),
+    PARTITION p_20201024 VALUES LESS THAN ('2020-10-25'),
+    PARTITION p_max VALUES LESS THAN (MAXVALUE)
+    );
+</code></pre>
+<hr />
+<h2 id="12-random-row">12. Random Row</h2>
+<pre><code class="language-mysql">SELECT *
+FROM example_table
+ORDER BY RAND()
+LIMIT 1;
+</code></pre>
+<hr />
+<h2 id="13-reset-auto-increment">13. Reset Auto Increment</h2>
+<pre><code class="language-mysql">ALTER TABLE example_table
+AUTO_INCREMENT = 1;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2343,10 +3361,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
