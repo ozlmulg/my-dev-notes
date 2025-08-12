@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../apicurio-via-docker/">
+        <link rel="prev" href="../../kubernetes/kubeadm/">
       
       
-        <link rel="next" href="../multi-gitter/">
+        <link rel="next" href="../tfenv/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>KafkaUI - My Dev Notes</title>
+        <title>TerraformL Cheatsheet - My Dev Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#local-kafka-ui-setup-with-docker" class="md-skip">
+        <a href="#terraform-cheatsheet" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              KafkaUI
+              TerraformL Cheatsheet
             
           </span>
         </div>
@@ -361,11 +361,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../terraform/terraform-cheatsheet/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -491,13 +493,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../apicurio-via-docker/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -1232,8 +1232,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1245,19 +1247,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1270,7 +1275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Terraform
@@ -1281,10 +1286,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../terraform/terraform-cheatsheet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TerraformL Cheatsheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1295,6 +1322,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Import
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-state-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform State Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-aliases-and-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Aliases and Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-console-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Console Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile-commands-for-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile Commands for Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atlantis-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atlantis Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-terraform-registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Terraform Registries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1307,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/tfenv/" class="md-nav__link">
+      <a href="../tfenv/" class="md-nav__link">
         
   
   
@@ -2162,10 +2299,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -2179,22 +2314,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -2207,7 +2339,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -2221,7 +2353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apicurio-via-docker/" class="md-nav__link">
+      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2241,32 +2373,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    KafkaUI
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2277,71 +2387,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-list-available-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. List Available Topics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-get-kafka-cluster-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Get Kafka Cluster ID
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-run-kafka-ui-with-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Run Kafka UI with Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-access-kafka-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Access Kafka UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2354,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multi-gitter/" class="md-nav__link">
+      <a href="../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2404,45 +2449,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-list-available-topics" class="md-nav__link">
+  <a href="#terraform-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      1. List Available Topics
+      Terraform Basics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-get-kafka-cluster-id" class="md-nav__link">
+  <a href="#terraform-import" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Get Kafka Cluster ID
+      Terraform Import
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-run-kafka-ui-with-docker" class="md-nav__link">
+  <a href="#terraform-state-management" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Run Kafka UI with Docker
+      Terraform State Management
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-access-kafka-ui" class="md-nav__link">
+  <a href="#terraform-aliases-and-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Access Kafka UI
+      Terraform Aliases and Providers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#terraform-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      Terraform Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-console-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Console Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makefile-commands-for-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile Commands for Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atlantis-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atlantis Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-terraform-registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Terraform Registries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Notes
     </span>
   </a>
   
@@ -2464,55 +2554,172 @@
 
 
 
-<h1 id="local-kafka-ui-setup-with-docker">Local Kafka UI Setup with Docker</h1>
-<p>This guide explains how to set up and use <strong>Kafka UI</strong> locally with Docker for debugging and inspecting Kafka topics.</p>
-<hr />
-<h2 id="1-list-available-topics">1. List Available Topics</h2>
-<p>To list the topics in a running Kafka cluster:</p>
-<pre><code>kafka-topics --bootstrap-server &lt;KAFKA_BOOTSTRAP_SERVER&gt; --list
-</code></pre>
-<p>Example:</p>
-<pre><code>kafka-topics --bootstrap-server my-cluster.kafka.local:9094 --list
-</code></pre>
-<hr />
-<h2 id="2-get-kafka-cluster-id">2. Get Kafka Cluster ID</h2>
-<p>To retrieve the cluster ID of your local or remote Kafka cluster:</p>
-<pre><code>kafka-cluster cluster-id --bootstrap-server &lt;KAFKA_BOOTSTRAP_SERVER&gt;
-</code></pre>
-<p>Example:</p>
-<pre><code>kafka-cluster cluster-id --bootstrap-server my-cluster.kafka.local:9094
-</code></pre>
-<p>You will need this <strong>Cluster ID</strong> in the next step.</p>
-<hr />
-<h2 id="3-run-kafka-ui-with-docker">3. Run Kafka UI with Docker</h2>
-<p>Run the Kafka UI Docker container, replacing <code>&lt;CLUSTER_ID&gt;</code> and <code>&lt;KAFKA_BOOTSTRAP_SERVER&gt;</code> with your values:</p>
-<pre><code>docker run -d -p 8080:8080
--e KAFKA_CLUSTERS_0_NAME=&lt;CLUSTER_ID&gt;
--e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=&lt;KAFKA_BOOTSTRAP_SERVER&gt;
-provectuslabs/kafka-ui
-</code></pre>
-<p>Example:</p>
-<pre><code>docker run -d -p 8080:8080
--e KAFKA_CLUSTERS_0_NAME=abcd1234ClusterId
--e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=my-cluster.kafka.local:9094
-provectuslabs/kafka-ui
-</code></pre>
-<hr />
-<h2 id="4-access-kafka-ui">4. Access Kafka UI</h2>
-<p>Once the container is running, open your browser and navigate to: <code>http://localhost:8080</code></p>
-<p>You will see the Kafka UI interface where you can:</p>
+<h1 id="terraform-cheatsheet">Terraform Cheatsheet</h1>
+<h2 id="terraform-basics">Terraform Basics</h2>
+<p>Terraform is an infrastructure-as-code tool that allows you to provision and manage cloud resources declaratively. Key
+components include:</p>
 <ul>
-<li>Browse topics</li>
-<li>View messages</li>
-<li>Manage consumer groups</li>
-<li>Inspect configurations</li>
+<li><strong>Providers:</strong> Plugins that manage resources (e.g., <code>azurerm</code> for Azure, <code>aws</code> for AWS)</li>
+<li><strong>Modules:</strong> Reusable Terraform configurations</li>
+<li><strong>State:</strong> Maintains the current state of infrastructure</li>
+<li><strong>Workspaces/Environments:</strong> Logical separation for different deployment stages (dev, prod, etc.)</li>
 </ul>
 <hr />
-<h2 id="notes">Notes</h2>
+<h2 id="terraform-import">Terraform Import</h2>
+<p>When managing existing infrastructure with Terraform, <code>terraform import</code> allows you to bring existing resources into
+Terraform's state.</p>
+<p><strong>Example: Import an Azure Service Bus Subscription Rule</strong></p>
+<pre><code class="language-yaml">- name: &quot;Terraform Import&quot;
+  run: terraform import azurerm_servicebus_subscription_rule.example /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/microsoft.servicebus/namespaces/{namespace}/topics/{topic}/subscriptions/{subscription}/rules/{rule}
+  working-directory: ${{ github.workspace }}/terraform/environments/dev
+</code></pre>
+<p><strong>Sample import commands:</strong></p>
+<pre><code class="language-bash"># List current state resources
+terraform state list
+
+# Remove resource from state if it no longer exists
+terraform state rm module.example.azurerm_dns_a_record.resource_name
+
+# Import an existing Azure DNS A record
+terraform import module.dns.azurerm_dns_a_record.resource_name /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/dnszones/{zoneName}/A/{recordName}
+</code></pre>
+<hr />
+<h2 id="terraform-state-management">Terraform State Management</h2>
+<p>Managing the Terraform state file is critical for avoiding conflicts and ensuring proper tracking of resources.</p>
 <ul>
-<li><strong>Docker</strong> must be installed and running on your local machine.</li>
-<li>Ensure that <strong>port 8080</strong> is not already in use. You can check by running: <code>lsof -i:8080</code></li>
-<li>Replace placeholder values (<code>&lt;CLUSTER_ID&gt;</code> and <code>&lt;KAFKA_BOOTSTRAP_SERVER&gt;</code>) with actual values from your environment.</li>
+<li>To manually edit state:</li>
+</ul>
+<pre><code class="language-bash"># Pull state locally
+terraform state pull &gt; terraform.tfstate
+
+# Edit terraform.tfstate file carefully
+
+# Push edited state back
+terraform state push terraform.tfstate
+</code></pre>
+<ul>
+<li>To list resources in state:</li>
+</ul>
+<pre><code class="language-bash">terraform state list
+</code></pre>
+<ul>
+<li>To remove resources from state:</li>
+</ul>
+<pre><code class="language-bash">terraform state rm &lt;resource_address&gt;
+</code></pre>
+<hr />
+<h2 id="terraform-aliases-and-providers">Terraform Aliases and Providers</h2>
+<p>Terraform allows configuring multiple provider instances with aliases, useful for managing different subscriptions or
+environments.</p>
+<pre><code class="language-hcl">provider &quot;azurerm&quot; {
+  version         = &quot;=2.33.0&quot;
+  alias           = &quot;development&quot;
+  subscription_id = &quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;
+  features {}
+}
+
+data &quot;azurerm_dns_zone&quot; &quot;example&quot; {
+  provider            = azurerm.development
+  name                = &quot;example.dev&quot;
+  resource_group_name = &quot;dns-example-group&quot;
+}
+</code></pre>
+<hr />
+<h2 id="terraform-best-practices">Terraform Best Practices</h2>
+<ul>
+<li>Use version pinning for providers to avoid unexpected changes.</li>
+<li>Use modules to structure reusable code.</li>
+<li>Separate environments using workspaces or directory structure.</li>
+<li>Manage state securely with remote backends.</li>
+<li>Use <code>terraform fmt</code> and <code>terraform validate</code> regularly.</li>
+<li>Plan and apply with targeted resources if needed:</li>
+</ul>
+<pre><code class="language-bash">terraform plan -target='module.example.resource'
+terraform apply -target='module.example.resource'
+</code></pre>
+<ul>
+<li>Use community best practices,
+  e.g., <a href="https://github.com/terraform-aws-modules/terraform-aws-lambda">terraform-aws-lambda</a>.</li>
+</ul>
+<hr />
+<h2 id="terraform-console-examples">Terraform Console Examples</h2>
+<p>Terraform Console is a useful interactive REPL to test expressions:</p>
+<pre><code class="language-bash">$ echo 'replace(&quot;example_name&quot;, &quot;_&quot;, &quot;-&quot;)' | terraform console
+example-name
+
+$ echo 'split(&quot;,&quot;, &quot;foo,bar,baz&quot;)' | terraform console
+[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]
+</code></pre>
+<hr />
+<h2 id="makefile-commands-for-terraform">Makefile Commands for Terraform</h2>
+<p>Example Makefile snippets to standardize Terraform commands:</p>
+<details>
+<summary>terraform.sh</summary>
+
+
+<pre><code class="language-makefile">MODULE_TERRAFORM=.
+
+##@ TERRAFORM
+
+terraform-init: ## Init tf, sample usage: make terraform-init env=dev
+    terraform -chdir=terraform/environments/$(env) init -upgrade
+
+terraform-format-check: ## Check formatting of tf files
+    terraform fmt -check -recursive
+
+terraform-format: ## Format tf files
+    terraform fmt -recursive
+
+terraform-validate: ## Validate tf files, sample usage: make terraform-validate env=dev
+    terraform -chdir=terraform/environments/$(env) validate
+
+terraform-state-list: ## List tf state, sample usage: make terraform-state-list env=dev
+    terraform -chdir=terraform/environments/$(env) state list
+
+terraform-plan: ## Plan tf, sample usage: make terraform-plan env=dev
+    terraform -chdir=terraform/environments/$(env) plan -lock=false
+
+terraform-import: ## Run tf import script, sample usage: make terraform-import env=dev
+    (cd terraform/environments/$(env) &amp;&amp; ./imports.sh)
+</code></pre>
+
+
+</details>
+
+<hr />
+<h2 id="atlantis-integration">Atlantis Integration</h2>
+<p>Atlantis automates Terraform workflows on GitHub pull requests.</p>
+<p>Sample commands for Atlantis:</p>
+<pre><code class="language-bash">atlantis plan -d 'path/to/module' -- -target='module.example'
+
+atlantis apply -d 'path/to/module'
+</code></pre>
+<p>You can specify multiple targets in one command:</p>
+<pre><code class="language-bash">atlantis plan -d 'path/to/module' -- -target='module.repo1' -target='module.repo2'
+</code></pre>
+<hr />
+<h2 id="sample-terraform-registries">Sample Terraform Registries</h2>
+<ul>
+<li>
+<p>Refer to
+  the <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_database">official Azure PostgreSQL Terraform resource documentation</a>
+  for managing PostgreSQL databases on Azure.</p>
+</li>
+<li>
+<p>Refer to
+  the <a href="https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository#squash_merge_commit_message">official Github Repository Terraform resource documentation</a>
+  for managing Github repositories.</p>
+</li>
+</ul>
+<hr />
+<h2 id="additional-notes">Additional Notes</h2>
+<ul>
+<li>To use specific git references for modules:</li>
+</ul>
+<pre><code class="language-hcl">source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module?ref=v1.2.3&quot;
+</code></pre>
+<ul>
+<li>Flatten nested lists in variables using <code>flatten</code> and <code>for</code> expressions to manage complex inputs effectively.</li>
 </ul>
 
 
