@@ -60,6 +60,8 @@ nav:
   - Git:
       - Git Cheatsheet: git/git-cheatsheet.md
       - Github Actions: git/github-actions.md
+      - Tmate: git/tmate.md
+      - List Github Actions: git/list-github-actions.md
   - Maven:
       - Maven Wrapper: maven/maven-wrapper.md
   - Java:

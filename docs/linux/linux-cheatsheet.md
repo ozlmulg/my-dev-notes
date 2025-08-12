@@ -7,6 +7,7 @@ This document lists some of the most commonly used Linux commands by developers,
 ## watch
 
 Runs a command repeatedly, showing its output and errors. Useful for monitoring changes in real time.
+If the command is not found, install it by using `brew install watch`.
 
 Usage:  
 `watch ls -l`
