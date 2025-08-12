@@ -78,6 +78,12 @@ nav:
       - tfenv: terraform/tfenv.md
   - Node.js:
       - nvm & npm: nodejs/nvm-npm.md
+  - Database:
+      - MySQL:
+          - MySQL Cheatsheet: database/mysql/mysql-cheatsheet.md
+      - PostgreSQL:
+          - PostgreSQL Cheatsheet: database/postgresql/postgresql-cheatsheet.md
+          - PostgreSQL JSONB Operations: database/postgresql/postgresql-jsonb-operations.md
   - Mobile:
       - Android:
           - Android Firebase Integration: mobile/android/android-firebase-integration.md
