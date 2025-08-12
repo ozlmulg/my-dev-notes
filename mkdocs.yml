@@ -75,6 +75,7 @@ nav:
       - Minikube: kubernetes/minikube.md
       - Kubeadm: kubernetes/kubeadm.md
   - Terraform:
+      - TerraformL Cheatsheet: terraform/terraform-cheatsheet.md
       - tfenv: terraform/tfenv.md
   - Node.js:
       - nvm & npm: nodejs/nvm-npm.md
