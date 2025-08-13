@@ -1271,7 +1271,7 @@
         <li class="md-nav__item">
   <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Activate kernel modules and disable swap.
+      2. Activate kernel modules and disable swap
     </span>
   </a>
   
@@ -2415,7 +2415,7 @@
         <li class="md-nav__item">
   <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Activate kernel modules and disable swap.
+      2. Activate kernel modules and disable swap
     </span>
   </a>
   
@@ -2465,7 +2465,8 @@
 
 
 <h1 id="kubeadm-installation">kubeadm Installation</h1>
-<p>You can find the kubernetes documentation <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">here.</a></p>
+<p>You can find the kubernetes
+documentation <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">here.</a></p>
 <h2 id="1-create-virtual-machines">1. Create virtual machines</h2>
 <pre><code>$ multipass launch --name master -c 2 -m 2G -d 10G
 $ multipass launch --name node1 -c 2 -m 2G -d 10G
@@ -2474,7 +2475,7 @@ $ multipass launch --name node1 -c 2 -m 2G -d 10G
 <li>Connect to the master node and run <code>sudo hostnamectl set-hostname master</code>.<br />
   Connect to node1 and run <code>sudo hostnamectl set-hostname node1</code>.</li>
 </ul>
-<h2 id="2-activate-kernel-modules-and-disable-swap">2. Activate kernel modules and disable swap.</h2>
+<h2 id="2-activate-kernel-modules-and-disable-swap">2. Activate kernel modules and disable swap</h2>
 <pre><code>$ sudo modprobe overlay
 $ sudo modprobe br_netfilter
 </code></pre>
@@ -2522,7 +2523,7 @@ $ sudo ufw allow 10257/tcp
 $ sudo apt-get update
 $ sudo apt-get install -y apt-transport-https ca-certificates curl
 $ sudo mkdir -p -m 755 /etc/apt/keyrings
-### Eğer Kubernetes 1.31'den başka bir versiyon yüklemek isterseniz aşağıdaki iki komuttaki v1.31 kısımlarını düzeltin ####
+### If you want to install a Kubernetes version other than 1.31, update the v1.31 parts in the two commands below.
 $ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 $ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 $ sudo apt-get update
