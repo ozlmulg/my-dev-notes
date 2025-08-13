@@ -40,6 +40,8 @@ sudo rm -rf /Library/Developer/CommandLineTools
 sudo xcode-select --install
 ```
 
+---
+
 ## Prepare Your Scripts
 
 Make sure your shell scripts have execute permission:
@@ -47,6 +49,8 @@ Make sure your shell scripts have execute permission:
 ```bash
 chmod +x ./update_codeowners.sh
 ```
+
+---
 
 ## Usage Examples
 
@@ -88,6 +92,8 @@ multi-gitter run ./update_codeowners.sh \
 --pr-body "This PR updates the CODEOWNERS file with correct team assignments." \
 --dry-run
 ```
+
+---
 
 ## Sample Scripts
 
