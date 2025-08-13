@@ -1,4 +1,4 @@
-# nvm & npm - Node Version & Package Manager
+# Nvm & Npm - Node Version & Package Manager
 
 **nvm** (Node Version Manager) allows you to install and switch between multiple Node.js versions easily.  
 **npm** (Node Package Manager) is used to manage JavaScript packages for Node.js.

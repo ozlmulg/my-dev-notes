@@ -1,4 +1,4 @@
-# Linux Network Commands
+# Linux Network Cheatsheet
 
 This document lists some of the most commonly used Linux network commands by developers, with descriptions and usage
 examples.

@@ -1,4 +1,4 @@
-# Apicurio Installation via Docker
+# Apicurio via Docker
 
 Apicurio Registry is an open-source registry for storing and retrieving API artifacts such as OpenAPI definitions,
 AsyncAPI definitions, Avro schemas, JSON Schema, and more. This guide explains how to install and run Apicurio **(both

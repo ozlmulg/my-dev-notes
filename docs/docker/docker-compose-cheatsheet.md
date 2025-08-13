@@ -1,4 +1,4 @@
-# Docker Compose Commands
+# Docker Compose Cheatsheet
 
 Docker Compose is a tool for defining and running multi-container Docker applications. Below are some common Docker
 Compose commands with explanations using the new `docker compose` syntax.

@@ -1,4 +1,4 @@
-# Local Kafka UI Setup with Docker
+# KafkaUI via Docker
 
 This guide explains how to set up and use **Kafka UI** locally with Docker for debugging and inspecting Kafka topics.
 

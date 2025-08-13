@@ -190,8 +190,8 @@ atlantis plan -d 'path/to/module' -- -target='module.repo1' -target='module.repo
   for managing PostgreSQL databases on Azure.
 
 - Refer to
-  the [official Github Repository Terraform resource documentation](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository#squash_merge_commit_message)
-  for managing Github repositories.
+  the [official GitHub Repository Terraform resource documentation](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository#squash_merge_commit_message)
+  for managing GitHub repositories.
 
 ---
 

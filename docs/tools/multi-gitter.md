@@ -1,7 +1,7 @@
-# Multi-Repository PR Automation with Multi-Gitter
+# Multi-Gitter
 
-This document introduces a powerful tool called **Multi-Gitter**, perfect for teams like DevOps or DevEx who need to
-apply changes across many repositories efficiently.
+This document introduces a powerful tool called **Multi-Gitter**, perfect for people who need to apply changes across
+many repositories efficiently.
 
 Multi-Gitter runs a script on multiple repositories, automatically creating Pull Requests (PRs) with custom titles and
 bodies. This allows teams to review and merge changes consistently across all relevant repos.

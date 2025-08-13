@@ -1,4 +1,4 @@
-# kubeadm Installation
+# Kubeadm
 
 You can find the kubernetes
 documentation [here.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)

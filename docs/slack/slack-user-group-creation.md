@@ -1,10 +1,10 @@
-# Creating Slack User Groups via API
+# Slack User Group Creation
+
+## Creating Slack User Groups via API
 
 You can create user groups in Slack to mention multiple users at once efficiently.
 
----
-
-## Example `curl` request to create a user group
+### Example `curl` request to create a user group
 
 ```bash
 curl -X POST https://slack.com/api/usergroups.create \

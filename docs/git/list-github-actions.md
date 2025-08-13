@@ -1,4 +1,4 @@
-# List GitHub Actions Jobs and Steps
+# List GitHub Actions
 
 This script scans a given GitHub Actions workflow file or an entire folder containing multiple workflow files, and lists
 all jobs and their steps.

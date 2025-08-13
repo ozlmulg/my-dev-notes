@@ -1,4 +1,4 @@
-# Apache Maven Wrapper
+# Maven Wrapper
 
 The **Maven Wrapper** has officially been released by the Apache Maven Project!
 

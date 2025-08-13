@@ -1,4 +1,4 @@
-# Using tmate for Debugging in GitHub Actions
+# Tmate
 
 [tmate](https://github.com/mxschmitt/action-tmate) is a tool that lets you connect to a running GitHub Actions runner
 via SSH, allowing real-time interactive debugging.

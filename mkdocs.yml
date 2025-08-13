@@ -59,26 +59,26 @@ nav:
       - Linux Network Cheatsheet: linux/linux-network-cheatsheet.md
   - Git:
       - Git Cheatsheet: git/git-cheatsheet.md
-      - Github Actions: git/github-actions.md
+      - GitHub Actions: git/github-actions.md
       - Tmate: git/tmate.md
-      - List Github Actions: git/list-github-actions.md
+      - List GitHub Actions: git/list-github-actions.md
   - Maven:
       - Maven Wrapper: maven/maven-wrapper.md
   - Java:
       - Jenv: java/jenv.md
   - Docker:
-      - Docker CLI: docker/docker-cli.md
       - Docker Cheatsheet: docker/docker-cheatsheet.md
-      - Docker Compose: docker/docker-compose.md
+      - Docker Compose Cheatsheet: docker/docker-compose-cheatsheet.md
+      - Docker Examples: docker/docker-examples.md
   - Kubernetes:
-      - Kubectl: kubernetes/kubectl.md
       - Minikube: kubernetes/minikube.md
+      - Kubectl: kubernetes/kubectl.md
       - Kubeadm: kubernetes/kubeadm.md
   - Terraform:
       - Terraform Cheatsheet: terraform/terraform-cheatsheet.md
-      - tfenv: terraform/tfenv.md
+      - Tfenv: terraform/tfenv.md
   - Node.js:
-      - nvm & npm: nodejs/nvm-npm.md
+      - Nvm & Npm: nodejs/nvm-npm.md
   - Database:
       - MySQL:
           - MySQL Cheatsheet: database/mysql/mysql-cheatsheet.md
@@ -100,8 +100,8 @@ nav:
       - Slack Reminder: slack/slack-reminder.md
       - Slack Message: slack/slack-message.md
       - Slack User Group Creation: slack/slack-user-group-creation.md
-      - Slack Github Workflows: slack/slack-github-workflows.md
+      - Slack GitHub Workflows: slack/slack-github-workflows.md
   - Tools:
-      - Apicurio: tools/apicurio-via-docker.md
-      - KafkaUI: tools/kafkaui-via-docker.md
+      - Apicurio via Docker: tools/apicurio-via-docker.md
+      - KafkaUI via Docker: tools/kafkaui-via-docker.md
       - Multi Gitter: tools/multi-gitter.md

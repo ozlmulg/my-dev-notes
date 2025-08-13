@@ -1,4 +1,4 @@
-# Linux Commands
+# Linux Cheatsheet
 
 This document lists some of the most commonly used Linux commands by developers, with descriptions and usage examples.
 
