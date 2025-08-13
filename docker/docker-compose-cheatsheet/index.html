@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../java/jenv/">
+        <link rel="prev" href="../docker-cheatsheet/">
       
       
-        <link rel="next" href="../docker-cheatsheet/">
+        <link rel="next" href="../docker-examples/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Docker CLI - My Dev Notes</title>
+        <title>Docker Compose Cheatsheet - My Dev Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-command-reference" class="md-skip">
+        <a href="#docker-compose-cheatsheet" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker CLI
+              Docker Compose Cheatsheet
             
           </span>
         </div>
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../docker-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../kubernetes/kubectl/" class="md-tabs__link">
+        <a href="../../kubernetes/minikube/" class="md-tabs__link">
           
   
   
@@ -756,7 +756,7 @@
   
   
   <span class="md-ellipsis">
-    Github Actions
+    GitHub Actions
     
   </span>
   
@@ -802,7 +802,7 @@
   
   
   <span class="md-ellipsis">
-    List Github Actions
+    List GitHub Actions
     
   </span>
   
@@ -1034,116 +1034,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Docker CLI
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Docker CLI
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#image-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#container-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Container Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volume-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Volume Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -1167,15 +1057,161 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../docker-compose/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Docker Compose Cheatsheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Docker Compose
+    Docker Compose Cheatsheet
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services-in-detached-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Services in Detached Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-running-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Running Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuilding-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restarting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restarting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services Without Removing Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Examples
     
   </span>
   
@@ -1251,12 +1287,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/kubectl/" class="md-nav__link">
+      <a href="../../kubernetes/minikube/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubectl
+    Minikube
     
   </span>
   
@@ -1274,12 +1310,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/minikube/" class="md-nav__link">
+      <a href="../../kubernetes/kubectl/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Minikube
+    Kubectl
     
   </span>
   
@@ -1404,7 +1440,7 @@
   
   
   <span class="md-ellipsis">
-    tfenv
+    Tfenv
     
   </span>
   
@@ -1481,7 +1517,7 @@
   
   
   <span class="md-ellipsis">
-    nvm & npm
+    Nvm & Npm
     
   </span>
   
@@ -2232,7 +2268,7 @@
   
   
   <span class="md-ellipsis">
-    Slack Github Workflows
+    Slack GitHub Workflows
     
   </span>
   
@@ -2313,7 +2349,7 @@
   
   
   <span class="md-ellipsis">
-    Apicurio
+    Apicurio via Docker
     
   </span>
   
@@ -2336,7 +2372,7 @@
   
   
   <span class="md-ellipsis">
-    KafkaUI
+    KafkaUI via Docker
     
   </span>
   
@@ -2404,45 +2440,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#image-commands" class="md-nav__link">
+  <a href="#starting-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Image Commands
+      Starting Services
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#container-commands" class="md-nav__link">
+  <a href="#starting-services-in-detached-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Container Commands
+      Starting Services in Detached Mode
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#volume-commands" class="md-nav__link">
+  <a href="#stopping-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Volume Commands
+      Stopping Services
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-commands" class="md-nav__link">
+  <a href="#viewing-running-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      Network Commands
+      Viewing Running Containers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-commands" class="md-nav__link">
+  <a href="#viewing-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      System Commands
+      Viewing Logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuilding-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restarting-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restarting Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping Services Without Removing Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
     </span>
   </a>
   
@@ -2464,43 +2536,111 @@
 
 
 
-<h1 id="docker-command-reference">Docker Command Reference</h1>
-<h2 id="image-commands">Image Commands</h2>
+<h1 id="docker-compose-cheatsheet">Docker Compose Cheatsheet</h1>
+<p>Docker Compose is a tool for defining and running multi-container Docker applications. Below are some common Docker
+Compose commands with explanations using the new <code>docker compose</code> syntax.</p>
+<hr />
+<h2 id="starting-services">Starting Services</h2>
+<pre><code class="language-bash">docker compose up
+</code></pre>
 <ul>
-<li><code>docker build</code> — Build an image from a Dockerfile</li>
-<li><code>docker images</code> — List images</li>
-<li><code>docker rmi</code> — Remove one or more images</li>
-<li><code>docker tag</code> — Tag an image for a repository</li>
+<li>Builds, (re)creates, starts, and attaches to containers for a service defined in <code>docker-compose.yml</code>.</li>
 </ul>
-<h2 id="container-commands">Container Commands</h2>
+<hr />
+<h2 id="starting-services-in-detached-mode">Starting Services in Detached Mode</h2>
+<pre><code class="language-bash">docker compose up -d
+</code></pre>
 <ul>
-<li><code>docker run</code> — Run a container</li>
-<li><code>docker ps</code> — List running containers</li>
-<li><code>docker stop</code> — Stop one or more running containers</li>
-<li><code>docker start</code> — Start one or more stopped containers</li>
-<li><code>docker restart</code> — Restart containers</li>
-<li><code>docker rm</code> — Remove one or more containers</li>
-<li><code>docker exec</code> — Run a command inside a running container</li>
-<li><code>docker logs</code> — Fetch logs from a container</li>
+<li>Starts the containers in the background (detached mode).</li>
 </ul>
-<h2 id="volume-commands">Volume Commands</h2>
+<hr />
+<h2 id="stopping-services">Stopping Services</h2>
+<pre><code class="language-bash">docker compose down
+</code></pre>
 <ul>
-<li><code>docker volume create</code> — Create a volume</li>
-<li><code>docker volume ls</code> — List volumes</li>
-<li><code>docker volume rm</code> — Remove a volume</li>
+<li>Stops and removes containers, networks, volumes, and images created by <code>docker compose up</code>.</li>
 </ul>
-<h2 id="network-commands">Network Commands</h2>
+<hr />
+<h2 id="viewing-running-containers">Viewing Running Containers</h2>
+<pre><code class="language-bash">docker compose ps
+</code></pre>
 <ul>
-<li><code>docker network create</code> — Create a network</li>
-<li><code>docker network ls</code> — List networks</li>
-<li><code>docker network rm</code> — Remove a network</li>
+<li>Lists containers started by <code>docker compose</code>.</li>
 </ul>
-<h2 id="system-commands">System Commands</h2>
+<hr />
+<h2 id="viewing-logs">Viewing Logs</h2>
+<pre><code class="language-bash">docker compose logs
+</code></pre>
 <ul>
-<li><code>docker system prune</code> — Remove unused data</li>
-<li><code>docker info</code> — Display system-wide information</li>
-<li><code>docker version</code> — Show Docker version info</li>
+<li>Shows output logs from containers.</li>
 </ul>
+<hr />
+<h2 id="rebuilding-services">Rebuilding Services</h2>
+<pre><code class="language-bash">docker compose build
+</code></pre>
+<ul>
+<li>Builds or rebuilds services.</li>
+</ul>
+<hr />
+<h2 id="restarting-services">Restarting Services</h2>
+<pre><code class="language-bash">docker compose restart
+</code></pre>
+<ul>
+<li>Restarts running containers.</li>
+</ul>
+<hr />
+<h2 id="stopping-services-without-removing-containers">Stopping Services Without Removing Containers</h2>
+<pre><code class="language-bash">docker compose stop
+</code></pre>
+<ul>
+<li>Stops running containers but does not remove them.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker compose up</code></td>
+<td>Start and attach to containers</td>
+</tr>
+<tr>
+<td><code>docker compose up -d</code></td>
+<td>Start containers in detached mode</td>
+</tr>
+<tr>
+<td><code>docker compose down</code></td>
+<td>Stop and remove containers and networks</td>
+</tr>
+<tr>
+<td><code>docker compose ps</code></td>
+<td>List containers</td>
+</tr>
+<tr>
+<td><code>docker compose logs</code></td>
+<td>Show container logs</td>
+</tr>
+<tr>
+<td><code>docker compose build</code></td>
+<td>Build or rebuild services</td>
+</tr>
+<tr>
+<td><code>docker compose restart</code></td>
+<td>Restart running containers</td>
+</tr>
+<tr>
+<td><code>docker compose stop</code></td>
+<td>Stop containers without removing them</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>For more info, visit the official docs: https://docs.docker.com/compose/</p>
 
 
 

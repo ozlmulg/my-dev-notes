@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../kubectl/">
+        <link rel="prev" href="../../docker/docker-examples/">
       
       
-        <link rel="next" href="../kubeadm/">
+        <link rel="next" href="../kubectl/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minikube-usage-basic-commands" class="md-skip">
+        <a href="#minikube" class="md-skip">
           Skip to content
         </a>
       
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../docker/docker-cli/" class="md-tabs__link">
+        <a href="../../docker/docker-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../kubectl/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -756,7 +756,7 @@
   
   
   <span class="md-ellipsis">
-    Github Actions
+    GitHub Actions
     
   </span>
   
@@ -802,7 +802,7 @@
   
   
   <span class="md-ellipsis">
-    List Github Actions
+    List GitHub Actions
     
   </span>
   
@@ -1032,29 +1032,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cli/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Docker CLI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
@@ -1078,12 +1055,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose/" class="md-nav__link">
+      <a href="../../docker/docker-compose-cheatsheet/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Docker Compose
+    Docker Compose Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Examples
     
   </span>
   
@@ -1156,29 +1156,6 @@
             Kubernetes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kubectl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1299,19 +1276,33 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1431,7 +1422,7 @@
   
   
   <span class="md-ellipsis">
-    tfenv
+    Tfenv
     
   </span>
   
@@ -1508,7 +1499,7 @@
   
   
   <span class="md-ellipsis">
-    nvm & npm
+    Nvm & Npm
     
   </span>
   
@@ -2259,7 +2250,7 @@
   
   
   <span class="md-ellipsis">
-    Slack Github Workflows
+    Slack GitHub Workflows
     
   </span>
   
@@ -2340,7 +2331,7 @@
   
   
   <span class="md-ellipsis">
-    Apicurio
+    Apicurio via Docker
     
   </span>
   
@@ -2363,7 +2354,7 @@
   
   
   <span class="md-ellipsis">
-    KafkaUI
+    KafkaUI via Docker
     
   </span>
   
@@ -2493,15 +2484,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2518,7 +2500,7 @@
 
 
 
-<h1 id="minikube-usage-basic-commands">Minikube Usage &amp; Basic Commands</h1>
+<h1 id="minikube">Minikube</h1>
 <p>Minikube is a tool that makes it easy to run Kubernetes locally. Below are some commonly used Minikube commands with
 brief explanations.</p>
 <hr />
@@ -2570,6 +2552,36 @@ brief explanations.</p>
 <li>Adds a new node to the Minikube cluster.</li>
 </ul>
 <hr />
+<h1 id="deleting-all-docker-objects-in-minikube">Deleting All Docker Objects in Minikube</h1>
+<p>Minikube runs its own <strong>Docker daemon</strong> inside a virtual machine (VM).<br />
+Because of this, regular Docker commands won’t affect it unless you connect to Minikube’s Docker environment first.</p>
+<hr />
+<h2 id="1-delete-all-docker-objects-inside-minikube">1️⃣ Delete All Docker Objects Inside Minikube</h2>
+<p><strong>Step 1:</strong> Connect your shell to Minikube's Docker environment</p>
+<pre><code class="language-bash">eval $(minikube docker-env)
+</code></pre>
+<p><strong>Step 2:</strong> Remove all unused containers, images, networks, and volumes</p>
+<pre><code class="language-bash">docker system prune -a --volumes
+</code></pre>
+<ul>
+<li>eval $(minikube docker-env) → Points your shell to Minikube’s Docker daemon.</li>
+<li>docker system prune -a --volumes → Removes <strong>all</strong> unused containers, images, networks, and volumes.<br />
+  ⚠ <strong>Warning:</strong> This action cannot be undone.</li>
+</ul>
+<hr />
+<h2 id="2-completely-reset-the-minikube-environment">2️⃣ Completely Reset the Minikube Environment</h2>
+<p>If you want to remove not just Docker objects, but the entire Minikube Kubernetes environment:</p>
+<pre><code class="language-bash">minikube delete --all
+</code></pre>
+<p>Afterwards, you can start fresh with:</p>
+<pre><code class="language-bash">minikube start
+</code></pre>
+<hr />
+<h2 id="3-delete-all-kubernetes-resources-only">3️⃣ Delete All Kubernetes Resources Only</h2>
+<p>If you only want to remove Kubernetes objects (pods, deployments, services, etc.) without deleting Docker images:</p>
+<pre><code class="language-bash">kubectl delete all --all -A
+</code></pre>
+<hr />
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -2606,6 +2618,10 @@ brief explanations.</p>
 <tr>
 <td><code>minikube node add</code></td>
 <td>Add new node</td>
+</tr>
+<tr>
+<td><code>minikube delete --all</code></td>
+<td>Reset the Minikube cluster</td>
 </tr>
 </tbody>
 </table>
