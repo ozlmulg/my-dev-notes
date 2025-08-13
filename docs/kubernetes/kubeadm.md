@@ -1,6 +1,7 @@
 # kubeadm Installation
 
-You can find the kubernetes documentation [here.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+You can find the kubernetes
+documentation [here.](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
 ## 1. Create virtual machines
 
@@ -12,7 +13,7 @@ $ multipass launch --name node1 -c 2 -m 2G -d 10G
 * Connect to the master node and run `sudo hostnamectl set-hostname master`.  
   Connect to node1 and run `sudo hostnamectl set-hostname node1`.
 
-## 2. Activate kernel modules and disable swap.
+## 2. Activate kernel modules and disable swap
 
 ```
 $ sudo modprobe overlay
@@ -76,7 +77,7 @@ $ sudo ufw allow 10257/tcp
 $ sudo apt-get update
 $ sudo apt-get install -y apt-transport-https ca-certificates curl
 $ sudo mkdir -p -m 755 /etc/apt/keyrings
-### Eğer Kubernetes 1.31'den başka bir versiyon yüklemek isterseniz aşağıdaki iki komuttaki v1.31 kısımlarını düzeltin ####
+### If you want to install a Kubernetes version other than 1.31, update the v1.31 parts in the two commands below.
 $ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 $ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 $ sudo apt-get update
