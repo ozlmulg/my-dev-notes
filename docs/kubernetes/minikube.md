@@ -63,6 +63,14 @@ minikube service --url <service-name>
 
 - Starts a service in Minikube and provides the URL to access it. (e.g. http://127.0.0.1:33901)
 
+## Add new node
+
+```bash
+minikube node add
+```
+
+- Adds a new node to the Minikube cluster.
+
 ---
 
 ## Summary
@@ -75,6 +83,7 @@ minikube service --url <service-name>
 | `minikube stop`                         | Stop the Minikube cluster         |
 | `minikube delete`                       | Delete the Minikube cluster       |
 | `minikube service --url <service-name>` | Create a service url              |
+| `minikube node add`                     | Add new node                      |
 
 ---
 
