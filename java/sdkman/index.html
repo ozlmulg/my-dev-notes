@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../slack-reminder/">
+        <link rel="prev" href="../jenv/">
       
       
-        <link rel="next" href="../slack-user-group-creation/">
+        <link rel="next" href="../../docker/docker-installation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Slack Message - My Dev Notes</title>
+        <title>Sdkman - My Dev Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slack-message" class="md-skip">
+        <a href="#sdkman" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slack Message
+              Sdkman
             
           </span>
         </div>
@@ -295,11 +295,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../java/jenv/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../jenv/" class="md-tabs__link">
           
   
   
@@ -501,13 +503,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../slack-reminder/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -958,8 +958,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -971,19 +973,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -996,7 +1001,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Java
@@ -1010,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/jenv/" class="md-nav__link">
+      <a href="../jenv/" class="md-nav__link">
         
   
   
@@ -1030,10 +1035,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../java/sdkman/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sdkman
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1044,6 +1071,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-sdkman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing SDKMAN!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Your Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-available-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Available SDKs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-available-versions-for-a-specific-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Available Versions for a Specific SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-specific-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a Specific SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-latest-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Latest SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-between-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switching Between Versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-sdkman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating SDKMAN!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling SDKs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2249,10 +2386,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -2268,22 +2403,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -2296,7 +2428,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Slack
@@ -2310,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slack-reminder/" class="md-nav__link">
+      <a href="../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2330,32 +2462,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Slack Message
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2366,146 +2476,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#slack-block-kit-builder" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slack Block Kit Builder
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#incoming-webhooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Incoming Webhooks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-slack-messages-using-block-kit-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Slack Messages Using Block Kit JSON
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example Slack Messages Using Block Kit JSON">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reminder-message-start-of-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reminder Message (Start of Event)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thank-you-message-end-of-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Thank You Message (End of Event)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-with-user-mentions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example with User Mentions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-user-joining-request-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: User Joining Request Message
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-messages-using-curl-and-incoming-webhooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Messages Using curl and Incoming Webhooks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sending Messages Using curl and Incoming Webhooks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send-reminder-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Reminder Message
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-thank-you-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Thank You Message
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emoji-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emoji Customization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helpful-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Helpful Links
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2518,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slack-user-group-creation/" class="md-nav__link">
+      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2541,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slack-github-workflows/" class="md-nav__link">
+      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2743,120 +2713,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#slack-block-kit-builder" class="md-nav__link">
+  <a href="#installing-sdkman" class="md-nav__link">
     <span class="md-ellipsis">
-      Slack Block Kit Builder
+      Installing SDKMAN!
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#incoming-webhooks" class="md-nav__link">
+  <a href="#configuring-your-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      Incoming Webhooks
+      Configuring Your Shell
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-slack-messages-using-block-kit-json" class="md-nav__link">
+  <a href="#listing-available-sdks" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Slack Messages Using Block Kit JSON
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example Slack Messages Using Block Kit JSON">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reminder-message-start-of-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reminder Message (Start of Event)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thank-you-message-end-of-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      Thank You Message (End of Event)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-with-user-mentions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example with User Mentions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-user-joining-request-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: User Joining Request Message
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-messages-using-curl-and-incoming-webhooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Messages Using curl and Incoming Webhooks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sending Messages Using curl and Incoming Webhooks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send-reminder-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Reminder Message
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-thank-you-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Thank You Message
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emoji-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emoji Customization
+      Listing Available SDKs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#helpful-links" class="md-nav__link">
+  <a href="#listing-available-versions-for-a-specific-sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      Helpful Links
+      Listing Available Versions for a Specific SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-specific-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a Specific SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-latest-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Latest SDK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-between-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switching Between Versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-sdkman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating SDKMAN!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling SDKs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
     </span>
   </a>
   
@@ -2878,181 +2818,90 @@
 
 
 
-<h1 id="slack-message">Slack Message</h1>
-<p>This document provides examples and guidelines for building Slack messages using Block Kit Builder and sending messages
-via Incoming Webhooks and Slack API.</p>
+<h1 id="sdkman">SDKMAN!</h1>
+<p>SDKMAN! is a tool for managing parallel versions of multiple Software Development Kits on most Unix-based systems. It
+provides a convenient way to install, switch, and manage SDKs such as Java, Groovy, Kotlin, Scala, and more.</p>
 <hr />
-<h2 id="slack-block-kit-builder">Slack Block Kit Builder</h2>
-<p>You can use the Slack Block Kit Builder app to visually design and test your Slack message layouts:<br />
-<a href="https://app.slack.com/block-kit-builder">https://app.slack.com/block-kit-builder</a></p>
-<p>Try changing properties like <code>color</code> in attachments or customizing blocks for your needs.</p>
-<hr />
-<h2 id="incoming-webhooks">Incoming Webhooks</h2>
-<p>Slack Incoming Webhooks allow you to send messages to Slack channels via HTTP requests.<br />
-You need to create an app and enable Incoming Webhooks in your Slack workspace:<br />
-<a href="https://api.slack.com/apps">https://api.slack.com/apps</a></p>
-<p>Example Incoming Webhook URL:<br />
-<code>https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX</code></p>
-<hr />
-<h2 id="example-slack-messages-using-block-kit-json">Example Slack Messages Using Block Kit JSON</h2>
-<h3 id="reminder-message-start-of-event">Reminder Message (Start of Event)</h3>
-<pre><code class="language-json">{
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;header&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;plain_text&quot;,
-        &quot;text&quot;: &quot;🌟 Friendly Reminder: Upcoming Team Meeting :rocket:&quot;,
-        &quot;emoji&quot;: true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;section&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;mrkdwn&quot;,
-        &quot;text&quot;: &quot;Hi Team,\n\nJust a quick reminder about our upcoming *Team Meeting*:\n\n*📌 Topic:* Efficient Build System Updates\n*🗓️ Date:* 22.11.2024\n*⏰ Time:* 15:00-16:00\n*📍 Link:* &lt;https://meeting-link.example.com|Click here to join the meeting&gt;\n\nLooking forward to seeing you all there! 😊&quot;
-      }
-    }
-  ]
-}
-</code></pre>
-<h3 id="thank-you-message-end-of-event">Thank You Message (End of Event)</h3>
-<pre><code class="language-json">{
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;header&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;plain_text&quot;,
-        &quot;text&quot;: &quot;👏 Great Job, Team! 🎉&quot;,
-        &quot;emoji&quot;: true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;section&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;mrkdwn&quot;,
-        &quot;text&quot;: &quot;Thank you everyone for your participation in today’s Team Meeting :rocket:! Special thanks to our presenters for their excellent work:\n\n*🗣️ Presenter 1* - for the *Build System Overview* presentation 👏\n*🗣️ Presenter 2* - for the *Automation Tools* presentation 👏\n\nPlease share your topic ideas in the #team-announcements channel. Looking forward to the next meeting! 🚀&quot;
-      }
-    },
-    {
-      &quot;type&quot;: &quot;divider&quot;
-    },
-    {
-      &quot;type&quot;: &quot;context&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;plain_text&quot;,
-          &quot;text&quot;: &quot;Thanks again, everyone! Keep up the fantastic work! 💪🏼&quot;,
-          &quot;emoji&quot;: true
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<h3 id="example-with-user-mentions">Example with User Mentions</h3>
-<p>In Slack Block Kit, you can mention users by their Slack User ID:</p>
-<pre><code class="language-json">{
-  &quot;type&quot;: &quot;section&quot;,
-  &quot;text&quot;: {
-    &quot;type&quot;: &quot;mrkdwn&quot;,
-    &quot;text&quot;: &quot;Special shoutout to our presenter &lt;@U12345678&gt; for an amazing presentation! 🎉&quot;
-  }
-}
-</code></pre>
-<p>Replace <code>U12345678</code> with the actual Slack User ID.</p>
-<h3 id="example-user-joining-request-message">Example: User Joining Request Message</h3>
-<pre><code class="language-json">{
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;header&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;plain_text&quot;,
-        &quot;text&quot;: &quot;User Request to Join Channel&quot;,
-        &quot;emoji&quot;: true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;section&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;mrkdwn&quot;,
-        &quot;text&quot;: &quot;Hello @here, &lt;@U12345678&gt; would like to join this private channel but cannot. Could someone please add them?&quot;
-      }
-    }
-  ]
-}
+<h2 id="installing-sdkman">Installing SDKMAN!</h2>
+<p>To install SDKMAN!, open your terminal and run:</p>
+<pre><code class="language-bash">brew install sdkman-cli
 </code></pre>
 <hr />
-<h2 id="sending-messages-using-curl-and-incoming-webhooks">Sending Messages Using <code>curl</code> and Incoming Webhooks</h2>
-<p>Replace <code>YOUR_WEBHOOK_URL</code> with your actual webhook URL.</p>
-<h3 id="send-reminder-message">Send Reminder Message</h3>
-<pre><code class="language-bash">curl -X POST -H 'Content-type: application/json' --data '{
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;header&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;plain_text&quot;,
-        &quot;text&quot;: &quot;🌟 Friendly Reminder: Upcoming Team Meeting :rocket:&quot;,
-        &quot;emoji&quot;: true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;section&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;mrkdwn&quot;,
-        &quot;text&quot;: &quot;Hi Team,\n\nJust a quick reminder about our upcoming *Team Meeting*:\n\n*📌 Topic:* Efficient Build System Updates\n*🗓️ Date:* 22.11.2024\n*⏰ Time:* 15:00-16:00\n*📍 Link:* &lt;https://meeting-link.example.com|Join here&gt;\n\nLooking forward to seeing you all there! 😊&quot;
-      }
-    }
-  ]
-}' https://hooks.slack.com/services/YOUR_WEBHOOK_URL
+<h2 id="configuring-your-shell">Configuring Your Shell</h2>
+<p>To ensure SDKMAN! works correctly, you need to add initialization to your shell profile. For Bash or Zsh, append the
+following lines at the end of your profile file (<code>~/.bash_profile</code>, <code>~/.bashrc</code>, or <code>~/.zshrc</code>):</p>
+<pre><code class="language-bash">#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR=&quot;$HOME/.sdkman&quot;
+[[ -s &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot; ]] &amp;&amp; source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
 </code></pre>
-<h3 id="send-thank-you-message">Send Thank You Message</h3>
-<pre><code class="language-bash">curl -X POST -H 'Content-type: application/json' --data '{
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;header&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;plain_text&quot;,
-        &quot;text&quot;: &quot;👏 Great Job, Team! 🎉&quot;,
-        &quot;emoji&quot;: true
-      }
-    },
-    {
-      &quot;type&quot;: &quot;section&quot;,
-      &quot;text&quot;: {
-        &quot;type&quot;: &quot;mrkdwn&quot;,
-        &quot;text&quot;: &quot;Thank you everyone for your participation in today’s Team Meeting :rocket:! Special thanks to our presenters for their excellent work:\n\n*🗣️ Presenter 1* - for the *Build System Overview* presentation 👏\n*🗣️ Presenter 2* - for the *Automation Tools* presentation 👏\n\nPlease share your topic ideas in the #team-announcements channel. Looking forward to the next meeting! 🚀&quot;
-      }
-    },
-    {
-      &quot;type&quot;: &quot;divider&quot;
-    },
-    {
-      &quot;type&quot;: &quot;context&quot;,
-      &quot;elements&quot;: [
-        {
-          &quot;type&quot;: &quot;plain_text&quot;,
-          &quot;text&quot;: &quot;Thanks again, everyone! Keep up the fantastic work! 💪🏼&quot;,
-          &quot;emoji&quot;: true
-        }
-      ]
-    }
-  ]
-}' https://hooks.slack.com/services/YOUR_WEBHOOK_URL
+<p>After adding these lines, apply the changes with:</p>
+<pre><code class="language-bash">source ~/.bash_profile (or 'source ~/.bashrc' or 'source ~/.zshrc' depending on your shell)
+</code></pre>
+<p>You can verify that SDKMAN! is installed correctly by executing:</p>
+<pre><code class="language-bash">sdk version
 </code></pre>
 <hr />
-<h2 id="emoji-customization">Emoji Customization</h2>
-<p>You can use custom emojis in your messages.
-Manage your workspace emojis here:
-<code>https://YOURWORKSPACE.slack.com/customize/emoji</code></p>
-<p>Use emojis by their shortcodes, for example: <code>:rocket:</code>, <code>:star:</code>, <code>:heart:</code>.</p>
+<h2 id="listing-available-sdks">Listing Available SDKs</h2>
+<p>To see all SDKs available for installation, use:</p>
+<pre><code class="language-bash">sdk list
+</code></pre>
 <hr />
-<h2 id="helpful-links">Helpful Links</h2>
-<ul>
-<li>Slack Block Kit Builder: <a href="https://app.slack.com/block-kit-builder">Slack Block Kit Builder</a></li>
-<li>Slack API Incoming Webhooks: <a href="https://api.slack.com/messaging/webhooks">Slack Webhooks</a></li>
-<li>Custom Emojis: <code>https://YOURWORKSPACE.slack.com/customize/emoji</code></li>
-</ul>
+<p>This will display a list of candidates, versions, and whether they are installed on your system.</p>
+<h2 id="listing-available-versions-for-a-specific-sdk">Listing Available Versions for a Specific SDK</h2>
+<p>To see all available versions of a specific SDK, such as Java, run:</p>
+<pre><code class="language-bash">sdk list java
+</code></pre>
+<p>This will display all Java versions you can install, along with the currently installed and default versions.</p>
+<hr />
+<h2 id="installing-a-specific-sdk">Installing a Specific SDK</h2>
+<p>To install a specific version of an SDK, use:</p>
+<pre><code class="language-bash">sdk install &lt;candidate&gt; &lt;version&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">sdk install java 21.0.4-tem
+</code></pre>
+<hr />
+<h2 id="installing-latest-sdk">Installing Latest SDK</h2>
+<p>To install the latest version of an SDK, use:</p>
+<pre><code class="language-bash">sdk install &lt;candidate&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">sdk install java
+</code></pre>
+<hr />
+<h2 id="switching-between-versions">Switching Between Versions</h2>
+<p>You can switch to a different installed version with:</p>
+<pre><code class="language-bash">sdk use &lt;candidate&gt; &lt;version&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">sdk use java 21.0.4-tem
+</code></pre>
+<p>Or set it as the default version:</p>
+<pre><code class="language-bash">sdk default &lt;candidate&gt; &lt;version&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">sdk default java 21.0.4-tem
+</code></pre>
+<hr />
+<h2 id="updating-sdkman">Updating SDKMAN!</h2>
+<p>Keep your SDKMAN! installation up-to-date by running:</p>
+<pre><code class="language-bash">sdk update
+</code></pre>
+<hr />
+<h2 id="uninstalling-sdks">Uninstalling SDKs</h2>
+<p>To remove an installed SDK, use:</p>
+<pre><code class="language-bash">sdk uninstall &lt;candidate&gt; &lt;version&gt;
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">sdk uninstall java 21.0.4-tem
+</code></pre>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>SDKMAN! simplifies the management of multiple SDKs on your system, allowing you to install, switch, and maintain
+different versions effortlessly. By mastering these commands and correctly configuring your shell, you can ensure that
+your development environment is flexible and up-to-date.</p>
+<p>For more detailed usage instructions, please refer to the official SDKMAN! usage
+guide: <a href="https://sdkman.io/usage">https://sdkman.io/usage</a></p>
 
 
 
