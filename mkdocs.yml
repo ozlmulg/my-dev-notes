@@ -86,6 +86,9 @@ nav:
       - PostgreSQL:
           - PostgreSQL Cheatsheet: database/postgresql/postgresql-cheatsheet.md
           - PostgreSQL JSONB Operations: database/postgresql/postgresql-jsonb-operations.md
+  - Cloud:
+      - AWS:
+          - Athena: cloud/aws/athena.md
   - Mobile:
       - Android:
           - Android Firebase Integration: mobile/android/android-firebase-integration.md
