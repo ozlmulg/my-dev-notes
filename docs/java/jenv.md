@@ -166,6 +166,6 @@ jenv rehash
 
 ---
 
-## Reference
+## References
 
-For more details, check the official website: [https://www.jenv.be/](https://www.jenv.be/)
+For more details, check the official website: [https://www.jenv.be](https://www.jenv.be)

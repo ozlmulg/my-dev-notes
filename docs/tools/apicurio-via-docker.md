@@ -35,7 +35,7 @@ lsof -i:8888
 
    `docker run -it -p 8080:8080 apicurio/apicurio-registry:3.0.6`
 
-3. Open your browser and navigate to: http://localhost:8080/
+3. Open your browser and navigate to: `http://localhost:8080`
 
 ---
 
@@ -49,7 +49,7 @@ lsof -i:8888
 
    `docker run -it -p 8888:8080 apicurio/apicurio-registry-ui:3.0.6`
 
-3. Open your browser and navigate to: http://localhost:8888/
+3. Open your browser and navigate to: `http://localhost:8888`
 
 ---
 
@@ -57,7 +57,7 @@ lsof -i:8888
 
 Once the UI is connected to the backend:
 
-1. Go to the UI (http://localhost:8888/)
+1. Go to the UI (`http://localhost:8888`)
 2. Use the **Upload** feature to add your API definition file (e.g., OpenAPI, Avro, JSON Schema).
 3. Explore detailed documentation, validation results, and example payloads.
 

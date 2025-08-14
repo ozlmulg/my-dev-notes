@@ -142,6 +142,8 @@ ___
 
 Example: `docker cp 12a793b3fec0:/usr/src/app/ .`
 
+___
+
 ## Image
 
 **Logging into a registry via Docker CLI:**
@@ -219,6 +221,8 @@ Example: `docker save ozgurozturknet/img:latest -o image.tar`
 
 Example: `docker load -i imagecon1.tar`
 
+___
+
 ## Volume
 
 **Creating a volume:**
@@ -260,6 +264,8 @@ ___
 `docker volume rm volume_name`
 
 Example: `docker volume rm firstvolume`
+
+___
 
 ## Network
 
@@ -310,6 +316,8 @@ ___
 
 Example: `docker container run -p 8080:80 -p 53:53/udp nginx:latest`
 
+___
+
 ## Logging
 
 **Viewing logs created by a container:**
@@ -344,3 +352,10 @@ ___
 
 Example: `docker logs -f 12a793b3fec0`
 (logs will show live as they occur; use Ctrl-C to exit)
+
+___
+
+## References
+
+For more details, check
+the [website](https://github.com/ozgurozturknet/AdanZyeDocker/blob/master/DockerCheatSheetTurkce.md).

@@ -74,6 +74,6 @@ For instructions on upgrading Terraform to a specific version, refer to:
 
 ---
 
-## Reference
+## References
 
 For more details, check the official repo: [https://github.com/tfutils/tfenv](https://github.com/tfutils/tfenv)

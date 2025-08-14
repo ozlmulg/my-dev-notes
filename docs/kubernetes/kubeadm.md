@@ -108,3 +108,7 @@ $ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25
 kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
+
+## References
+
+For more details, check the [website](https://github.com/aytitech/k8sfundamentals/blob/main/setup/README.md).

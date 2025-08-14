@@ -73,14 +73,14 @@ minikube node add
 
 ---
 
-# Deleting All Docker Objects in Minikube
+## Deleting All Docker Objects in Minikube
 
 Minikube runs its own **Docker daemon** inside a virtual machine (VM).  
 Because of this, regular Docker commands won’t affect it unless you connect to Minikube’s Docker environment first.
 
 ---
 
-## 1️⃣ Delete All Docker Objects Inside Minikube
+### 1. Delete All Docker Objects Inside Minikube
 
 **Step 1:** Connect your shell to Minikube's Docker environment
 
@@ -100,7 +100,7 @@ docker system prune -a --volumes
 
 ---
 
-## 2️⃣ Completely Reset the Minikube Environment
+### 2. Completely Reset the Minikube Environment
 
 If you want to remove not just Docker objects, but the entire Minikube Kubernetes environment:
 
@@ -116,7 +116,7 @@ minikube start
 
 ---
 
-## 3️⃣ Delete All Kubernetes Resources Only
+### 3. Delete All Kubernetes Resources Only
 
 If you only want to remove Kubernetes objects (pods, deployments, services, etc.) without deleting Docker images:
 
@@ -141,6 +141,6 @@ kubectl delete all --all -A
 
 ---
 
-For more details, visit the official documentation: https://minikube.sigs.k8s.io/docs/
+For more details, visit the official documentation: [Minikube Official Website](https://minikube.sigs.k8s.io/docs/)
 
 > **Note:** Docker must be installed and running on your machine to use Minikube with the Docker driver.
