@@ -54,9 +54,10 @@ extra:
 # Page tree
 nav:
   - Home: index.md
-  - Linux:
-      - Linux Cheatsheet: linux/linux-cheatsheet.md
-      - Linux Network Cheatsheet: linux/linux-network-cheatsheet.md
+  - Shell:
+      - Shell Commands: shell/shell-commands.md
+      - Shell Network Commands: shell/shell-network-commands.md
+      - Bash Completion: shell/bash-completion.md
   - Git:
       - Git Cheatsheet: git/git-cheatsheet.md
       - GitHub Actions: git/github-actions.md

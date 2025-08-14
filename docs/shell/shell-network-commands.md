@@ -1,7 +1,7 @@
-# Linux Network Cheatsheet
+# Shell Network Commands
 
-This document lists some of the most commonly used Linux network commands by developers, with descriptions and usage
-examples.
+This document provides an overview of commonly used shell network commands for developers, along with descriptions and
+practical usage examples.
 
 ---
 

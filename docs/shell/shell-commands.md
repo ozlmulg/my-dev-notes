@@ -1,6 +1,7 @@
-# Linux Cheatsheet
+# Shell Commands
 
-This document lists some of the most commonly used Linux commands by developers, with descriptions and usage examples.
+This document provides an overview of commonly used shell commands for developers, along with descriptions and practical
+usage examples.
 
 ---
 
@@ -357,4 +358,4 @@ Example output:
 # Notes
 
 - Most commands support many options and flags; check their man pages (e.g., `man grep`) for details.
-- Some tools like `htop` or `rsync` may require installation depending on your Linux distro.
+- Some tools like `htop` or `rsync` may require installation depending on your operating system or shell environment.
