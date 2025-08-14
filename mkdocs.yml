@@ -112,3 +112,4 @@ nav:
       - KafkaUI via Docker: tools/kafkaui-via-docker.md
       - Multi-Gitter: tools/multi-gitter.md
       - Multipass: tools/multipass.md
+      - BloomRPC: tools/bloomrpc.md
