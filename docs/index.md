@@ -1,6 +1,6 @@
 # My Dev Notes
 
-![Home Image](images/home.jpg)
+![Home Image](home/images/home.jpg)
 
 Welcome to My Dev Notes 👋
 
