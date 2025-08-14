@@ -67,6 +67,7 @@ nav:
       - Maven Wrapper: maven/maven-wrapper.md
   - Java:
       - Jenv: java/jenv.md
+      - Sdkman: java/sdkman.md
   - Docker:
       - Docker Installation: docker/docker-installation.md
       - Docker Cheatsheet: docker/docker-cheatsheet.md
