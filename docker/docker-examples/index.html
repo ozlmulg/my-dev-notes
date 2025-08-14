@@ -1177,6 +1177,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2448,6 +2457,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2559,6 +2577,7 @@
 <p><strong>Copying files between container and host (both directions):</strong></p>
 <p><code>docker cp container_id|or|container_name:path host_path</code></p>
 <p>Example: <code>docker cp 12a793b3fec0:/usr/src/app/ .</code></p>
+<hr />
 <h2 id="image">Image</h2>
 <p><strong>Logging into a registry via Docker CLI:</strong></p>
 <p><code>docker login registry_url</code></p>
@@ -2609,6 +2628,7 @@
 <p>Example: <code>docker save ozgurozturknet/img:latest -o image.tar</code></p>
 <p><code>docker load -i filename.tar</code></p>
 <p>Example: <code>docker load -i imagecon1.tar</code></p>
+<hr />
 <h2 id="volume">Volume</h2>
 <p><strong>Creating a volume:</strong></p>
 <p><code>docker volume create volume_name</code></p>
@@ -2636,6 +2656,7 @@
 <p><strong>Removing a volume:</strong></p>
 <p><code>docker volume rm volume_name</code></p>
 <p>Example: <code>docker volume rm firstvolume</code></p>
+<hr />
 <h2 id="network">Network</h2>
 <p><strong>Creating a user-defined bridge network (bridge):</strong></p>
 <p><code>docker network create --driver=bridge network_name</code></p>
@@ -2668,6 +2689,7 @@
 <p><strong>Running a container with published ports (-p):</strong></p>
 <p><code>docker container run -p host_port:container_port/tcp_or_udp image:tag</code></p>
 <p>Example: <code>docker container run -p 8080:80 -p 53:53/udp nginx:latest</code></p>
+<hr />
 <h2 id="logging">Logging</h2>
 <p><strong>Viewing logs created by a container:</strong></p>
 <p><code>docker logs container_id|or|container_name</code></p>
@@ -2691,6 +2713,10 @@
 <p><code>docker logs -f container_id|or|container_name</code></p>
 <p>Example: <code>docker logs -f 12a793b3fec0</code>
 (logs will show live as they occur; use Ctrl-C to exit)</p>
+<hr />
+<h2 id="references">References</h2>
+<p>For more details, check
+the <a href="https://github.com/ozgurozturknet/AdanZyeDocker/blob/master/DockerCheatSheetTurkce.md">website</a>.</p>
 
 
 

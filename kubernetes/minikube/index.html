@@ -1276,6 +1276,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deleting-all-docker-objects-in-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting All Docker Objects in Minikube
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting All Docker Objects in Minikube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-delete-all-docker-objects-inside-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Delete All Docker Objects Inside Minikube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-completely-reset-the-minikube-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Completely Reset the Minikube Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-delete-all-kubernetes-resources-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Delete All Kubernetes Resources Only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2484,6 +2535,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deleting-all-docker-objects-in-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting All Docker Objects in Minikube
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting All Docker Objects in Minikube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-delete-all-docker-objects-inside-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Delete All Docker Objects Inside Minikube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-completely-reset-the-minikube-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Completely Reset the Minikube Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-delete-all-kubernetes-resources-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Delete All Kubernetes Resources Only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2552,11 +2654,11 @@ brief explanations.</p>
 <li>Adds a new node to the Minikube cluster.</li>
 </ul>
 <hr />
-<h1 id="deleting-all-docker-objects-in-minikube">Deleting All Docker Objects in Minikube</h1>
+<h2 id="deleting-all-docker-objects-in-minikube">Deleting All Docker Objects in Minikube</h2>
 <p>Minikube runs its own <strong>Docker daemon</strong> inside a virtual machine (VM).<br />
 Because of this, regular Docker commands won’t affect it unless you connect to Minikube’s Docker environment first.</p>
 <hr />
-<h2 id="1-delete-all-docker-objects-inside-minikube">1️⃣ Delete All Docker Objects Inside Minikube</h2>
+<h3 id="1-delete-all-docker-objects-inside-minikube">1. Delete All Docker Objects Inside Minikube</h3>
 <p><strong>Step 1:</strong> Connect your shell to Minikube's Docker environment</p>
 <pre><code class="language-bash">eval $(minikube docker-env)
 </code></pre>
@@ -2569,7 +2671,7 @@ Because of this, regular Docker commands won’t affect it unless you connect to
   ⚠ <strong>Warning:</strong> This action cannot be undone.</li>
 </ul>
 <hr />
-<h2 id="2-completely-reset-the-minikube-environment">2️⃣ Completely Reset the Minikube Environment</h2>
+<h3 id="2-completely-reset-the-minikube-environment">2. Completely Reset the Minikube Environment</h3>
 <p>If you want to remove not just Docker objects, but the entire Minikube Kubernetes environment:</p>
 <pre><code class="language-bash">minikube delete --all
 </code></pre>
@@ -2577,7 +2679,7 @@ Because of this, regular Docker commands won’t affect it unless you connect to
 <pre><code class="language-bash">minikube start
 </code></pre>
 <hr />
-<h2 id="3-delete-all-kubernetes-resources-only">3️⃣ Delete All Kubernetes Resources Only</h2>
+<h3 id="3-delete-all-kubernetes-resources-only">3. Delete All Kubernetes Resources Only</h3>
 <p>If you only want to remove Kubernetes objects (pods, deployments, services, etc.) without deleting Docker images:</p>
 <pre><code class="language-bash">kubectl delete all --all -A
 </code></pre>
@@ -2626,7 +2728,7 @@ Because of this, regular Docker commands won’t affect it unless you connect to
 </tbody>
 </table>
 <hr />
-<p>For more details, visit the official documentation: https://minikube.sigs.k8s.io/docs/</p>
+<p>For more details, visit the official documentation: <a href="https://minikube.sigs.k8s.io/docs/">Minikube Official Website</a></p>
 <blockquote>
 <p><strong>Note:</strong> Docker must be installed and running on your machine to use Minikube with the Docker driver.</p>
 </blockquote>

@@ -1348,6 +1348,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#moving-or-renaming-terraform-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving or Renaming Terraform Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#terraform-import" class="md-nav__link">
     <span class="md-ellipsis">
       Terraform Import
@@ -1375,18 +1384,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terraform-best-practices" class="md-nav__link">
+  <a href="#terraform-console-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Terraform Best Practices
+      Terraform Console Examples
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#terraform-console-examples" class="md-nav__link">
+  <a href="#flattening-nested-lists-in-terraform" class="md-nav__link">
     <span class="md-ellipsis">
-      Terraform Console Examples
+      Flattening Nested Lists in Terraform
     </span>
   </a>
   
@@ -1411,6 +1420,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-specific-git-references-for-terraform-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Specific Git References for Terraform Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sample-terraform-registries" class="md-nav__link">
     <span class="md-ellipsis">
       Sample Terraform Registries
@@ -1420,9 +1447,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-notes" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Notes
+      References
     </span>
   </a>
   
@@ -2458,6 +2485,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#moving-or-renaming-terraform-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving or Renaming Terraform Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#terraform-import" class="md-nav__link">
     <span class="md-ellipsis">
       Terraform Import
@@ -2485,18 +2521,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#terraform-best-practices" class="md-nav__link">
+  <a href="#terraform-console-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Terraform Best Practices
+      Terraform Console Examples
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#terraform-console-examples" class="md-nav__link">
+  <a href="#flattening-nested-lists-in-terraform" class="md-nav__link">
     <span class="md-ellipsis">
-      Terraform Console Examples
+      Flattening Nested Lists in Terraform
     </span>
   </a>
   
@@ -2521,6 +2557,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-specific-git-references-for-terraform-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Specific Git References for Terraform Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sample-terraform-registries" class="md-nav__link">
     <span class="md-ellipsis">
       Sample Terraform Registries
@@ -2530,9 +2584,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-notes" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Notes
+      References
     </span>
   </a>
   
@@ -2565,6 +2619,33 @@ components include:</p>
 <li><strong>Workspaces/Environments:</strong> Logical separation for different deployment stages (dev, prod, etc.)</li>
 </ul>
 <hr />
+<h2 id="moving-or-renaming-terraform-resources">Moving or Renaming Terraform Resources</h2>
+<p>When you rename a Terraform resource in code, Terraform may try to <strong>delete the old resource</strong> and <strong>create a new one</strong>
+instead of just updating its name.<br />
+To avoid unnecessary destruction and downtime, you can use the <a href="https://developer.hashicorp.com/terraform/cli/commands/state/mv">
+<code>terraform state mv</code></a> command.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Move a resource in the state file from the old name to the new name
+terraform state mv \
+module.old_module_name.aws_s3_bucket.example \
+module.new_module_name.aws_s3_bucket.example
+</code></pre>
+<p><strong>When to Use:</strong></p>
+<ul>
+<li>Renaming a resource in <code>.tf</code> files.</li>
+<li>Moving a resource to another module.</li>
+<li>Refactoring module structures.</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ol>
+<li><strong>Plan first</strong> — Run <code>terraform plan</code> before and after the move to ensure no unintended changes.</li>
+<li><strong>Backup your state</strong> — Always back up <code>terraform.tfstate</code> before making state changes.</li>
+<li><strong>Avoid in production without testing</strong> — Test the move in a non-production environment first.</li>
+</ol>
+<p><strong>Reference:</strong></p>
+<p>For more details, see:<br />
+<a href="https://openupthecloud.com/terraform-rename-instead-delete/">Terraform Rename Instead of Delete – Open Up The Cloud</a></p>
+<hr />
 <h2 id="terraform-import">Terraform Import</h2>
 <p>When managing existing infrastructure with Terraform, <code>terraform import</code> allows you to bring existing resources into
 Terraform's state.</p>
@@ -2583,6 +2664,90 @@ terraform state rm module.example.azurerm_dns_a_record.resource_name
 # Import an existing Azure DNS A record
 terraform import module.dns.azurerm_dns_a_record.resource_name /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/dnszones/{zoneName}/A/{recordName}
 </code></pre>
+<p><strong>Sample import file (Terraform DNS Record State Update):</strong></p>
+<details>
+<summary>Prerequisites</summary>
+
+Before running the Terraform import commands, export the required Auth0 credentials in your shell profile (e.g.,
+`~/.bash_profile` or `~/.zshrc`).
+
+
+<pre><code class="language-bash">export AUTH0_DOMAIN=&quot;https://&lt;your-auth0-domain&gt;&quot;
+export AUTH0_CLIENT_ID=&quot;&lt;your-client-id&gt;&quot;
+export AUTH0_CLIENT_SECRET=&quot;&lt;your-client-secret&gt;&quot;
+</code></pre>
+
+
+After adding these lines, reload your shell configuration:
+
+
+<pre><code class="language-bash">source ~/.bash_profile
+# or
+source ~/.zshrc
+</code></pre>
+
+
+</details>
+
+<details>
+<summary>import.sh</summary>
+
+
+<pre><code class="language-shell"># Terraform DNS Record State Update
+
+## 1. View the initial state
+# This lists all resources currently in the Terraform state.
+terraform -chdir=.. state list
+
+## 2. Remove existing DNS record resources from the state
+terraform -chdir=.. state rm module.infrastructure_region.azurerm_dns_a_record.app_record_1
+terraform -chdir=.. state rm module.infrastructure_region.azurerm_dns_a_record.app_record_2
+terraform -chdir=.. state rm module.infrastructure_region.azurerm_dns_a_record.app_record_3
+terraform -chdir=.. state rm module.infrastructure_region.azurerm_dns_a_record.app_record_4
+terraform -chdir=.. state rm module.infrastructure_region.data.azurerm_dns_zone.zone
+
+## 3. Import new DNS record resources into the state
+terraform -chdir=.. import module.dns_region.azurerm_dns_a_record.app_record_1 /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;dns-resource-group&gt;/providers/Microsoft.Network/dnszones/example.com/A/record-1
+terraform -chdir=.. import module.dns_region.azurerm_dns_a_record.app_record_2 /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;dns-resource-group&gt;/providers/Microsoft.Network/dnszones/example.com/A/record-2
+terraform -chdir=.. import module.dns_region.azurerm_dns_a_record.app_record_3 /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;dns-resource-group&gt;/providers/Microsoft.Network/dnszones/example.com/A/record-3
+terraform -chdir=.. import module.dns_region.azurerm_dns_a_record.app_record_4 /subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;dns-resource-group&gt;/providers/Microsoft.Network/dnszones/example.com/A/record-4
+
+## 4. View the final state
+terraform -chdir=.. state list
+</code></pre>
+
+
+</details>
+
+<p><strong>Sample import file (Terraform Auth0 Resource Import):</strong></p>
+<details>
+<summary>import.sh</summary>
+
+
+<pre><code class="language-shell"># Terraform Auth0 Resource Import
+
+## 1. View the initial state
+# This lists all resources currently in the Terraform state.
+terraform -chdir=.. state list
+
+## 2. Import Auth0 resources
+
+### Servers
+terraform -chdir=.. import module.auth0-example-service.auth0_resource_server.rs[0] &lt;resource-server-id&gt;
+
+### Clients
+terraform -chdir=.. import module.auth0-example-app.auth0_client.application &lt;client-id&gt;
+
+### Client Grants
+terraform -chdir=.. import module.auth0-example-grant.auth0_client_grant.application-grant &lt;client-grant-id&gt;
+
+## 3. View the final state
+terraform -chdir=.. state list
+</code></pre>
+
+
+</details>
+
 <hr />
 <h2 id="terraform-state-management">Terraform State Management</h2>
 <p>Managing the Terraform state file is critical for avoiding conflicts and ensuring proper tracking of resources.</p>
@@ -2625,23 +2790,6 @@ data &quot;azurerm_dns_zone&quot; &quot;example&quot; {
 }
 </code></pre>
 <hr />
-<h2 id="terraform-best-practices">Terraform Best Practices</h2>
-<ul>
-<li>Use version pinning for providers to avoid unexpected changes.</li>
-<li>Use modules to structure reusable code.</li>
-<li>Separate environments using workspaces or directory structure.</li>
-<li>Manage state securely with remote backends.</li>
-<li>Use <code>terraform fmt</code> and <code>terraform validate</code> regularly.</li>
-<li>Plan and apply with targeted resources if needed:</li>
-</ul>
-<pre><code class="language-bash">terraform plan -target='module.example.resource'
-terraform apply -target='module.example.resource'
-</code></pre>
-<ul>
-<li>Use community best practices,
-  e.g., <a href="https://github.com/terraform-aws-modules/terraform-aws-lambda">terraform-aws-lambda</a>.</li>
-</ul>
-<hr />
 <h2 id="terraform-console-examples">Terraform Console Examples</h2>
 <p>Terraform Console is a useful interactive REPL to test expressions:</p>
 <pre><code class="language-bash">$ echo 'replace(&quot;example_name&quot;, &quot;_&quot;, &quot;-&quot;)' | terraform console
@@ -2651,10 +2799,53 @@ $ echo 'split(&quot;,&quot;, &quot;foo,bar,baz&quot;)' | terraform console
 [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]
 </code></pre>
 <hr />
+<h2 id="flattening-nested-lists-in-terraform">Flattening Nested Lists in Terraform</h2>
+<p>When working with nested lists or complex data structures in Terraform, you can use the <code>flatten()</code> function to produce
+a single-level list from multiple nested lists.</p>
+<p><strong>Example: Flatten Database Roles:</strong></p>
+<p>Suppose you have a list of databases, each with its own set of roles, and you want to create a flat list of all roles
+with their corresponding database details.</p>
+<pre><code>variable &quot;databases&quot; {
+  type = list(object({
+    name         = string
+    key_vault_id = string
+    roles = list(object({
+      name       = string
+      privileges = list(string)
+    }))
+  }))
+  description = &quot;Database settings&quot;
+  default     = []
+}
+
+local all_database_roles = flatten([
+  for database in local.databases : [
+    for role in database.roles : {
+      db_name      = database.name
+      key_vault_id = database.key_vault_id
+      name         = role.name
+      privileges   = role.privileges
+    }
+  ]
+])
+</code></pre>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li>The outer <code>for</code> loop iterates over each database in <code>local.databases</code>.</li>
+<li>The inner <code>for</code> loop iterates over each role in <code>database.roles</code>.</li>
+<li>For each role, we construct an object containing some fields from the database and the role itself.</li>
+<li>The result of each inner loop is a list of role objects per database.</li>
+<li>The <code>flatten()</code> function merges all these lists into a single list of role objects.</li>
+</ol>
+<p><strong>Reference:</strong></p>
+<p>For more details, see the <a href="https://developer.hashicorp.com/terraform/language/functions/flatten">Terraform
+<code>flatten()</code> function documentation</a> and <a href="https://developer.hashicorp.com/terraform/language/functions/setproduct">
+<code>setproduct()</code> function documentation</a>.</p>
+<hr />
 <h2 id="makefile-commands-for-terraform">Makefile Commands for Terraform</h2>
 <p>Example Makefile snippets to standardize Terraform commands:</p>
 <details>
-<summary>terraform.sh</summary>
+<summary>terraform.make</summary>
 
 
 <pre><code class="language-makefile">MODULE_TERRAFORM=.
@@ -2698,6 +2889,43 @@ atlantis apply -d 'path/to/module'
 <pre><code class="language-bash">atlantis plan -d 'path/to/module' -- -target='module.repo1' -target='module.repo2'
 </code></pre>
 <hr />
+<h2 id="using-specific-git-references-for-terraform-modules">Using Specific Git References for Terraform Modules</h2>
+<p>When sourcing Terraform modules from a Git repository, omitting the <code>ref</code> parameter will default to the repository's
+<code>master</code> (or <code>main</code>) branch.<br />
+To ensure reproducibility and stability, it is recommended to use a specific tag, commit, or branch via the <code>ref</code>
+parameter.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-hcl"># Without ref — defaults to master/main branch
+source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module&quot;
+
+# With ref — pinned to a specific version
+source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module?ref=v1.2.3&quot;
+
+# You can also reference a specific branch or commit
+source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module?ref=feature/my-feature&quot;
+source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module?ref=commit-sha&quot;
+</code></pre>
+<p><strong>Tip:</strong><br />
+Using a specific tag or commit hash prevents unexpected changes from upstream that could break your infrastructure.</p>
+<hr />
+<h2 id="terraform-best-practices">Terraform Best Practices</h2>
+<ul>
+<li>Use version pinning for providers to avoid unexpected changes.</li>
+<li>Use modules to structure reusable code.</li>
+<li>Separate environments using workspaces or directory structure.</li>
+<li>Manage state securely with remote backends.</li>
+<li>Use <code>terraform fmt</code> and <code>terraform validate</code> regularly.</li>
+<li>Plan and apply with targeted resources if needed:</li>
+</ul>
+<pre><code class="language-bash">terraform plan -target='module.example.resource'
+
+terraform apply -target='module.example.resource'
+</code></pre>
+<ul>
+<li>Use community best practices,
+  e.g., <a href="https://github.com/terraform-aws-modules/terraform-aws-lambda">terraform-aws-lambda</a>.</li>
+</ul>
+<hr />
 <h2 id="sample-terraform-registries">Sample Terraform Registries</h2>
 <ul>
 <li>
@@ -2712,15 +2940,42 @@ atlantis apply -d 'path/to/module'
 </li>
 </ul>
 <hr />
-<h2 id="additional-notes">Additional Notes</h2>
+<h2 id="references">References</h2>
+<p>For all official Terraform documentation, including CLI commands, configuration language functions, providers, modules,
+and other resources, you can refer to the main HashiCorp Terraform documentation site:</p>
 <ul>
-<li>To use specific git references for modules:</li>
+<li><strong>Terraform Official Documentation
+  </strong>: <a href="https://developer.hashicorp.com/terraform">https://developer.hashicorp.com/terraform</a></li>
 </ul>
-<pre><code class="language-hcl">source = &quot;git::ssh://git@github.com/organization/terraform-modules.git//path/to/module?ref=v1.2.3&quot;
-</code></pre>
+<p>This site covers:</p>
 <ul>
-<li>Flatten nested lists in variables using <code>flatten</code> and <code>for</code> expressions to manage complex inputs effectively.</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/cli">Terraform CLI</a></strong>:
+  Covers all CLI commands, flags, environment variables, configuration options, and usage examples.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/language">Terraform Language &amp; Functions</a></strong>:
+  Includes information about Terraform configuration language, expressions, and built-in functions like <code>flatten</code>,
+  <code>setproduct</code>, <code>lookup</code>, <code>templatefile</code>, and many others.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/tutorials/modules">Providers &amp; Modules</a></strong>:
+  Central resource for providers, modules, and other Terraform resources.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/tutorials/state">State Management</a></strong>:
+  Guides for managing Terraform state, remote backends, and best practices.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/tutorials/cloud-get-started">Terraform Cloud &amp; Enterprise</a>:</strong>
+  Documentation for Terraform Cloud and Enterprise features like integration guides and workflows.</p>
+</li>
+<li>
+<p><strong><a href="https://developer.hashicorp.com/terraform/tutorials">Getting Started Guides</a>:</strong>
+  Step-by-step tutorials to help beginners set up Terraform and learn best practices.</p>
+</li>
 </ul>
+<p>By visiting the link above, you can navigate to all specific areas of Terraform documentation in one place.</p>
 
 
 
