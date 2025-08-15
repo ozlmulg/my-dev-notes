@@ -1,4 +1,4 @@
-# SDKMAN!
+# SDKMAN! - Java Version Manager
 
 SDKMAN! is a tool for managing parallel versions of multiple Software Development Kits on most Unix-based systems. It
 provides a convenient way to install, switch, and manage SDKs such as Java, Groovy, Kotlin, Scala, and more.
