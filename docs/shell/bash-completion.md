@@ -15,9 +15,37 @@ In this guide, we'll:
 
 ---
 
-## Installing Bash Completion v2
+## Installing Bash Completion
 
-First, install Bash Completion v2 via Homebrew:
+Bash Completion comes in two major versions, and the right one for you depends on your Bash version.
+
+| Feature                      | bash-completion v1                   | bash-completion v2                               |
+|------------------------------|--------------------------------------|--------------------------------------------------|
+| Compatible Bash versions     | Bash 3.x and above                   | Bash 4.x and above (including 5.x)               |
+| Status                       | Legacy, still works for older setups | Recommended for modern setups                    |
+| Installation path (Homebrew) | `/usr/local/etc/bash_completion.d/`  | `$(brew --prefix)/etc/profile.d/`                |
+| Feature set                  | More limited                         | Expanded features and modern completion format   |
+| macOS usage                  | Works with macOS default Bash (3.2)  | Best used with newer Bash installed via Homebrew |
+
+**When to choose v1:**
+
+- You are on macOS and using the default Bash (3.2) without upgrading.
+- You need maximum compatibility with older scripts or legacy environments.
+
+**When to choose v2:**
+
+- You have installed a newer Bash (4.x or 5.x) via Homebrew.
+- You want more up-to-date and feature-rich completions.
+
+**Installation commands:**
+
+- **v1:**
+
+```bash
+brew install bash-completion
+```
+
+- **v2:**
 
 ```bash
 brew install bash-completion@2
