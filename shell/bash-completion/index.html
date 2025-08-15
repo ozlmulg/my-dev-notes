@@ -766,9 +766,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-bash-completion-v2" class="md-nav__link">
+  <a href="#installing-bash-completion" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Bash Completion v2
+      Installing Bash Completion
     </span>
   </a>
   
@@ -2729,9 +2729,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-bash-completion-v2" class="md-nav__link">
+  <a href="#installing-bash-completion" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Bash Completion v2
+      Installing Bash Completion
     </span>
   </a>
   
@@ -2820,8 +2820,63 @@ remember many commands and flags.</p>
 <li>Set up completion for <strong>Git</strong>, <strong>Docker</strong>, <strong>kubectl</strong>, and <strong>Multipass</strong>.</li>
 </ul>
 <hr />
-<h2 id="installing-bash-completion-v2">Installing Bash Completion v2</h2>
-<p>First, install Bash Completion v2 via Homebrew:</p>
+<h2 id="installing-bash-completion">Installing Bash Completion</h2>
+<p>Bash Completion comes in two major versions, and the right one for you depends on your Bash version.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>bash-completion v1</th>
+<th>bash-completion v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compatible Bash versions</td>
+<td>Bash 3.x and above</td>
+<td>Bash 4.x and above (including 5.x)</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Legacy, still works for older setups</td>
+<td>Recommended for modern setups</td>
+</tr>
+<tr>
+<td>Installation path (Homebrew)</td>
+<td><code>/usr/local/etc/bash_completion.d/</code></td>
+<td><code>$(brew --prefix)/etc/profile.d/</code></td>
+</tr>
+<tr>
+<td>Feature set</td>
+<td>More limited</td>
+<td>Expanded features and modern completion format</td>
+</tr>
+<tr>
+<td>macOS usage</td>
+<td>Works with macOS default Bash (3.2)</td>
+<td>Best used with newer Bash installed via Homebrew</td>
+</tr>
+</tbody>
+</table>
+<p><strong>When to choose v1:</strong></p>
+<ul>
+<li>You are on macOS and using the default Bash (3.2) without upgrading.</li>
+<li>You need maximum compatibility with older scripts or legacy environments.</li>
+</ul>
+<p><strong>When to choose v2:</strong></p>
+<ul>
+<li>You have installed a newer Bash (4.x or 5.x) via Homebrew.</li>
+<li>You want more up-to-date and feature-rich completions.</li>
+</ul>
+<p><strong>Installation commands:</strong></p>
+<ul>
+<li><strong>v1:</strong></li>
+</ul>
+<pre><code class="language-bash">brew install bash-completion
+</code></pre>
+<ul>
+<li><strong>v2:</strong></li>
+</ul>
 <pre><code class="language-bash">brew install bash-completion@2
 </code></pre>
 <hr />
