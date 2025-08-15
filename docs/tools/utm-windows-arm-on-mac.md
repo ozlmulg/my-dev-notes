@@ -72,6 +72,8 @@ This guide explains how to set up a Windows ARM virtual machine on macOS using *
 - **Deleting the VM:** Remove the VM in UTM and delete the associated `.utm` folder from
   `~/Library/Containers/com.utmapp.UTM/Data/Documents/<UTM_NAME>/` to free space.
 
+![UTM Windows Success](images/utm_windows_success.png)
+
 ---
 
 ## Notes
