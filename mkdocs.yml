@@ -113,4 +113,5 @@ nav:
       - Multi-Gitter: tools/multi-gitter.md
       - Multipass: tools/multipass.md
       - BloomRPC: tools/bloomrpc.md
-      - UTM Windows ARM on Mac: tools/utm-windows-arm-on-mac.md
+      - Windows on Mac via UTM: tools/windows-on-mac-via-utm.md
+      - Overriding Hostnames: tools/overriding-hostnames.md

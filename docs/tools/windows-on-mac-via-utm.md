@@ -1,4 +1,4 @@
-# UTM Windows ARM on Mac
+# Windows on Mac via UTM
 
 This guide explains how to set up a Windows ARM virtual machine on macOS using **UTM** and **CrystalFetch ISO Downloader
 **. It covers downloading the ISO, configuring the VM, and optimizing display settings.
