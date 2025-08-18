@@ -54,3 +54,7 @@ This site contains my personal development notes, cheatsheets, and useful comman
    kill -9 PID
    mkdocs serve -a 127.0.0.1:8001 # run on a different port
    ```
+
+## License
+
+[Apache License 2.0](https://github.com/ozlmulg/my-dev-notes/blob/master/LICENSE)
