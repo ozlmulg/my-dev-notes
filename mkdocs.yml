@@ -75,7 +75,7 @@ nav:
       - Docker Examples: docker/docker-examples.md
   - Kubernetes:
       - Minikube: kubernetes/minikube.md
-      - Kubectl: kubernetes/kubectl.md
+      - Kubectl Cheatsheet: kubernetes/kubectl-cheatsheet.md
       - Kubeadm: kubernetes/kubeadm.md
       - Kubernetes Dashboards: kubernetes/kubernetes-dashboards.md
   - Terraform:

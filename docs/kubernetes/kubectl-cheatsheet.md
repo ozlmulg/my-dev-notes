@@ -1,4 +1,4 @@
-# Kubectl
+# Kubectl Cheatsheet
 
 ## Get Resources
 
