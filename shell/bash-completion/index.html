@@ -2890,7 +2890,7 @@ This is especially useful for CLI tools like <code>git</code>, <code>docker</cod
 remember many commands and flags.</p>
 <p>In this guide, we'll:</p>
 <ul>
-<li>Install <code>bash-completion@2</code> on macOS using Homebrew.</li>
+<li>Install <code>bash-completion</code> using Homebrew.</li>
 <li>Enable bash completion in your shell.</li>
 <li>Set up completion for <strong>Git</strong>, <strong>Docker</strong>, <strong>kubectl</strong>, and <strong>Multipass</strong>.</li>
 </ul>
@@ -2957,13 +2957,19 @@ remember many commands and flags.</p>
 <hr />
 <h2 id="enabling-bash-completion">Enabling Bash Completion</h2>
 <p>To enable bash completion globally, add the following to your <code>~/.bash_profile</code> (or <code>~/.bashrc</code> if you prefer):</p>
-<pre><code class="language-bash">for file in \
-  &quot;$(brew --prefix)/etc/profile.d/bash_completion.sh&quot; \
-  /usr/local/etc/bash_completion \
-  /usr/local/etc/profile.d/bash_completion.sh
-do
-  [[ -r &quot;$file&quot; ]] &amp;&amp; . &quot;$file&quot; &amp;&amp; break
-done
+<ul>
+<li><strong>If you installed <code>bash-completion</code>:</strong></li>
+</ul>
+<pre><code class="language-bash">if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+</code></pre>
+<ul>
+<li><strong>If you installed <code>bash-completion@2</code>:</strong></li>
+</ul>
+<pre><code class="language-bash">if [ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]; then
+    . $(brew --prefix)/etc/profile.d/bash_completion.sh
+fi
 </code></pre>
 <p>Then reload your profile:</p>
 <pre><code class="language-bash">source ~/.bash_profile
