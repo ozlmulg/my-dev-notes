@@ -9,7 +9,7 @@ remember many commands and flags.
 
 In this guide, we'll:
 
-- Install `bash-completion@2` on macOS using Homebrew.
+- Install `bash-completion` using Homebrew.
 - Enable bash completion in your shell.
 - Set up completion for **Git**, **Docker**, **kubectl**, and **Multipass**.
 
@@ -57,14 +57,20 @@ brew install bash-completion@2
 
 To enable bash completion globally, add the following to your `~/.bash_profile` (or `~/.bashrc` if you prefer):
 
+- **If you installed ` bash-completion`:**
+
 ```bash
-for file in \
-  "$(brew --prefix)/etc/profile.d/bash_completion.sh" \
-  /usr/local/etc/bash_completion \
-  /usr/local/etc/profile.d/bash_completion.sh
-do
-  [[ -r "$file" ]] && . "$file" && break
-done
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+```
+
+- **If you installed ` bash-completion@2`:**
+
+```bash
+if [ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]; then
+    . $(brew --prefix)/etc/profile.d/bash_completion.sh
+fi
 ```
 
 Then reload your profile:
