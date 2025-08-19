@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../minikube/">
+        <link rel="prev" href="../kubeadm/">
       
       
-        <link rel="next" href="../kubeadm/">
+        <link rel="next" href="../../terraform/terraform-cheatsheet/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Kubectl - My Dev Notes</title>
+        <title>Kubernetes Dashboards - My Dev Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl" class="md-skip">
+        <a href="#kubernetes-dashboards" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl
+              Kubernetes Dashboards
             
           </span>
         </div>
@@ -1293,32 +1293,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Kubectl
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kubectl/" class="md-nav__link">
         
   
   
@@ -1329,80 +1307,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Describe Resources
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logs and Exec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apply and Delete
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Miscellaneous
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1435,10 +1339,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../kubernetes-dashboards/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Dashboards
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1449,6 +1375,194 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kubernetes-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Kubernetes Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Kubernetes Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-kubernetes-dashboard-with-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Kubernetes Dashboard with Minikube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Lens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Lens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-headlamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Headlamp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Headlamp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-desktop-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Desktop App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-deploy-in-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Deploy in Cluster
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2777,54 +2891,168 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#1-kubernetes-dashboard" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      1. Kubernetes Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Kubernetes Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      Installation
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-dashboard" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      Accessing the Dashboard
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#using-kubernetes-dashboard-with-minikube" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      Using Kubernetes Dashboard with Minikube
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#2-lens" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      2. Lens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Lens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-headlamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Headlamp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Headlamp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-desktop-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Desktop App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-deploy-in-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Deploy in Cluster
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison
     </span>
   </a>
   
@@ -2846,42 +3074,147 @@
 
 
 
-<h1 id="kubectl">Kubectl</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="kubernetes-dashboards">Kubernetes Dashboards</h1>
+<p>This guide provides an overview and installation instructions for three popular Kubernetes dashboard tools:</p>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li><a href="https://github.com/kubernetes/dashboard">Kubernetes Dashboard</a></li>
+<li><a href="https://k8slens.dev/">Lens</a></li>
+<li><a href="https://github.com/headlamp-k8s/headlamp">Headlamp</a></li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
+<p>These tools make it easier to visualize, manage, and troubleshoot Kubernetes clusters.</p>
+<hr />
+<h2 id="1-kubernetes-dashboard">1. Kubernetes Dashboard</h2>
+<h3 id="overview">Overview</h3>
+<p>The <strong>Kubernetes Dashboard</strong> is a web-based UI that allows you to manage applications, monitor cluster resources, and
+troubleshoot workloads within your cluster.</p>
+<h3 id="installation">Installation</h3>
+<p>Deploy the dashboard with the following command:</p>
+<pre><code class="language-bash">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+</code></pre>
+<h3 id="accessing-the-dashboard">Accessing the Dashboard</h3>
+<p>Create a Service Account and ClusterRoleBinding:</p>
+<pre><code class="language-bash">kubectl create serviceaccount dashboard-admin-sa -n kubernetes-dashboard
+kubectl create clusterrolebinding dashboard-admin-sa   --clusterrole=cluster-admin   --serviceaccount=kubernetes-dashboard:dashboard-admin-sa
+</code></pre>
+<p>Get the authentication token:</p>
+<pre><code class="language-bash">kubectl -n kubernetes-dashboard create token dashboard-admin-sa
+</code></pre>
+<p>Start the proxy:</p>
+<pre><code class="language-bash">kubectl proxy
+</code></pre>
+<p>Access the dashboard at:<br />
+<a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</a></p>
+<h3 id="using-kubernetes-dashboard-with-minikube">Using Kubernetes Dashboard with Minikube</h3>
+<p>If you are running Kubernetes with <strong>Minikube</strong>, enabling the dashboard is even easier.</p>
+<p>Enable the Dashboard Addon:</p>
+<pre><code class="language-bash">minikube addons enable dashboard
+</code></pre>
+<p>Start the Dashboard:</p>
+<pre><code class="language-bash">minikube dashboard
+</code></pre>
+<p>This command will automatically open the Dashboard in your default web browser.</p>
+<hr />
+<h2 id="2-lens">2. Lens</h2>
+<h3 id="overview_1">Overview</h3>
+<p><a href="https://k8slens.dev/"><strong>Lens</strong></a> is a popular desktop application for Kubernetes cluster management. It provides an
+intuitive interface for monitoring workloads, nodes, logs, and cluster health.</p>
+<h3 id="installation_1">Installation</h3>
 <ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
+<li><strong>macOS (Homebrew):</strong></li>
 </ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
+<pre><code class="language-bash">brew install --cask lens
+</code></pre>
 <ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
+<li><strong>Windows (Chocolatey):</strong></li>
 </ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
+<pre><code class="language-bash">choco install lens
+</code></pre>
 <ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
+<li>
+<p><strong>Linux (AppImage):</strong>
+  Download the latest <code>.AppImage</code> from the <a href="https://github.com/lensapp/lens/releases">Lens GitHub releases</a>.</p>
+</li>
+<li>
+<p>Or directly download Lens from the <a href="https://k8slens.dev/">Lens Official Website</a>.</p>
+</li>
 </ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
+<h3 id="usage">Usage</h3>
 <ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
+<li>Start Lens and add your cluster via <code>~/.kube/config</code>.</li>
+<li>Explore resources such as pods, deployments, and services.</li>
+<li>Use built-in terminal and monitoring features for troubleshooting.</li>
 </ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
+<hr />
+<h2 id="3-headlamp">3. Headlamp</h2>
+<h3 id="overview_2">Overview</h3>
+<p><a href="https://github.com/headlamp-k8s/headlamp"><strong>Headlamp</strong></a> is an open-source, web-based Kubernetes UI. Unlike Lens, it
+runs as a web app and supports plugins for customization.</p>
+<h3 id="installation_2">Installation</h3>
+<p>You can run Headlamp as a desktop app or deploy it into a cluster.</p>
+<h4 id="option-1-desktop-app">Option 1: Desktop App</h4>
 <ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
+<li><strong>macOS (Homebrew):</strong></li>
+</ul>
+<pre><code class="language-bash">brew install headlamp
+</code></pre>
+<ul>
+<li><strong>Linux &amp; Windows:</strong>
+  Download binaries from the <a href="https://github.com/headlamp-k8s/headlamp/releases">Headlamp releases</a>.</li>
+</ul>
+<h4 id="option-2-deploy-in-cluster">Option 2: Deploy in Cluster</h4>
+<pre><code class="language-bash">kubectl apply -f https://raw.githubusercontent.com/headlamp-k8s/headlamp/main/kubernetes-headlamp.yaml
+</code></pre>
+<p>Expose the service (e.g., via <code>kubectl port-forward</code> or Ingress).</p>
+<h3 id="usage_1">Usage</h3>
+<ul>
+<li>Log in with your kubeconfig file or token.</li>
+<li>Navigate through workloads, namespaces, and nodes.</li>
+<li>Extend functionality using available plugins.</li>
+</ul>
+<hr />
+<h2 id="comparison">Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Kubernetes Dashboard</th>
+<th>Lens (Desktop)</th>
+<th>Headlamp (Web/Desktop)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>Web UI</td>
+<td>Desktop app</td>
+<td>Web &amp; Desktop app</td>
+</tr>
+<tr>
+<td>Installation</td>
+<td>In-cluster YAML</td>
+<td>Binary/AppImage</td>
+<td>In-cluster or Desktop</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>Token</td>
+<td>kubeconfig</td>
+<td>kubeconfig / token</td>
+</tr>
+<tr>
+<td>Extensibility</td>
+<td>Limited</td>
+<td>No plugins</td>
+<td>Plugin system</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>✅ You can choose the tool that best fits your needs:</p>
+<ul>
+<li><strong>Kubernetes Dashboard</strong> → Official and lightweight.</li>
+<li><strong>Lens</strong> → Powerful desktop client.</li>
+<li><strong>Headlamp</strong> → Flexible, extensible, and web-based.  </li>
 </ul>
 
 
