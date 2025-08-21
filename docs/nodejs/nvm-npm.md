@@ -120,7 +120,7 @@ Example `.npmrc` for private GitHub packages:
 
 ---
 
-## 6. Example Makefile Commands
+## 6. Makefile Commands for Easy Setup
 
 Generate `.npmrc`:
 
@@ -129,7 +129,7 @@ init-npmrc: ## Generate npmrc file to access @yourorg npm packages
 	echo -e "@yourorg:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >${MAIN_POM_FOLDER}/app/test-react-client/.npmrc
 ```
 
-Install React Client:
+Build React Client:
 
 ```make
 react-build: ## Build react client
@@ -147,6 +147,14 @@ react-run: ## Run react client
 	make init-npmrc
 	cd ${MAIN_POM_FOLDER}/app/test-react-client && \
 	bash -i -c "nvm use && npm start"
+```
+
+Usage:
+
+```bash
+make init-npmrc
+make react-build
+make react-run
 ```
 
 ---

@@ -1,7 +1,7 @@
 # Minikube
 
 Minikube is a tool that makes it easy to run Kubernetes locally. Below are some commonly used Minikube commands with
-brief explanations.
+brief explanations. It can come with many addons. We can stop and run the cluster with a single command.
 
 ---
 
@@ -11,13 +11,19 @@ brief explanations.
 brew install minikube
 ```
 
-- Installs Minikube on macOS using Homebrew.
+- Installs Minikube using Homebrew.
+
+* **Docker must be installed on the system to use minikube.** Because Minikube will use Docker in the background. We can
+  also use many tools like VirtualBox in the background.
+* For testing `minikube status`.
 
 ---
 
 ## Starting Minikube
 
 ### 1. Start with a Docker driver
+
+By default, it uses Docker in the background.
 
 ```bash
 minikube start --driver=docker
@@ -49,6 +55,7 @@ minikube start -p profileName
 
 ```bash
 minikube status
+kubectl get nodes
 ```
 
 - Shows the current status of the Minikube cluster.
@@ -61,7 +68,7 @@ minikube status
 minikube stop
 ```
 
-- Stops the running Minikube cluster without deleting it.
+- Stops the running Minikube Kubernetes cluster without deleting it.
 
 ---
 
@@ -71,7 +78,7 @@ minikube stop
 minikube delete
 ```
 
-- Deletes the Minikube cluster and all its data.
+- Deletes the Kubernetes cluster and all its contents (all pods).
 
 ---
 
@@ -212,6 +219,6 @@ kubectl delete all --all -A
 
 ---
 
-For more details, visit the official documentation: [Minikube Official Website](https://minikube.sigs.k8s.io/docs/)
+## References
 
-> **Note:** Docker must be installed and running on your machine to use Minikube with the Docker driver.
+- [Minikube Official Website](https://minikube.sigs.k8s.io/docs/)

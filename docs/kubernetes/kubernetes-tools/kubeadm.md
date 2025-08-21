@@ -111,4 +111,5 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 
 ## References
 
-For more details, check the [website](https://github.com/aytitech/k8sfundamentals/blob/main/setup/README.md).
+- [Kubernetes Official Kubeadm Installation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+- [GitHub - Aytitech K8sFundamentals](https://github.com/aytitech/k8sfundamentals/blob/main/setup/README.md)

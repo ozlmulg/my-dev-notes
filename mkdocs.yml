@@ -74,10 +74,26 @@ nav:
       - Docker Compose Cheatsheet: docker/docker-compose-cheatsheet.md
       - Docker Examples: docker/docker-examples.md
   - Kubernetes:
-      - Minikube: kubernetes/minikube.md
-      - Kubectl Cheatsheet: kubernetes/kubectl-cheatsheet.md
-      - Kubeadm: kubernetes/kubeadm.md
-      - Kubernetes Dashboards: kubernetes/kubernetes-dashboards.md
+      - Kubernetes Introduction: kubernetes/kubernetes-introduction.md
+      - Kubernetes Installation: kubernetes/kubernetes-installation.md
+      - Kubernetes Objects:
+          - Pod: kubernetes/kubernetes-objects/pod.md
+          - Namespace: kubernetes/kubernetes-objects/namespace.md
+          - Label, Selector, Annotation: kubernetes/kubernetes-objects/label-selector-annotation.md
+          - Deployment, ReplicaSet: kubernetes/kubernetes-objects/deployment-replicaset.md
+          - Rollout, Rollback: kubernetes/kubernetes-objects/rollout-rollback.md
+          - Network Structure, Service: kubernetes/kubernetes-objects/network-structure-service.md
+          - Liveness, Readiness, Resource Limits, Env. Variables: kubernetes/kubernetes-objects/liveness-readiness-resource-limits-env-variables.md
+          - Volume, Secret, ConfigMap: kubernetes/kubernetes-objects/volume-secret-configmap.md
+          - Ingress: kubernetes/kubernetes-objects/ingress.md
+      - Kubernetes Tools:
+          - Kubectl: kubernetes/kubernetes-tools/kubectl.md
+          - Kubeadm: kubernetes/kubernetes-tools/kubeadm.md
+          - Minikube: kubernetes/kubernetes-tools/minikube.md
+          - Dashboards: kubernetes/kubernetes-tools/dashboards.md
+          - Helm: kubernetes/kubernetes-tools/helm.md
+          - Prometheus, EFK Stack: kubernetes/kubernetes-tools/prometheus-efk-stack.md
+          - Service Mesh: kubernetes/kubernetes-tools/service-mesh.md
   - Terraform:
       - Terraform Cheatsheet: terraform/terraform-cheatsheet.md
       - Tfenv: terraform/tfenv.md
