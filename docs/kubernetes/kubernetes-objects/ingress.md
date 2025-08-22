@@ -230,8 +230,6 @@ spec:
 After selecting and installing the Ingress Controller (Nginx) and installing the ClusterIP type services for each app,
 deploy the **Ingress objects** necessary for users to access service A when they write **example.com/a**.
 
-> _**Research Topic:** What is Layer 7? What does it do?_
-
 **Ingress Object definition for blue and green apps:**
 
 The `pathType` section can be set in two ways: `exact` or `Prefix`. For detailed information, refer to
@@ -243,7 +241,7 @@ kind: Ingress
 metadata:
   name: appingress
   annotations:
-  # Nginx settings are configured through annotations
+    # Nginx settings are configured through annotations
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
@@ -251,7 +249,7 @@ spec:
       http:
         paths:
           - path: /blue
-            pathType: Prefix 
+            pathType: Prefix
             backend:
               service:
                 name: bluesvc

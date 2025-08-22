@@ -377,30 +377,6 @@ linkerd uninstall | kubectl delete -f -
 
 ---
 
-## When to Use a Service Mesh
-
-Consider a mesh when you need:
-
-- Progressive delivery at scale (canary, blue/green) with policy‑driven controls
-- Uniform mTLS without per‑service certificate handling
-- Consistent timeouts/retries/circuit breaking across many services
-- Standardized metrics and traces with minimal app code changes
-
-You may not need a mesh if you have a small number of services, simple traffic, or you can implement minimal concerns (
-timeouts/retries) directly in your clients.
-
----
-
-## Troubleshooting Tips
-
-- Injection: ensure namespace label/annotation is correct and Pods restart to pick up sidecars.
-- DNS/hosts: `curl` the Kubernetes Service DNS name (e.g., `web.mesh-demo.svc.cluster.local`).
-- Policies: strict mTLS or AuthorizationPolicy can block traffic—check logs of sidecars and control plane.
-- Port naming: name ports `http`, `grpc`, etc., so the mesh applies correct protocol filters.
-- Events: `kubectl describe pod <name>` and `kubectl get events -A` for readiness/health failures.
-
----
-
 ## Clean Up
 
 ```shell
@@ -409,13 +385,6 @@ kubectl delete namespace l5d-demo || true
 ```
 
 ---
-
-## Cheat Sheet: Key Resources
-
-- Istio: VirtualService, DestinationRule, Gateway, PeerAuthentication, AuthorizationPolicy
-- Linkerd: TrafficSplit (SMI), Server/ServerAuthorization, viz extension
-
-Use these to compose routing, resiliency, identity, and policy—without changing your application code.
 
 ## References
 

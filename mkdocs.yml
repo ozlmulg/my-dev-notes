@@ -82,17 +82,28 @@ nav:
           - Label, Selector, Annotation: kubernetes/kubernetes-objects/label-selector-annotation.md
           - Deployment, ReplicaSet: kubernetes/kubernetes-objects/deployment-replicaset.md
           - Rollout, Rollback: kubernetes/kubernetes-objects/rollout-rollback.md
+          - StatefulSet: kubernetes/kubernetes-objects/statefulset.md
+          - DaemonSet: kubernetes/kubernetes-objects/daemonset.md
+          - Job, CronJob: kubernetes/kubernetes-objects/job-cronjob.md
           - Network Structure, Service: kubernetes/kubernetes-objects/network-structure-service.md
-          - Liveness, Readiness, Resource Limits, Env. Variables: kubernetes/kubernetes-objects/liveness-readiness-resource-limits-env-variables.md
-          - Volume, Secret, ConfigMap: kubernetes/kubernetes-objects/volume-secret-configmap.md
           - Ingress: kubernetes/kubernetes-objects/ingress.md
+          - Network Policy: kubernetes/kubernetes-objects/network-policy.md
+          - ConfigMap: kubernetes/kubernetes-objects/volume-secret-configmap.md
+          - Secret, Image Secret: kubernetes/kubernetes-objects/image-secret.md
+          - Probes, Resource Limits, Environment Variables: kubernetes/kubernetes-objects/probes-resource-limits-env-variables.md
+          - Affinity, Taint, Toleration: kubernetes/kubernetes-objects/affinity-taint-toleration.md
+          - Persistent Volume Claim: kubernetes/kubernetes-objects/persistent-volume-claim.md
+          - Storage Class: kubernetes/kubernetes-objects/storage-class.md
+          - Authentication: kubernetes/kubernetes-objects/authentication.md
+          - RBAC: kubernetes/kubernetes-objects/rbac.md
+          - Service Account: kubernetes/kubernetes-objects/service-account.md
       - Kubernetes Tools:
           - Kubectl: kubernetes/kubernetes-tools/kubectl.md
           - Kubeadm: kubernetes/kubernetes-tools/kubeadm.md
           - Minikube: kubernetes/kubernetes-tools/minikube.md
           - Dashboards: kubernetes/kubernetes-tools/dashboards.md
           - Helm: kubernetes/kubernetes-tools/helm.md
-          - Prometheus, EFK Stack: kubernetes/kubernetes-tools/prometheus-efk-stack.md
+          - Monitoring (Prometheus, EFK Stack): kubernetes/kubernetes-tools/monitoring-prometheus-efk-stack.md
           - Service Mesh: kubernetes/kubernetes-tools/service-mesh.md
   - Terraform:
       - Terraform Cheatsheet: terraform/terraform-cheatsheet.md

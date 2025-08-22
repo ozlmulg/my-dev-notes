@@ -1,4 +1,4 @@
-# Kubernetes Objects - Liveness, Readiness, Resource Limits, Environment Variables
+# Kubernetes Objects - Probes, Resource Limits, Environment Variables
 
 ## Overview
 
@@ -245,8 +245,6 @@ spec:
 * If requirements cannot be met, **the container cannot be created**
 * Memory behaves differently than CPU. Kubernetes doesn't block when memory requests exceed limits. If memory usage
   exceeds limits, the Pod enters "OOMKilled" state and is restarted
-
-> **Research Topic:** How should organizations determine the limits and minimum requirements for Pods?
 
 ## Environment Variables
 

@@ -2,7 +2,7 @@
 description: Kubernetes Prometheus Stack & ElasticSearch Fluentd Kibana Stack
 ---
 
-# Kubernetes Prometheus, EFK Stack
+# Kubernetes Monitoring - Prometheus, EFK Stack
 
 ![](<../images/kubernetes_prometheus.png>)
 
