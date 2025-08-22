@@ -2,36 +2,24 @@
 
 ## Deployment
 
-In K8s culture, "Singleton (Single) Pods" are generally not created. We create higher-level objects that manage them and
-these pods are managed by these objects. (EX: Deployment)
+In Kubernetes culture, "Singleton (Single) Pods" are generally not created directly. Instead, we create higher-level objects that manage them, and these Pods are managed by these controller objects. (Example: Deployment)
 
-**So, why don't we create them?**
+**Why Don't We Create Pods Directly?**
 
-For example, let's think that we deploy a frontend object with a container in a pod. If an error occurs in this
-container and our RestartPolicy is "Always or On-failure", kube-sched recovers by restarting the container and continues
-its operation. However, **if the problem occurs on the node, kube-sched doesn't say "Let me go and run this on another
-worker-node"!**
+Consider a scenario where we deploy a frontend application with a container in a Pod. If an error occurs in this container and our RestartPolicy is set to "Always" or "OnFailure", kube-scheduler can recover by restarting the container and continuing operation. However, **if the problem occurs on the node itself, kube-scheduler doesn't automatically migrate the Pod to another worker node!**
 
-So as a solution to this, we defined 3 nodes and put a load balancer in front of them. If something happens to one, the
-others will continue to be online, so we solved the problem. **BUT..** Let's think we developed the application. We will
-have to refresh the container images on all nodes one by one. If we want to add a label, we need to add it to all of
-them. **So, things get complicated.**
+As a solution, we could define 3 nodes and place a load balancer in front of them. If one fails, the others continue operating, solving the availability problem. **BUT...** Consider application development scenarios. We would need to refresh container images on all nodes individually. If we want to add labels, we need to add them to all nodes. **This approach becomes increasingly complex and difficult to manage.**
 
 **SOLUTION: "Deployment" Object**
 
-* Deployment is a type of object that continuously tries to bring the **desired state** we determine for one or more
-  pods to the **current state**. The **deployment-controller** within deployments takes the necessary actions to bring
-  the current state to the desired state.
-* With the Deployment object, we can easily do the image update operation above on all nodes, for example.
-* We can also specify how the Deployment should behave during operations with the (**Rollout**) parameter.
-* **If we get an error in new operations done in Deployment, we can return it to its old state with a single command.**
-* ⚠️⚠️⚠️ For example, if we make a **replica** definition when creating a deployment, the k8s
-  cluster will always try to keep that many replicas alive. Even if you manually delete one of the pods created by the
-  deployment, a new pod will be started in the background. This is why we don't create **Singleton Pods**. That is, we
-  don't create pods directly manually or with yaml, leaving this optimization to k8s.
-* Even if you're going to create a single pod, you should create it with deployment! (k8s official recommendation)
+* Deployment is a controller object that continuously strives to bring the **desired state** we define for one or more Pods to the **current state**. The **deployment-controller** within Deployments takes the necessary actions to transition the current state to the desired state.
+* With the Deployment object, we can easily perform operations like the image update mentioned above across all nodes.
+* We can also specify how the Deployment should behave during operations using the (**Rollout**) parameter.
+* **If errors occur during new operations in a Deployment, we can revert to the previous state with a single command.**
+* ⚠️⚠️⚠️ **Critical Point:** For example, if we define a **replica** count when creating a deployment, the Kubernetes cluster will always attempt to maintain that many replicas running. Even if you manually delete one of the Pods created by the deployment, a new Pod will be started automatically in the background. This is why we don't create **Singleton Pods** directly. Instead, we delegate this optimization to Kubernetes.
+* **Best Practice:** Even if you're going to create a single Pod, you should create it using a Deployment! (Official Kubernetes recommendation)
 
-### Creating Deployment with Command
+### Creating Deployments via Command Line
 
 ```shell
 kubectl create deployment <deploymentName> --image=<imageName> --replicas=<replicasNumber>
@@ -42,7 +30,7 @@ kubectl get deployment
 # Pay attention to the ready column for all deployments!
 ```
 
-### Updating image in Deployment
+### Updating Images in Deployments
 
 ```shell
 kubectl set image deployment/<deploymentName> <containerName>=<newImage>
@@ -50,23 +38,23 @@ kubectl set image deployment/<deploymentName> <containerName>=<newImage>
 kubectl set image deployment/firstdeployment nginx=httpd
 ```
 
-* As default strategy, it first updates one pod, then the other, then the other. We can change this.
+* By default, the strategy updates one Pod at a time. This behavior can be customized.
 
-### Changing Deployment Replicas
+### Scaling Deployment Replicas
 
 ```shell
 kubectl scale deployment <deploymentName> --replicas=<newReplicaNumber>
 ```
 
-### Deleting Deployment
+### Deleting Deployments
 
 ```shell
 kubectl delete deployments <deploymentName>
 ```
 
-### **Creating Deployment with YAML**
+### **Creating Deployments with YAML**
 
-1. Copy the commands under **`metadata`** in any yaml file that will create a pod:
+1. Copy the commands under **`metadata`** in any YAML file that creates a Pod:
 
 ```yaml
 # podexample.yaml
@@ -85,9 +73,8 @@ spec:
         - containerPort: 80
 ```
 
-1. Paste it under the **`template`** section in the yaml file that will create the deployment. _(Pay attention to
-   indentation!)_
-2. **Delete the `name` field from the pod template.**
+2. Paste it under the **`template`** section in the YAML file that creates the deployment. _(Pay attention to indentation!)_
+3. **Delete the `name` field from the Pod template.**
 
 ```yaml
 apiVersion: apps/v1
@@ -100,51 +87,45 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend # Label to be used to match with the pod in the template.
-  template: # Area where we specify the properties of the pods to be created.
+      app: frontend # Label to be used to match with the Pod in the template
+  template: # Area where we specify the properties of the Pods to be created
     metadata:
       labels:
-        app: frontend # Label of the pod matching with the deployment.
+        app: frontend # Label of the Pod matching with the deployment
     spec:
       containers:
         - name: nginx
           image: nginx:latest
           ports:
-            - containerPort: 80 # port to be opened to the outside.
+            - containerPort: 80 # Port to be opened to the outside
 ```
 
 * Each deployment must have **at least one** `selector` definition.
-* **If you're going to create multiple deployments, you must use different labels.** Otherwise, deployments may confuse
-  which pods belong to them. **Also, creating a singleton pod using the same labels is risky!**
+* **If you're going to create multiple deployments, you must use different labels.** Otherwise, deployments may confuse which Pods belong to them. **Also, creating a singleton Pod using the same labels is risky!**
 
 ## ReplicaSet
 
-In K8s, the object type that creates and manages x number of pods is actually **not deployment.** **ReplicaSet** takes
-on all these tasks. When we tell the deployment the desired derived state, the deployments object creates a ReplicaSet
-object and ReplicaSet performs all these tasks.
+In Kubernetes, the object type that actually creates and manages a specific number of Pods is **not Deployment** - it's **ReplicaSet**. When we tell the deployment the desired derived state, the Deployment object creates a ReplicaSet object, and ReplicaSet performs all these management tasks.
 
-When K8s first came out, we had an object called **Replication-controller**. It still exists but is not used.
+When Kubernetes was first introduced, we had an object called **Replication-controller**. It still exists but is no longer used.
 
 ```shell
-kubectl get replicaset # Lists active ReplicaSets.
+kubectl get replicaset # Lists active ReplicaSets
 ```
 
-When defining a deployment, when we make a change on it; deployment **creates a new ReplicaSet** and this ReplicaSet
-starts creating new pods. Meanwhile, old pods are deleted.
+When defining a deployment and making changes to it, the deployment **creates a new ReplicaSet**, and this ReplicaSet starts creating new Pods. Meanwhile, old Pods are deleted.
 
-### Undoing changes made on Deployment
+### Rolling Back Changes Made to Deployments
 
 ```shell
 kubectl rollout undo deployment <deploymentName>
 ```
 
-In this case, the old deployment is recreated and the old ReplicaSet starts creating the previous pods. This is why, *
-*to avoid managing all these operations manually**, we don't create ReplicaSet directly, we continue our operations by
-creating deployment.
+In this case, the old deployment is recreated, and the old ReplicaSet starts creating the previous Pods. This is why, **to avoid managing all these operations manually**, we don't create ReplicaSets directly; we continue our operations by creating Deployments.
 
-—> **Deployment > ReplicaSet > Pods**
+**Hierarchy:** **Deployment > ReplicaSet > Pods**
 
-* When ReplicaSet is wanted to be created as YAML, **it is created exactly the same way as deployment.**
+* When ReplicaSet is desired to be created as YAML, **it is created exactly the same way as Deployment.**
 
 ## References
 

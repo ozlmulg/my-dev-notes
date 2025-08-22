@@ -2,31 +2,28 @@
 
 ## Namespace
 
-* Let's think of a scenario where 10 different teams use a single **file server**:
-    * One person's created file can be overwritten by another or cause name conflicts,
-    * I may have difficulty separating files that only Team 1 should see, I need to constantly make file settings.
-    * To solve this, we can create a special folder for each team and arrange their permissions according to team
-      members.
-* In the example above, we can think of the **fileserver** as the **k8s cluster**, and **namespaces** as the **folders**
-  opened for each team here.
-* **Namespaces are k8s objects. When defining them (especially in YAML) files, definition should be made accordingly.**
-* Namespaces must be independent and unique from each other. Namespaces cannot be nested within each other.
-* When each k8s is created, 4 default namespaces are created. (_default, kube-node-lease, kube-public, kube-system_)
+* Consider a scenario where 10 different teams share a single **file server**:
+    * Files created by one person could be overwritten by another, causing name conflicts
+    * Separating files that only Team 1 should access becomes challenging, requiring constant permission adjustments
+    * To resolve this, we can create dedicated folders for each team and configure permissions according to team membership
+* In the example above, we can think of the **file server** as the **Kubernetes cluster**, and **namespaces** as the **dedicated folders** created for each team
+* **Namespaces are Kubernetes objects that require proper definition when creating them (especially in YAML files)**
+* Namespaces must be independent and unique from each other. **Namespaces cannot be nested within each other**
+* When Kubernetes is initially created, four default namespaces are automatically established: `default`, `kube-node-lease`, `kube-public`, and `kube-system`
 
-### Listing Namespace
+### Listing Namespaces
 
-* By default, all operations and objects are processed under the **default namespace**. When we write
-  `kubectl get pods`, since we don't specify any namespace, it gets the pods under the `default namespace`.
+* By default, all operations and objects are processed under the **default namespace**. When we execute `kubectl get pods` without specifying a namespace, it retrieves pods from the `default namespace`
 
 ```shell
 kubectl get pods --namespace <namespaceName>
 kubectl get pods -n <namespaceName>
 
-# To list pods in all namespaces:
+# To list pods across all namespaces:
 kubectl get pods --all-namespaces
 ```
 
-### Creating Namespace
+### Creating Namespaces
 
 ```shell
 kubectl create namespace <namespaceName>
@@ -34,18 +31,18 @@ kubectl create namespace <namespaceName>
 kubectl get namespaces
 ```
 
-#### Creating Namespace using YAML file
+#### Creating Namespaces Using YAML Files
 
 ```yaml
 apiVersion: v1
-kind: Namespace # A namespace named development is created.
+kind: Namespace # A namespace named development is created
 metadata:
-  name: development # We give a name to the namespace.
+  name: development # We assign a name to the namespace
 ---
 apiVersion: v1
 kind: Pod
 metadata:
-  namespace: development # We define the pod under the namespace we created.
+  namespace: development # We define the pod under the created namespace
   name: namespacepod
 spec:
   containers:
@@ -55,22 +52,19 @@ spec:
         - containerPort: 80
 ```
 
-When creating a Pod running in a namespace and connecting to this pod; in short, when doing any operation on these pods,
-**namespace** must be specified. If not specified, k8s will start looking for the relevant pod under the **default
-namespace**.
+**Important Note:** When creating Pods that run in a specific namespace and connecting to these Pods (or performing any operations on them), **the namespace must be specified**. If not specified, Kubernetes will search for the relevant Pod under the **default namespace**.
 
-### Changing Default Namespace
+### Changing the Default Namespace
 
-```
+```shell
 kubectl config set-context --current --namespace=<namespaceName>
 ```
 
-### Deleting Namespace
+### Deleting Namespaces
 
-⚠️ **ATTENTION!** **No confirmation will be requested when deleting namespace. All objects under the namespace
-will be deleted!**
+⚠️ **CRITICAL WARNING!** **No confirmation will be requested when deleting a namespace. All objects within the namespace will be permanently deleted!**
 
-```
+```shell
 kubectl delete namespaces <namespaceName>
 ```
 

@@ -4,21 +4,17 @@ description: What is Pod, Commands, YAML, Multi Container …
 
 # Kubernetes Objects - Pod
 
-## What is Pod?
+## What is a Pod?
 
-* Things we run, execute, deploy on K8s are called **Kubernetes Objects**.
-* **The most basic object is Pod.**
-* Before K8s, we always worked with docker containers. **In K8s, we don't create containers directly.** In the K8s
-  world, the **smallest unit** we can create and manage is **Pod**.
-* Pods can contain **one or more** containers. **For Best Practice, each pod contains only one container.**
-* Each pod has a **unique ID (uid)** and a **unique IP**. The Api-server **records this uid and IP to etcd**. If the
-  Scheduler sees that any pod is not associated with a node, it selects a **suitable worker node** to run that pod and
-  adds this information to the pod definition. The **kubelet** service running inside the pod sees this pod definition
-  and runs the relevant container.
-* Containers in the same pod are run on the same node and these containers communicate through localhost.
-* Pods are created with **`kubectl run`**.
+* **Kubernetes Objects** are the entities we deploy, execute, and manage within Kubernetes clusters.
+* **The Pod is the most fundamental Kubernetes object.**
+* Unlike traditional container management where we work directly with Docker containers, **Kubernetes operates at the Pod level** - the smallest deployable unit we can create and manage.
+* Pods can contain **one or more containers**, though **best practice recommends one container per Pod** for optimal resource management and scalability.
+* Each Pod receives a **unique identifier (UID)** and a **unique IP address**. The API server records this information in etcd. The Scheduler identifies unassigned Pods and selects appropriate worker nodes for execution, updating the Pod definition accordingly. The kubelet service running on the worker node then creates and manages the specified containers.
+* Containers within the same Pod run on the same node and communicate through localhost interfaces.
+* Pods are created using the **`kubectl run`** command.
 
-## Creating Pod
+## Creating Pods
 
 ```shell
 kubectl run firstpod --image=nginx --restart=Never --port=80 --labels="app=frontend" 
@@ -26,17 +22,17 @@ kubectl run firstpod --image=nginx --restart=Never --port=80 --labels="app=front
 # Output: pod/firstpod created
 ```
 
-* `–restart` -> We wrote `Never` so that if the container inside the pod stops for any reason, it won't be restarted.
+* The `--restart` parameter with `Never` ensures that if the container stops for any reason, it will not be automatically restarted.
 
-### Showing Defined Pods
+### Listing Pods
 
 ```shell
 kubectl get pods -o wide
 
-# -o wide --> For wider table display.
+# -o wide provides an extended table display with additional details
 ```
 
-### Seeing Details of an Object
+### Inspecting Pod Details
 
 ```shell
 kubectl describe <object> <objectName>
@@ -44,13 +40,13 @@ kubectl describe <object> <objectName>
 kubectl describe pods first-pod
 ```
 
-* Gets all information about the `first-pod` pod.
-* Pay attention to **Events** in the information. We can see the pod's history, what happened, what k8s did.
-    * First, Scheduler makes node assignment,
-    * kubelet pulled the container image,
-    * kubelet created the pod.
+* This command retrieves comprehensive information about the specified Pod.
+* Pay particular attention to the **Events** section, which provides a chronological history of Pod lifecycle events:
+    * Initial node assignment by the Scheduler
+    * Container image pulling by kubelet
+    * Pod creation and startup processes
 
-### Seeing Pod Logs
+### Accessing Pod Logs
 
 ```shell
 kubectl logs <podName>
@@ -58,21 +54,21 @@ kubectl logs <podName>
 kubectl logs first-pod
 ```
 
-**Seeing Logs Live (Realtime)**
+**Real-time Log Monitoring**
 
 ```shell
 kubectl logs -f <podName>
 ```
 
-### Running Commands Inside Pod
+### Executing Commands Within Pods
 
-```
+```shell
 kubectl exec <podName> -- <command>
 
 kubectl exec first-pod -- ls /
 ```
 
-### Connecting to Container Inside Pod
+### Interactive Container Access
 
 ```shell
 kubectl exec -it <podName> -- <shellName>
@@ -80,38 +76,37 @@ kubectl exec -it <podName> -- <shellName>
 kubectl exec -it first-pod -- /bin/sh
 ```
 
-**If there is more than 1 container in 1 Pod:**
+**Multi-container Pod Access**
 
-```
+```shell
 kubectl exec -it <podName> -c <containerName> -- <bash|/bin/sh>
 ```
 
-\-> Some commands we can use after connecting:
+**Useful Commands After Connection:**
 
 ```shell
-hostname #gives the pod name.
-printenv #Gets Pod env variables.
+hostname    # Displays the Pod name
+printenv    # Shows Pod environment variables
 ```
 
-\--> If there are multiple containers in a pod, to connect to the container we want:
+**Connecting to Specific Containers in Multi-container Pods:**
 
-```
+```shell
 kubectl exec -it <podName> -c <containerName> -- /bin/sh
 ```
 
-### Deleting Pod
+### Pod Deletion
 
 ```shell
 kubectl delete pods <podName>
 ```
 
-\-> Be careful when deleting! Because it doesn't ask for confirmation. **It deletes directly!** Especially be careful in
-production!
+⚠️ **Warning:** This command executes immediately without confirmation. Exercise extreme caution, especially in production environments!
 
-## YAML
+## YAML Configuration
 
-* k8s supports **YAML** or **JSON** as declarative method.
-* **We can specify multiple objects in a YAML file by putting `---` (three dashes).**
+* Kubernetes supports both **YAML** and **JSON** as declarative configuration methods.
+* **Multiple objects can be defined in a single YAML file by separating them with `---` (three dashes).**
 
 ```yaml
 apiVersion:
@@ -120,124 +115,109 @@ metadata:
 spec:
 ```
 
-* When creating any type of object; **apiVersion, kind and metadata** are required.
-* **`kind`** –> We write here what type of object we want to create. EX: `pod`
-* **`apiVersion`** –> Shows on which API or endpoint the object we want to create is served.
-* **`metadata`** –> Where we define unique information about the object. EX: `namespace`, `annotation`, etc.
-* **`spec`** –> Where we specify the properties of the object we want to create. The information we will enter is
-  different for each object. We can look at the definitions we will write here from the documentation.
+* When creating any Kubernetes object, **apiVersion, kind, and metadata** are mandatory fields.
+* **`kind`** specifies the type of object to create (e.g., `Pod`).
+* **`apiVersion`** indicates which API endpoint serves the object type.
+* **`metadata`** contains unique identifying information about the object (e.g., `namespace`, `annotations`).
+* **`spec`** defines the object's properties and configuration. The content varies by object type and can be referenced from official documentation.
 
-### Where Will We Find apiVersion?
+### Determining apiVersion
 
-1. We can look at the documentation.
-2. We can learn through kubectl:
+1. **Documentation Reference:** Consult official Kubernetes documentation.
+2. **Kubectl Explain:** Use the following command:
 
 ```shell
 kubectl explain pods
 ```
 
-We can learn the properties of the pod by writing the explain command above.
+This command displays Pod properties and shows the appropriate `apiVersion` under the `Versions` field.
 
-–> What's written opposite `Versions` is our `apiVersion`.
-
-### Writing metadata and spec
+### Configuring metadata and spec
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: first-pod    # Pod name
-  labels: # We can write the labels we will assign.
-    app: front-end  # We created app = front-end label.
+  name: first-pod    # Pod identifier
+  labels:            # Optional label assignments
+    app: front-end   # Creates app=front-end label
 spec:
-  containers: # We make container definitions.
+  containers:        # Container definitions
     - name: nginx            # Container name
-    image: nginx:latest
-    ports:
-      - containerPort: 80 # Port to access container from outside
+      image: nginx:latest    # Container image
+      ports:
+        - containerPort: 80  # External access port
 ```
 
-### Declaring YAML File to K8s
+### Applying YAML Configuration
 
 ```shell
 kubectl apply -f pod1.yaml
 ```
 
-* Take the pod1.yaml file and create the object defined here for me.
-* All properties of the created pod are displayed with `kubectl describe pods firstpod`.
-* YAML method can be used to create in pipeline.
-* :thumbsup: **Declarative Method Advantage** –> When we define a pod with imperative method, we get "Already exists."
-  error when we want to update one of its properties. But if we wanted to change the YAML declaratively and update it
-  and use the apply command, we would get the "pod configured" success message.
+* This command creates the object defined in the YAML file.
+* All Pod properties can be verified using `kubectl describe pods firstpod`.
+* YAML configuration is ideal for CI/CD pipeline integration.
+* ✅ **Declarative Method Advantage:** Unlike imperative commands that may return "Already exists" errors during updates, YAML modifications with `kubectl apply` provide "pod configured" success messages.
 
-### Stopping Declared YAML File
+### Removing YAML-defined Resources
 
 ```shell
 kubectl delete -f pod1.yaml
 ```
 
-### Directly Changing Pods with Kubectl (Edit)
+### Direct Pod Editing
 
 ```shell
 kubectl edit pods <podName>
 ```
 
-* Used to directly change the properties of any defined pod.
-* We press the `i` key to go into `INSERT` mode and do editing.
-* We can exit with CMD + C and exit VIM with `:wq`.
-* We see the message that the pod was edited.
-* It's not a preferred method, YAML + `kubectl apply` should be preferred.
+* This command allows direct modification of Pod properties.
+* Press `i` to enter `INSERT` mode for editing.
+* Exit with `Ctrl+C` and save with `:wq` in Vim.
+* A confirmation message indicates successful Pod modification.
+* **Note:** This method is not recommended; prefer YAML configuration with `kubectl apply`.
 
 ## Pod Lifecycle
 
-* **Pending** –> When we write a YAML file to create a pod, the configs written in the YAML file are mixed with defaults
-  and recorded to etcd.
-* **Creating** –> kube-sched constantly monitors etcd and if it sees any pod not assigned to a node, it intervenes and
-  selects the most suitable node and adds the node information. If it gets stuck at this stage, **it means a suitable
-  node cannot be found.**
-    * It constantly monitors etcd and detects pods assigned to its node. Accordingly, it downloads images to create
-      containers. If the image cannot be found or pulled from the repo, it goes into **ImagePullBackOff** state.
-    * If the image is pulled correctly and containers start to be created, the Pod goes into **Running** state.
+* **Pending** → When a YAML file is submitted, the configuration merges with defaults and is recorded in etcd.
+* **Creating** → The kube-scheduler continuously monitors etcd for unassigned Pods and selects suitable nodes for execution. If this stage persists, **it indicates that no suitable node can be found**.
+    * The kubelet continuously monitors etcd for Pods assigned to its node and downloads required container images. If image retrieval fails, the Pod enters **ImagePullBackOff** state.
+    * Upon successful image retrieval and container creation, the Pod transitions to **Running** state.
 
-> _Let's give an S here.. Let's talk about the working logic of Containers:_
+> **Container Operation Logic:**
+> 
+> Container images contain applications designed for continuous operation. Applications terminate in three scenarios:
+> 1. **Normal completion:** The application finishes all tasks and exits without errors.
+> 2. **Graceful shutdown:** User or system sends a shutdown signal, and the application exits cleanly.
+> 3. **Error termination:** The application encounters an error, crashes, and exits.
 
-* There is an application in container images that needs to run continuously. As long as this application runs, the
-  container is also in running state. The application ends its operation in 3 ways:
-    1. The application completes all its tasks and closes without error.
-    2. User or system sends shutdown signal and closes without error.
-    3. It gives an error, crashes, closes.
+> **Returning to the lifecycle...**
 
-> _Let's return to the cycle.._
+* When container applications stop, a **RestartPolicy** defined in the Pod determines the response, with three possible values:
+    * **`Always`** → Kubelet automatically restarts the container.
+    * **`Never`** → Kubelet **does not restart** the container.
+    * **`OnFailure`** → Kubelet only restarts the container when errors occur.
+* **Succeeded** → Pods that complete successfully enter this state.
+* **Failed** → Pods that fail to complete enter this state.
+* **Completed** → Pods that run successfully and exit without errors enter this state.
+* ⚠️ **CrashLoopBackOff** → When a Pod frequently crashes and restarts due to RestartPolicy, Kubernetes detects this pattern and places the Pod in this state. **Pods in this state require investigation.**
 
-* In response to the container application stopping, a **RestartPolicy** is defined in the Pod and takes 3 values:
-    * **`Always`** -> Kubelet restarts this container.
-    * **`Never`** -> Kubelet **does not restart** this container.
-    * **`On-failure`** -> Kubelet only starts the container when it gets an error.\\
-* **Succeeded** -> If the pod is created successfully, it goes to this state.
-* **Failed** -> If the pod is not created successfully, it goes to this state.
-* **Completed** -> If the pod is created successfully, runs and closes without error, it goes to this state.
-* ⚠️ **CrashLookBackOff** -> If a pod is created and frequently shuts down and is constantly tried to be
-  restarted due to RestartPolicy, k8s detects this and puts this pod into this state. **Pods in this state should be
-  examined.**
+## Multi-container Pods
 
-## Multi Container Pods
+### **Why Not Place Multiple Applications in the Same Container?**
 
-### **Why don't we put 2 applications in the same container?**
+**Answer:** **Isolation.** Multiple applications should operate independently. Without proper isolation, horizontal scaling becomes problematic. When scaling requires duplication, having multiple applications in the same container results in multiple instances of each application (e.g., 2 MySQL instances, 2 WordPress instances), which is not optimal.
 
-–> Answer: Isolation. Let 2 applications work in isolation. If you don't provide this isolation, you can't do horizontal
-scaling. When this situation needs to be duplicated and when we get the 2nd container, there will be 2 MySQL, 2
-Wordpress which is not a good thing.
+✅ **Therefore, the recommended pattern is 1 Pod = 1 Container = 1 Application.** Alternative approaches become **anti-patterns**.
 
-:ok_hand: Therefore **1 Pod = 1 Container = 1 application** should be! Other scenarios become **Anti-Pattern**.
+### Why Do Pods Support Multiple Containers?
 
-### So, why do pods allow multi-container?
+**Answer:** Some applications require **tight integration and dependency management**. When the main application starts or stops, dependent containers should follow the same lifecycle. In such cases, multiple containers can be placed in a single Pod.
 
-–> Answer: Some applications work integrated (dependent). That is, when the main application runs, it should run, when
-it stops, it should stop. In such cases, we can put multiple containers in one pod.
+**Note:** Containers within the same Pod communicate through localhost without requiring network configuration.
 
-–> Two containers in one pod don't need network, they can work through localhost.
-
-\-> If there is a pod with multi-container and we want to connect to one of these containers:
+**Accessing Specific Containers in Multi-container Pods:**
 
 ```shell
 kubectl exec -it <podName> -c <containerName> -- /bin/sh
@@ -274,15 +254,13 @@ spec:
 
 </details>
 
-### Running Multiple Containers in a Pod with Init Container
+### Init Containers
 
-It's like the `init()` command in Go, it's the first running container. For example, for the application container to
-start, it needs to fetch some config files. We can do this operation in the init container.
+Init containers function similarly to the `init()` function in Go - they execute first before the main application container. For example, if an application requires configuration files before startup, this operation can be performed in the init container.
 
-1. Before the application container is started, the **Init Container** runs first.
-2. The Init Container does what it needs to do and closes.
-3. The application container starts running after the Init Container closes. **The application container doesn't start
-   until the Init Container closes.**
+1. **Init Container Execution:** Before the application container starts, the **Init Container** runs first.
+2. **Task Completion:** The Init Container performs its required tasks and terminates.
+3. **Application Startup:** The application container starts only after the Init Container completes successfully. **The application container will not start until the Init Container finishes.**
 
 <details>
 <summary>podinitcontainer.yaml</summary>
