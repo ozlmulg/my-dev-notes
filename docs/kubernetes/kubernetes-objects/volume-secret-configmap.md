@@ -1,17 +1,33 @@
 # Kubernetes Objects - Volume, Secret, ConfigMap
 
-## Volume
+## Overview
 
-* Container files are ephemeral and exist only while the container is running. When containers are deleted, these files are also removed. Each time a new container is created, container-specific files are recreated from scratch. (This represents the **stateless concept**)
-* In certain scenarios, these files need to persist beyond container lifecycle. This is where **Ephemeral (Temporary) Volume concepts** become relevant. (This represents the **stateful concept**) For example, to prevent data loss in database containers, **volume structures** should be implemented.
-* Ephemeral Volumes can be mounted to all containers within the same Pod simultaneously.
-* Another purpose is to create shared storage areas that multiple containers in the same Pod can utilize collaboratively.
+Kubernetes provides comprehensive storage solutions for managing data persistence, sensitive information, and
+configuration management. This document covers the essential components for data management within Kubernetes clusters.
 
-> **Important Note:** In Ephemeral Volumes, if the Pod is deleted, all data is lost. However, if only the container is deleted and recreated, data persists as long as the Pod remains intact.
+## Volume Management
+
+### Purpose
+
+Container files are ephemeral and exist only while the container is running. When containers are deleted, these files
+are also removed. Each time a new container is created, container-specific files are recreated from scratch. (This
+represents the **stateless concept**)
+
+In certain scenarios, these files need to persist beyond container lifecycle. This is where **Ephemeral (Temporary)
+Volume concepts** become relevant. (This represents the **stateful concept**) For example, to prevent data loss in
+database containers, **volume structures** should be implemented.
+
+Ephemeral Volumes can be mounted to all containers within the same Pod simultaneously. Another purpose is to create
+shared storage areas that multiple containers in the same Pod can utilize collaboratively.
+
+> **Important Note:** In Ephemeral Volumes, if the Pod is deleted, all data is lost. However, if only the container is
+> deleted and recreated, data persists as long as the Pod remains intact.
+
+### Volume Types
 
 There are two types of Ephemeral Volumes:
 
-### emptyDir Volume
+#### emptyDir Volume
 
 ![](../images/kubernetes_emptydir.png)
 
@@ -54,14 +70,16 @@ spec:
 
 </details>
 
-### hostPath Volume
+#### hostPath Volume
 
-* **Usage Warning:** This volume type is rarely used and requires careful consideration when implemented.
-* While emptyDir creates volume folders within the Pod, hostPath creates volume folders on the worker node itself.
-* Three different types are supported:
-    * **Directory** → Used for folders that already exist on the worker node.
-    * **DirectoryOrCreate** → Used for existing folders or to create the folder if it doesn't exist.
-    * **FileOrCreate** → Not a folder! Used for single files. If the file doesn't exist, it's created.
+**Usage Warning:** This volume type is rarely used and requires careful consideration when implemented.
+
+While emptyDir creates volume folders within the Pod, hostPath creates volume folders on the worker node itself. Three
+different types are supported:
+
+* **Directory** → Used for folders that already exist on the worker node
+* **DirectoryOrCreate** → Used for existing folders or to create the folder if it doesn't exist
+* **FileOrCreate** → Not a folder! Used for single files. If the file doesn't exist, it's created
 
 ![](../images/kubernetes_hostpath.png)
 
@@ -111,16 +129,25 @@ spec:
 
 </details>
 
-## Secret
+## Secret Management
 
-* Although sensitive information (database credentials, etc.) can be stored in Environment Variables, this approach may not be ideal for security and management purposes.
-* The Secret object allows us to separate sensitive information from application object definitions in YAML files and manage them independently.
-* It's always safer and more flexible to store sensitive data such as tokens, usernames, and passwords in Secret objects.
+### Purpose
 
-### Creating Declarative Secrets
+Although sensitive information (database credentials, etc.) can be stored in Environment Variables, this approach may
+not be ideal for security and management purposes.
 
-* **Important:** The Secret and the Pods it will be assigned to **must be in the same namespace.**
-* Eight different types of secrets can be created. **`Opaque`** is a generic type that can store almost all sensitive data.
+The Secret object allows organizations to separate sensitive information from application object definitions in YAML
+files and manage them independently. It's always safer and more flexible to store sensitive data such as tokens,
+usernames, and passwords in Secret objects.
+
+### Creation Methods
+
+#### Declarative Creation
+
+**Important:** The Secret and the Pods it will be assigned to **must be in the same namespace.**
+
+Eight different types of secrets can be created. **`Opaque`** is a generic type that can store almost all sensitive
+data.
 
 Example secret.yaml file:
 
@@ -142,7 +169,7 @@ To view the data in the secret:
 kubectl describe secrets <secretName>
 ```
 
-### Creating Imperative Secrets
+#### Imperative Creation
 
 ```shell
 kubectl create secret generic <secretName> --from-literal=db_server=db.example.com --from-literal=db_username=admin
@@ -150,7 +177,9 @@ kubectl create secret generic <secretName> --from-literal=db_server=db.example.c
 
 ⚠️ **Note:** `generic` here corresponds to `Opaque` type specified in YAML.
 
-**Alternative Approach:** If you prefer not to enter sensitive data via CLI, you can store each piece of data in separate `.txt` files and use the `--from-file=db_server=server.txt` command. You can also use `.json` files instead of `.txt` files by specifying `--from-file=config.json`.
+**Alternative Approach:** If organizations prefer not to enter sensitive data via CLI, they can store each piece of data
+in separate `.txt` files and use the `--from-file=db_server=server.txt` command. They can also use `.json` files instead
+of `.txt` files by specifying `--from-file=config.json`.
 
 JSON example:
 
@@ -160,7 +189,7 @@ JSON example:
 }
 ```
 
-### Reading Secrets from Pods
+### Integration with Pods
 
 There are **two methods** to transfer created Secrets to Pods:
 
@@ -237,11 +266,18 @@ spec:
 kubectl exec <podName> -- printenv
 ```
 
-## ConfigMap
+## ConfigMap Management
 
-* ConfigMaps operate using exactly the same logic as Secret objects. The key difference is that Secrets are stored encrypted in etcd using base64 encoding, while ConfigMaps are not encrypted and therefore should not contain sensitive data.
-* ConfigMaps can be defined as **Volumes** or **Environment Variables** in Pods.
-* Since creation methods are identical to Secrets, the commands above remain valid.
+### Purpose
+
+ConfigMaps operate using exactly the same logic as Secret objects. The key difference is that Secrets are stored
+encrypted in etcd using base64 encoding, while ConfigMaps are not encrypted and therefore should not contain sensitive
+data.
+
+ConfigMaps can be defined as **Volumes** or **Environment Variables** in Pods. Since creation methods are identical to
+Secrets, the commands above remain valid.
+
+### Configuration
 
 <details>
 <summary>configmap.yaml</summary>
@@ -289,9 +325,11 @@ spec:
 
 </details>
 
-### Creating ConfigMaps from Configuration Files
+### File-based Creation
 
-Consider scenarios where you have `config.qa.yaml` or `config.prod.json` files for different environments (QA, SIT, and PROD) to be used in your application. How can you create ConfigMaps from the appropriate configuration file based on these environments in CI/CD?
+Consider scenarios where organizations have `config.qa.yaml` or `config.prod.json` files for different environments (QA,
+SIT, and PROD) to be used in applications. How can ConfigMaps be created from the appropriate configuration file based
+on these environments in CI/CD?
 
 <details>
 <summary>config.json</summary>
@@ -315,9 +353,11 @@ Consider scenarios where you have `config.qa.yaml` or `config.prod.json` files f
 
 </details>
 
-1. **Creating a ConfigMap from our config.json file via Kubectl:**
+#### Creation Process
 
-   **If you're running in CI/CD and want to track logs:**
+**Creating a ConfigMap from config.json file via Kubectl:**
+
+**If running in CI/CD and want to track logs:**
 
 ```shell
 # --dry-run is normally deprecated, but still used in older versions
@@ -329,22 +369,28 @@ kubectl create configmap testconfig --from-file config.json -o yaml --dry-run="c
 # The "-" (dash) at the end takes the output from the first part of the pipe
 ```
 
-* When you run the command above, kubectl takes the config.json file, creates ConfigMap YAML content that can be used with the `kubectl apply` command, and **prints this content to the screen as output** due to the **`--dry-run`** option.
-* We capture the incoming output (using bash "pipe | ") and send it to our cluster with the `kubectl apply` command to create the ConfigMap.
+When running the command above, kubectl takes the config.json file, creates ConfigMap YAML content that can be used with
+the `kubectl apply` command, and **prints this content to the screen as output** due to the **`--dry-run`** option.
 
-**If you want to create a ConfigMap directly from the config.json file without reading logs:**
+Organizations capture the incoming output (using bash "pipe | ") and send it to their cluster with the `kubectl apply`
+command to create the ConfigMap.
+
+**If organizations want to create a ConfigMap directly from the config.json file without reading logs:**
 
 ```shell
-# You can use many format files instead of config.json: e.g., yaml
+# Organizations can use many format files instead of config.json: e.g., yaml
 kubectl create configmap <configName> --from-file config.json
 ```
 
-2. **Now when creating the Pod, we need to transfer the values in our ConfigMap to a file in a folder inside the Pod and store it as a file using "volume" logic.**
+2. **Pod Integration:** When creating the Pod, organizations need to transfer the values in ConfigMaps to files in
+   folders inside Pods and store them as files using "volume" logic.
 
-* Let's define our volume and configMap in the "volumes" section.
-* In the "volumeMounts" section inside the Pod, let's introduce this volume to our pod.
-    * In the **`mountPath`** section, we can specify under which folder the file in the configMap will be copied inside the Pod and what its new name will be.
-    * With **`subPath`**, we need to provide the name of the file in the configMap (e.g., `config.json`). Thus, when the Pod is created, we specify "This file's name will change."
+* Define volumes and configMaps in the "volumes" section
+* In the "volumeMounts" section inside the Pod, introduce this volume to the pod
+    * In the **`mountPath`** section, specify under which folder the file in the configMap will be copied inside the Pod
+      and what its new name will be
+    * With **`subPath`**, provide the name of the file in the configMap (e.g., `config.json`). Thus, when the Pod is
+      created, specify "This file's name will change"
 
 <details>
 <summary>configmappod4.yaml</summary>
@@ -371,9 +417,9 @@ spec:
 
 </details>
 
-#### **Alternative Volume Definition Syntax**
+#### Alternative Volume Definition Syntax
 
-We can also write the volumes section in a different way:
+Organizations can also write the volumes section in a different way:
 
 <details>
 <summary>configmappod.yaml</summary>

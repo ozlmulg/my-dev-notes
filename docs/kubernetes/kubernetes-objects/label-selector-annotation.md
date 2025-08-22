@@ -1,28 +1,40 @@
 # Kubernetes Objects - Label, Selector, Annotation
 
-## What are Labels?
+## Overview
 
-* **Labels** are key-value pairs that act as tags for Kubernetes objects.
-* **Selectors** are mechanisms for selecting objects based on their labels.
+Labels and Selectors provide the fundamental mechanism for organizing and identifying Kubernetes objects. Labels act as
+key-value pairs that tag Kubernetes objects, while Selectors enable object selection based on these labels.
 
-**Example:** `example.com/tier:front-end` where:
+## Labels
+
+### Definition
+
+**Labels** are key-value pairs that act as tags for Kubernetes objects. **Selectors** are mechanisms for selecting
+objects based on their labels.
+
+**Format:** `example.com/tier:front-end` where:
+
 * `example.com/` = Prefix (optional)
 * `tier` = **key**
 * `front-end` = **value**
 
-* **Reserved prefixes:** `kubernetes.io/` and `k8s.io/` are reserved for Kubernetes core components and cannot be used.
-* Labels can contain dashes, underscores, and dots.
-* **Turkish characters cannot be used.**
-* **Labels are used to establish connections between objects like Services, Deployments, and Pods.**
+### Constraints
 
-## Label & Selector Implementation
+* **Reserved prefixes:** `kubernetes.io/` and `k8s.io/` are reserved for Kubernetes core components and cannot be used
+* **Valid characters:** Labels can contain dashes, underscores, and dots
+* **Language restrictions:** Turkish characters cannot be used
+* **Purpose:** Labels are used to establish connections between objects like Services, Deployments, and Pods
 
-* Label definitions are made in the **metadata** section. Multiple labels can be added to the same object.
-* Labels provide grouping and identification capabilities, making CLI operations easier.
+## Implementation
 
-### Selectors - Listing Objects by Labels
+### Label Definition
 
-* To list objects that have a specific "app" key:
+Label definitions are made in the **metadata** section. Multiple labels can be added to the same object. Labels provide
+grouping and identification capabilities, making CLI operations easier.
+
+### Selectors - Object Filtering
+
+To list objects that have a specific "app" key:
 
 ```yaml
 ---
@@ -40,7 +52,7 @@ metadata:
 ```shell
 kubectl get pods -l <keyword> --show-labels
 
-## Listing with Equality-based Syntax
+## Equality-based Syntax
 
 kubectl get pods -l "app" --show-labels
 
@@ -54,7 +66,7 @@ kubectl get pods -l "app=firstapp, tier!=front-end" --show-labels
 # Objects with app key and tier as "front-end":
 kubectl get pods -l "app, tier=front-end" --show-labels
 
-## Listing with Set-based Syntax
+## Set-based Syntax
 
 # Objects with app as "firstapp":
 kubectl get pods -l "app in (firstapp)" --show-labels
@@ -71,14 +83,19 @@ kubectl get pods -l "!app" --show-labels
 kubectl get pods -l "app in (firstapp), tier notin (frontend)" --show-labels
 ```
 
-* **Important distinction:** While no results are found with the first syntax (equality-based), results appear with the second syntax (set-based selector):
+### Syntax Differences
+
+**Important distinction:** While no results are found with the first syntax (equality-based), results appear with the
+second syntax (set-based selector):
 
 ```shell
 kubectl get pods -l "app=firstapp, app=secondapp" --show-labels # No results!
 kubectl get pods -l "app in (firstapp, secondapp)" --show-labels # Results exist!
 ```
 
-### Adding Labels via Command Line
+## Label Management
+
+### Adding Labels
 
 ```shell
 kubectl label pods <podName> <label>
@@ -86,15 +103,15 @@ kubectl label pods <podName> <label>
 kubectl label pods pod1 app=front-end
 ```
 
-### Deleting Labels via Command Line
+### Removing Labels
 
-You need to append a dash (-) at the end to indicate deletion.
+Append a dash (-) at the end to indicate deletion.
 
 ```shell
 kubectl label pods pod1 app-
 ```
 
-### Updating Labels via Command Line
+### Updating Labels
 
 ```shell
 kubectl label --overwrite pods <podName> <label>
@@ -102,7 +119,7 @@ kubectl label --overwrite pods <podName> <label>
 kubectl label --overwrite pods pod9 team=team3
 ```
 
-### Adding Labels in Bulk via Command Line
+### Bulk Operations
 
 This label is added to all objects.
 
@@ -110,9 +127,13 @@ This label is added to all objects.
 kubectl label pods --all foo=bar
 ```
 
-## Label Relationships Between Objects
+## Object Relationships
 
-* In normal operation, kube-scheduler makes node selections according to its own algorithm. If we want to make this selection manual, we can specify that it should select a node with the `hddtype: ssd` label as shown in the example below. This establishes a relationship between the Pod and node through labels.
+### Node Selection
+
+In normal operation, kube-scheduler makes node selections according to its own algorithm. To make this selection manual,
+specify that it should select a node with the `hddtype: ssd` label as shown in the example below. This establishes a
+relationship between the Pod and node through labels.
 
 ```yaml
 apiVersion: v1
@@ -129,7 +150,8 @@ spec:
     hddtype: ssd
 ```
 
-> **Note:** We can add the `hddtype: ssd` label to the single node in the minikube cluster. After adding this label, the Pod above will transition from "Pending" state to "Running" state. (Because it found the node it was looking for 😊)
+**Implementation:** Add the `hddtype: ssd` label to the single node in the minikube cluster. After adding this label,
+the Pod above will transition from "Pending" state to "Running" state. (Because it found the node it was looking for 😊)
 
 ```shell
 kubectl label nodes minikube hddtype=ssd
@@ -137,12 +159,21 @@ kubectl label nodes minikube hddtype=ssd
 
 ## Annotations
 
-* Annotations behave similarly to labels and are written under the **metadata** section.
-* Since labels are used to establish relationships between objects, they fall into the sensitive information category. For this reason, we can record important information that cannot be used as labels through **Annotations**.
-* **Example:** `example.com/notification-email:admin@k8s.com`
-    * `example.com` → Prefix (optional)
-    * `notification-email` → Key
-    * `admin@k8s.com` → Value
+### Purpose
+
+Annotations behave similarly to labels and are written under the **metadata** section. Since labels are used to
+establish relationships between objects, they fall into the sensitive information category. For this reason, important
+information that cannot be used as labels can be recorded through **Annotations**.
+
+### Format
+
+**Example:** `example.com/notification-email:admin@k8s.com`
+
+* `example.com` → Prefix (optional)
+* `notification-email` → Key
+* `admin@k8s.com` → Value
+
+### Configuration
 
 ```yaml
 apiVersion: v1
@@ -162,7 +193,9 @@ spec:
     - containerPort: 80
 ```
 
-### Adding Annotations via Command Line
+### Management Operations
+
+**Adding Annotations:**
 
 ```shell
 kubectl annotate pods annotationpod foo=bar
