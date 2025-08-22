@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../minikube/">
+        <link rel="prev" href="../job-cronjob/">
       
       
-        <link rel="next" href="../kubeadm/">
+        <link rel="next" href="../ingress/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubectl Cheatsheet - My Dev Notes</title>
+        <title>Network Structure, Service - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubectl-cheatsheet" class="md-skip">
+        <a href="#kubernetes-objects-network-structure-service" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubectl Cheatsheet
+              Network Structure, Service
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -233,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../shell/shell-commands/" class="md-tabs__link">
+        <a href="../../../shell/shell-commands/" class="md-tabs__link">
           
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../docker/docker-installation/" class="md-tabs__link">
+        <a href="../../../docker/docker-installation/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../minikube/" class="md-tabs__link">
+        <a href="../../kubernetes-introduction/" class="md-tabs__link">
           
   
   
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../terraform/terraform-cheatsheet/" class="md-tabs__link">
+        <a href="../../../terraform/terraform-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -389,7 +389,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -418,7 +418,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+        <a href="../../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -450,7 +450,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cloud/aws/athena/" class="md-tabs__link">
+        <a href="../../../cloud/aws/athena/" class="md-tabs__link">
           
   
   
@@ -482,7 +482,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -507,7 +507,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -529,7 +529,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -565,7 +565,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-commands/" class="md-nav__link">
         
   
   
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-network-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-network-commands/" class="md-nav__link">
         
   
   
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/bash-completion/" class="md-nav__link">
+      <a href="../../../shell/bash-completion/" class="md-nav__link">
         
   
   
@@ -785,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1033,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/sdkman/" class="md-nav__link">
+      <a href="../../../java/sdkman/" class="md-nav__link">
         
   
   
@@ -1116,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-installation/" class="md-nav__link">
+      <a href="../../../docker/docker-installation/" class="md-nav__link">
         
   
   
@@ -1139,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1185,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-examples/" class="md-nav__link">
+      <a href="../../../docker/docker-examples/" class="md-nav__link">
         
   
   
@@ -1273,12 +1273,309 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../kubernetes-introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Minikube
+    Kubernetes Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Objects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Objects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label-selector-annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Label, Selector, Annotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-replicaset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment, ReplicaSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rollout-rollback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rollout, Rollback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statefulset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StatefulSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daemonset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DaemonSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-cronjob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job, CronJob
     
   </span>
   
@@ -1310,7 +1607,7 @@
   
   
   <span class="md-ellipsis">
-    Kubectl Cheatsheet
+    Network Structure, Service
     
   </span>
   
@@ -1323,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    Kubectl Cheatsheet
+    Network Structure, Service
     
   </span>
   
@@ -1346,54 +1643,219 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#network-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      Network Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#communication-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      Communication Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cni-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      CNI Implementation
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#service-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      Service Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodeport" class="md-nav__link">
+    <span class="md-ellipsis">
+      NodePort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbalancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadBalancer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#externalname" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExternalName
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodeport-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      NodePort Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbalancer-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadBalancer Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imperative Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1415,7 +1877,353 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+      <a href="../ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ingress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume-secret-configmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secret, Image Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probes-resource-limits-env-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probes, Resource Limits, Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affinity-taint-toleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affinity, Taint, Toleration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistent-volume-claim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Persistent Volume Claim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Storage Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RBAC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubeadm/" class="md-nav__link">
         
   
   
@@ -1438,17 +2246,117 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes-dashboards/" class="md-nav__link">
+      <a href="../../kubernetes-tools/minikube/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubernetes Dashboards
+    Minikube
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/monitoring-prometheus-efk-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring (Prometheus, EFK Stack)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/service-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Mesh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1517,7 +2425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/terraform-cheatsheet/" class="md-nav__link">
+      <a href="../../../terraform/terraform-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1540,7 +2448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1617,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1743,7 +2651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1823,7 +2731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1846,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -1978,7 +2886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/aws/athena/" class="md-nav__link">
+      <a href="../../../cloud/aws/athena/" class="md-nav__link">
         
   
   
@@ -2118,7 +3026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2141,7 +3049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -2164,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2187,7 +3095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2271,7 +3179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2294,7 +3202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2317,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -2340,7 +3248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2431,7 +3339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2454,7 +3362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2477,7 +3385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2500,7 +3408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2589,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2612,7 +3520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2635,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2658,7 +3566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multipass/" class="md-nav__link">
+      <a href="../../../tools/multipass/" class="md-nav__link">
         
   
   
@@ -2681,7 +3589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/bloomrpc/" class="md-nav__link">
+      <a href="../../../tools/bloomrpc/" class="md-nav__link">
         
   
   
@@ -2704,7 +3612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/windows-on-mac-via-utm/" class="md-nav__link">
+      <a href="../../../tools/windows-on-mac-via-utm/" class="md-nav__link">
         
   
   
@@ -2727,7 +3635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/overriding-hostnames/" class="md-nav__link">
+      <a href="../../../tools/overriding-hostnames/" class="md-nav__link">
         
   
   
@@ -2777,54 +3685,219 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-resources" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Resources
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#describe-resources" class="md-nav__link">
+  <a href="#network-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Describe Resources
+      Network Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Principles
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#logs-and-exec" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#communication-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Logs and Exec
+      Communication Patterns
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apply-and-delete" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cni-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Apply and Delete
+      CNI Implementation
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-and-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling and Updating
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#miscellaneous" class="md-nav__link">
+  <a href="#service-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Miscellaneous
+      Service Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodeport" class="md-nav__link">
+    <span class="md-ellipsis">
+      NodePort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbalancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadBalancer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#externalname" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExternalName
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodeport-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      NodePort Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbalancer-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoadBalancer Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imperative Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -2846,42 +3919,156 @@
 
 
 
-<h1 id="kubectl-cheatsheet">Kubectl Cheatsheet</h1>
-<h2 id="get-resources">Get Resources</h2>
+<h1 id="kubernetes-objects-network-structure-service">Kubernetes Objects - Network Structure, Service</h1>
+<h2 id="overview">Overview</h2>
+<p>Kubernetes provides a sophisticated networking infrastructure that enables seamless communication between Pods and
+external services. This document covers the fundamental networking concepts and Service objects that facilitate this
+communication.</p>
+<h2 id="network-architecture">Network Architecture</h2>
+<h3 id="core-principles">Core Principles</h3>
+<p>Kubernetes network architecture operates under three fundamental rules:</p>
+<ol>
+<li>An <strong>IP address range</strong> (<code>--pod-network-cidr</code>) is defined during Kubernetes installation for Pod IP allocation</li>
+<li>In Kubernetes, each Pod receives a <strong>unique IP address</strong> assigned from this CIDR block</li>
+<li><strong>Pods within the same cluster</strong> can communicate with each other by default <strong>without restrictions and without NAT (
+   Network Address Translation)</strong></li>
+</ol>
+<h3 id="communication-patterns">Communication Patterns</h3>
+<p>Containers within Kubernetes are exposed to three types of communication:</p>
+<ol>
+<li><strong>External communication:</strong> A container communicates with IP addresses outside the Kubernetes cluster</li>
+<li><strong>Intra-node communication:</strong> A container communicates with another container on the same node</li>
+<li><strong>Inter-node communication:</strong> A container communicates with a container on a different node</li>
+</ol>
+<p>The first two scenarios work without issues, but the third scenario presents NAT-related challenges. To address this,
+Kubernetes has implemented the <strong>Container Network Interface (CNI)</strong> project to enable inter-container communication.</p>
+<h3 id="cni-implementation">CNI Implementation</h3>
+<p><strong>CNI is responsible for container network connectivity and resource cleanup when containers are deleted.</strong></p>
+<p><strong>Kubernetes has adopted CNI standards for network communication and allows users to choose from various CNI plugins.</strong>
+Organizations can select the most suitable CNI plugin from the following resources:</p>
+<p><a href="https://github.com/containernetworking/cni">CNI GitHub Repository</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/cluster-administration/networking">Kubernetes Official Documentation - Cluster Networking</a></p>
+<p><strong>Container Communication:</strong> We've covered container communication with the "Outside World." Now, how will the "Outside
+World" communicate with Containers?</p>
+<p><strong>Answer:</strong> Through the <strong>Service</strong> object.</p>
+<h2 id="service-objects">Service Objects</h2>
+<h3 id="purpose">Purpose</h3>
+<p>The Service object handles the networking aspects of Kubernetes, providing a stable endpoint for accessing Pods and
+enabling load balancing.</p>
+<h3 id="use-cases">Use Cases</h3>
+<p>Consider a system with 1 Frontend (React) and 1 Backend (Go):</p>
 <ul>
-<li><code>kubectl get pods</code> — List pods</li>
-<li><code>kubectl get services</code> — List services</li>
-<li><code>kubectl get deployments</code> — List deployments</li>
-<li><code>kubectl get nodes</code> — List nodes</li>
-<li><code>kubectl get namespaces</code> — List namespaces</li>
+<li>Organizations create <strong>one deployment each</strong> for both applications, ensuring <strong>3 Pods each</strong> are defined</li>
+<li>How will external access be provided to the 3 Frontend Pods?</li>
+<li>Requests from the Frontend need to be processed by the Backend. This communication is straightforward since each Pod
+  has an IP address, and all Pods in Kubernetes can communicate with each other using these IP addresses</li>
+<li>To enable this communication, Frontend Pods <strong>need to know</strong> the IP addresses of Backend Pods. One solution is to
+  hardcode all Backend Pod IP addresses in the Frontend deployment. However, Pods can be updated, changed, and during
+  these updates, they <strong>may receive new IP addresses, requiring manual updates to the Frontend deployment</strong></li>
 </ul>
-<h2 id="describe-resources">Describe Resources</h2>
+<p>This is why <strong>Service</strong> objects are created to solve all these scenarios. <strong>Kubernetes provides Pods with their own IP
+addresses and a single DNS name for a set of Pods, along with load balancing between them.</strong></p>
+<h2 id="service-types">Service Types</h2>
+<h3 id="clusterip">ClusterIP</h3>
+<p><strong>Purpose:</strong> Inter-container communication within the cluster</p>
+<p>Organizations can create a ClusterIP service and associate it with Pods through labels. When this object is created, it
+receives a unique DNS address that all Pods in the cluster can resolve. Additionally, every Kubernetes installation has
+a virtual IP range (e.g., 10.0.100.0/16).</p>
+<p>When a ClusterIP service object is created, <strong>an IP address is assigned</strong> to this object from the IP range, and <strong>this
+IP address is registered with the cluster's DNS mechanism using its name.</strong> This IP address is a <strong>Virtual IP address.</strong></p>
+<p>This IP address is added to the IP tables on all nodes by Kube-proxy. All traffic directed to this IP address is
+distributed to Pods using the Round Robin algorithm. This solution addresses two main problems:</p>
+<ol>
+<li>Organizations can define this IP address in Frontend nodes (and if named <code>backend</code>), they can specify to use this IP
+   address when accessing the Backend. (<strong>Selector = app:backend</strong>) Organizations no longer need to manually add Backend
+   Pod IP addresses to Frontend Pods every time!</li>
+</ol>
+<p><strong>In summary: ClusterIP Service solves inter-container communication by handling Service Discovery and Load Balancing
+tasks!</strong></p>
+<h3 id="nodeport">NodePort</h3>
+<p><strong>Purpose:</strong> External access to cluster services</p>
+<p>This service type is used to handle <strong>connections originating from outside the cluster.</strong> The <code>NodePort</code> key is used to
+configure this service type.</p>
+<h3 id="loadbalancer">LoadBalancer</h3>
+<p><strong>Purpose:</strong> Cloud service integration</p>
+<p>This service type is only available in cloud-managed Kubernetes services like Azure Kubernetes Service, Google
+Kubernetes Engine.</p>
+<h3 id="externalname">ExternalName</h3>
+<p><strong>Purpose:</strong> DNS resolution (Not currently necessary for most deployments)</p>
+<h2 id="service-configuration">Service Configuration</h2>
+<h3 id="clusterip-example">ClusterIP Example</h3>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: backend # Service name
+spec:
+  type: ClusterIP # Service type
+  selector:
+    app: backend # Which Pods to match (same as the label in the Pod)
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+</code></pre>
+<p>Any object within the cluster will receive a response when sending requests to <code>clusterIP:5000</code>.</p>
+<p><strong>Important Note:</strong> Service names follow this format when created: <code>serviceName.namespaceName.svc.cluster.domain</code></p>
+<p>If another object in the same namespace wants to access this service, it can write <code>backend</code> directly thanks to core DNS
+resolution. Objects from other namespaces must access this service using the <strong>full name</strong> above.</p>
+<h3 id="nodeport-example">NodePort Example</h3>
+<p><strong>Note:</strong> All created NodePort services also have <strong>ClusterIP</strong> functionality. Therefore, this service can be accessed
+internally using the ClusterIP.</p>
+<p><strong>Minikube Integration:</strong> When using minikube, organizations can open a tunnel with *
+<em><code>minikube service --url &lt;serviceName&gt;</code></em>* because they normally cannot access the worker node from outside. <em>This is
+specific to minikube.</em></p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: NodePort
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+</code></pre>
+<h3 id="loadbalancer-example">LoadBalancer Example</h3>
+<p>This service type works on clusters created on cloud services like Google Cloud Service and Azure.</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: frontendlb
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+</code></pre>
+<h2 id="service-management">Service Management</h2>
+<h3 id="imperative-creation">Imperative Creation</h3>
+<pre><code class="language-shell">kubectl delete service &lt;serviceName&gt;
+
+# Creating ClusterIP Service
+kubectl expose deployment backend --type=ClusterIP --name=backend
+
+kubectl expose deployment backend --type=NodePort --name=backend
+</code></pre>
+<h3 id="endpoints">Endpoints</h3>
+<p><strong>Purpose:</strong> Endpoints determine where requests to Services will be directed</p>
+<p>Just as deployments create ReplicaSets, Service objects also create Endpoints in the background. Endpoints determine
+where requests to our Services will be directed.</p>
+<pre><code class="language-shell">kubectl get endpoints
+</code></pre>
+<p>When a Pod is deleted, a new endpoint is created for the new Pod that will be created.</p>
+<h2 id="references">References</h2>
 <ul>
-<li><code>kubectl describe pod &lt;pod-name&gt;</code></li>
-<li><code>kubectl describe node &lt;node-name&gt;</code></li>
-<li><code>kubectl describe deployment &lt;deployment-name&gt;</code></li>
-</ul>
-<h2 id="logs-and-exec">Logs and Exec</h2>
-<ul>
-<li><code>kubectl logs &lt;pod-name&gt;</code> — View logs of a pod</li>
-<li><code>kubectl exec -it &lt;pod-name&gt; -- /bin/bash</code> — Exec into a pod shell</li>
-</ul>
-<h2 id="apply-and-delete">Apply and Delete</h2>
-<ul>
-<li><code>kubectl apply -f &lt;file.yaml&gt;</code> — Apply config from file</li>
-<li><code>kubectl delete -f &lt;file.yaml&gt;</code> — Delete resources from file</li>
-</ul>
-<h2 id="scaling-and-updating">Scaling and Updating</h2>
-<ul>
-<li><code>kubectl scale deployment &lt;name&gt; --replicas=&lt;num&gt;</code> — Scale deployment</li>
-<li><code>kubectl rollout status deployment/&lt;name&gt;</code> — Check rollout status</li>
-<li><code>kubectl rollout undo deployment/&lt;name&gt;</code> — Rollback deployment</li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><code>kubectl config view</code> — Show kubeconfig</li>
-<li><code>kubectl config use-context &lt;context-name&gt;</code> — Switch context</li>
-<li><code>kubectl top pod</code> — Show pod resource usage (if metrics-server installed)  </li>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes Official Service Overview</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/networkpolicy">GitHub - Aytitech K8sFundamentals - Network Policy</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/service">GitHub - Aytitech K8sFundamentals - Service</a></li>
 </ul>
 
 
@@ -2960,10 +4147,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../kubeadm/">
+        <link rel="prev" href="../label-selector-annotation/">
       
       
-        <link rel="next" href="../../terraform/terraform-cheatsheet/">
+        <link rel="next" href="../rollout-rollback/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubernetes Dashboards - My Dev Notes</title>
+        <title>Deployment, ReplicaSet - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-dashboards" class="md-skip">
+        <a href="#kubernetes-objects-deployment-replicaset" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes Dashboards
+              Deployment, ReplicaSet
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -233,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../shell/shell-commands/" class="md-tabs__link">
+        <a href="../../../shell/shell-commands/" class="md-tabs__link">
           
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../docker/docker-installation/" class="md-tabs__link">
+        <a href="../../../docker/docker-installation/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../minikube/" class="md-tabs__link">
+        <a href="../../kubernetes-introduction/" class="md-tabs__link">
           
   
   
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../terraform/terraform-cheatsheet/" class="md-tabs__link">
+        <a href="../../../terraform/terraform-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -389,7 +389,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -418,7 +418,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+        <a href="../../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -450,7 +450,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cloud/aws/athena/" class="md-tabs__link">
+        <a href="../../../cloud/aws/athena/" class="md-tabs__link">
           
   
   
@@ -482,7 +482,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -507,7 +507,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -529,7 +529,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -565,7 +565,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-commands/" class="md-nav__link">
         
   
   
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-network-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-network-commands/" class="md-nav__link">
         
   
   
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/bash-completion/" class="md-nav__link">
+      <a href="../../../shell/bash-completion/" class="md-nav__link">
         
   
   
@@ -785,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1033,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/sdkman/" class="md-nav__link">
+      <a href="../../../java/sdkman/" class="md-nav__link">
         
   
   
@@ -1116,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-installation/" class="md-nav__link">
+      <a href="../../../docker/docker-installation/" class="md-nav__link">
         
   
   
@@ -1139,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1185,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-examples/" class="md-nav__link">
+      <a href="../../../docker/docker-examples/" class="md-nav__link">
         
   
   
@@ -1273,12 +1273,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../kubernetes-introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Minikube
+    Kubernetes Introduction
     
   </span>
   
@@ -1296,12 +1296,125 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubectl-cheatsheet/" class="md-nav__link">
+      <a href="../../kubernetes-installation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubectl Cheatsheet
+    Kubernetes Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Objects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Objects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pod
     
   </span>
   
@@ -1319,12 +1432,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+      <a href="../namespace/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubeadm
+    Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label-selector-annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Label, Selector, Annotation
     
   </span>
   
@@ -1356,7 +1492,7 @@
   
   
   <span class="md-ellipsis">
-    Kubernetes Dashboards
+    Deployment, ReplicaSet
     
   </span>
   
@@ -1369,7 +1505,7 @@
   
   
   <span class="md-ellipsis">
-    Kubernetes Dashboards
+    Deployment, ReplicaSet
     
   </span>
   
@@ -1392,16 +1528,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-kubernetes-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Kubernetes Dashboard
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Kubernetes Dashboard">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -1409,29 +1535,30 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-deployments-instead-of-direct-pod-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Deployments Instead of Direct Pod Management?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use Deployments Instead of Direct Pod Management?">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#operational-challenges" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Operational Challenges
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-the-dashboard" class="md-nav__link">
+  <a href="#traditional-solutions-and-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing the Dashboard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-kubernetes-dashboard-with-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Kubernetes Dashboard with Minikube
+      Traditional Solutions and Limitations
     </span>
   </a>
   
@@ -1443,37 +1570,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-lens" class="md-nav__link">
+  <a href="#deployment-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Lens
+      Deployment Controller
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Lens">
+    <nav class="md-nav" aria-label="Deployment Controller">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Core Functionality
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
+  <a href="#key-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Key Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#critical-operational-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Critical Operational Behavior
     </span>
   </a>
   
@@ -1485,61 +1612,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-headlamp" class="md-nav__link">
+  <a href="#deployment-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Headlamp
+      Deployment Operations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Headlamp">
+    <nav class="md-nav" aria-label="Deployment Operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
+  <a href="#creation-via-command-line" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Creation via Command Line
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation_2" class="md-nav__link">
+  <a href="#image-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-desktop-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 1: Desktop App
+      Image Updates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-deploy-in-cluster" class="md-nav__link">
+  <a href="#scaling-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: Deploy in Cluster
+      Scaling Operations
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#usage_1" class="md-nav__link">
+  <a href="#resource-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Resource Management
     </span>
   </a>
   
@@ -1551,9 +1663,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison" class="md-nav__link">
+  <a href="#yaml-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Comparison
+      YAML Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replicaset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReplicaSet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReplicaSet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1562,6 +1776,613 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rollout-rollback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rollout, Rollback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statefulset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StatefulSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daemonset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DaemonSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-cronjob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job, CronJob
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-structure-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Structure, Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ingress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume-secret-configmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secret, Image Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probes-resource-limits-env-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probes, Resource Limits, Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affinity-taint-toleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affinity, Taint, Toleration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistent-volume-claim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Persistent Volume Claim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Storage Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RBAC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubeadm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/monitoring-prometheus-efk-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring (Prometheus, EFK Stack)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/service-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Mesh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1631,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/terraform-cheatsheet/" class="md-nav__link">
+      <a href="../../../terraform/terraform-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1654,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1731,7 +2552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1857,7 +2678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1937,7 +2758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1960,7 +2781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -2092,7 +2913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/aws/athena/" class="md-nav__link">
+      <a href="../../../cloud/aws/athena/" class="md-nav__link">
         
   
   
@@ -2232,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2255,7 +3076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -2278,7 +3099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2301,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2385,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2408,7 +3229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2431,7 +3252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -2454,7 +3275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2545,7 +3366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2568,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2591,7 +3412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2614,7 +3435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2703,7 +3524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2726,7 +3547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2749,7 +3570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2772,7 +3593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multipass/" class="md-nav__link">
+      <a href="../../../tools/multipass/" class="md-nav__link">
         
   
   
@@ -2795,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/bloomrpc/" class="md-nav__link">
+      <a href="../../../tools/bloomrpc/" class="md-nav__link">
         
   
   
@@ -2818,7 +3639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/windows-on-mac-via-utm/" class="md-nav__link">
+      <a href="../../../tools/windows-on-mac-via-utm/" class="md-nav__link">
         
   
   
@@ -2841,7 +3662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/overriding-hostnames/" class="md-nav__link">
+      <a href="../../../tools/overriding-hostnames/" class="md-nav__link">
         
   
   
@@ -2891,16 +3712,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-kubernetes-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Kubernetes Dashboard
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Kubernetes Dashboard">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -2908,29 +3719,30 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-deployments-instead-of-direct-pod-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Deployments Instead of Direct Pod Management?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Use Deployments Instead of Direct Pod Management?">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#operational-challenges" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Operational Challenges
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-the-dashboard" class="md-nav__link">
+  <a href="#traditional-solutions-and-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing the Dashboard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-kubernetes-dashboard-with-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Kubernetes Dashboard with Minikube
+      Traditional Solutions and Limitations
     </span>
   </a>
   
@@ -2942,37 +3754,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-lens" class="md-nav__link">
+  <a href="#deployment-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Lens
+      Deployment Controller
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Lens">
+    <nav class="md-nav" aria-label="Deployment Controller">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_1" class="md-nav__link">
+  <a href="#core-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Core Functionality
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation_1" class="md-nav__link">
+  <a href="#key-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Key Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#critical-operational-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Critical Operational Behavior
     </span>
   </a>
   
@@ -2984,61 +3796,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-headlamp" class="md-nav__link">
+  <a href="#deployment-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Headlamp
+      Deployment Operations
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Headlamp">
+    <nav class="md-nav" aria-label="Deployment Operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview_2" class="md-nav__link">
+  <a href="#creation-via-command-line" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Creation via Command Line
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installation_2" class="md-nav__link">
+  <a href="#image-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-desktop-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 1: Desktop App
+      Image Updates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-deploy-in-cluster" class="md-nav__link">
+  <a href="#scaling-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: Deploy in Cluster
+      Scaling Operations
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#usage_1" class="md-nav__link">
+  <a href="#resource-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Resource Management
     </span>
   </a>
   
@@ -3050,9 +3847,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comparison" class="md-nav__link">
+  <a href="#yaml-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Comparison
+      YAML Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YAML Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversion-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replicaset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReplicaSet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReplicaSet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rollback Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -3074,147 +3973,153 @@
 
 
 
-<h1 id="kubernetes-dashboards">Kubernetes Dashboards</h1>
-<p>This guide provides an overview and installation instructions for three popular Kubernetes dashboard tools:</p>
+<h1 id="kubernetes-objects-deployment-replicaset">Kubernetes Objects - Deployment, ReplicaSet</h1>
+<h2 id="overview">Overview</h2>
+<p>In Kubernetes architecture, "Singleton (Single) Pods" are generally not created directly. Instead, higher-level
+controller objects manage Pods, providing enhanced functionality and operational efficiency. The <strong>Deployment</strong>
+represents the primary controller for managing Pod lifecycles.</p>
+<h2 id="why-use-deployments-instead-of-direct-pod-management">Why Use Deployments Instead of Direct Pod Management?</h2>
+<h3 id="operational-challenges">Operational Challenges</h3>
+<p>Consider a scenario where a frontend application is deployed with a container in a Pod. If an error occurs in the
+container and the RestartPolicy is set to "Always" or "OnFailure", kube-scheduler can recover by restarting the
+container and continuing operation. However, <strong>if the problem occurs on the node itself, kube-scheduler doesn't
+automatically migrate the Pod to another worker node.</strong></p>
+<h3 id="traditional-solutions-and-limitations">Traditional Solutions and Limitations</h3>
+<p>As a solution, organizations could define multiple nodes and place a load balancer in front of them. If one node fails,
+others continue operating, solving the availability problem. <strong>However, this approach introduces significant operational
+complexity:</strong></p>
 <ul>
-<li><a href="https://github.com/kubernetes/dashboard">Kubernetes Dashboard</a></li>
-<li><a href="https://k8slens.dev/">Lens</a></li>
-<li><a href="https://github.com/headlamp-k8s/headlamp">Headlamp</a></li>
+<li>Container image updates require manual refresh across all nodes</li>
+<li>Label management becomes cumbersome and error-prone</li>
+<li>Configuration changes require individual node updates</li>
+<li><strong>This approach becomes increasingly complex and difficult to manage</strong></li>
 </ul>
-<p>These tools make it easier to visualize, manage, and troubleshoot Kubernetes clusters.</p>
-<hr />
-<h2 id="1-kubernetes-dashboard">1. Kubernetes Dashboard</h2>
-<h3 id="overview">Overview</h3>
-<p>The <strong>Kubernetes Dashboard</strong> is a web-based UI that allows you to manage applications, monitor cluster resources, and
-troubleshoot workloads within your cluster.</p>
-<h3 id="installation">Installation</h3>
-<p>Deploy the dashboard with the following command:</p>
-<pre><code class="language-bash">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
-</code></pre>
-<h3 id="accessing-the-dashboard">Accessing the Dashboard</h3>
-<p>Create a Service Account and ClusterRoleBinding:</p>
-<pre><code class="language-bash">kubectl create serviceaccount dashboard-admin-sa -n kubernetes-dashboard
-kubectl create clusterrolebinding dashboard-admin-sa   --clusterrole=cluster-admin   --serviceaccount=kubernetes-dashboard:dashboard-admin-sa
-</code></pre>
-<p>Get the authentication token:</p>
-<pre><code class="language-bash">kubectl -n kubernetes-dashboard create token dashboard-admin-sa
-</code></pre>
-<p>Start the proxy:</p>
-<pre><code class="language-bash">kubectl proxy
-</code></pre>
-<p>Access the dashboard at:<br />
-<a href="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/">http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</a></p>
-<h3 id="using-kubernetes-dashboard-with-minikube">Using Kubernetes Dashboard with Minikube</h3>
-<p>If you are running Kubernetes with <strong>Minikube</strong>, enabling the dashboard is even easier.</p>
-<p>Enable the Dashboard Addon:</p>
-<pre><code class="language-bash">minikube addons enable dashboard
-</code></pre>
-<p>Start the Dashboard:</p>
-<pre><code class="language-bash">minikube dashboard
-</code></pre>
-<p>This command will automatically open the Dashboard in your default web browser.</p>
-<hr />
-<h2 id="2-lens">2. Lens</h2>
-<h3 id="overview_1">Overview</h3>
-<p><a href="https://k8slens.dev/"><strong>Lens</strong></a> is a popular desktop application for Kubernetes cluster management. It provides an
-intuitive interface for monitoring workloads, nodes, logs, and cluster health.</p>
-<h3 id="installation_1">Installation</h3>
+<h2 id="deployment-controller">Deployment Controller</h2>
+<h3 id="core-functionality">Core Functionality</h3>
+<p>The <strong>Deployment</strong> object continuously strives to bring the <strong>desired state</strong> defined for one or more Pods to the *
+<em>current state</em><em>. The </em><em>deployment-controller</em>* within Deployments takes the necessary actions to transition the current
+state to the desired state.</p>
+<h3 id="key-benefits">Key Benefits</h3>
 <ul>
-<li><strong>macOS (Homebrew):</strong></li>
+<li><strong>Simplified Operations:</strong> Easily perform operations like image updates across all managed Pods</li>
+<li><strong>Rollout Control:</strong> Specify how Deployments should behave during operations using the <strong>Rollout</strong> parameter</li>
+<li><strong>Rollback Capability:</strong> Revert to previous states with a single command if errors occur during operations</li>
+<li><strong>Automatic Recovery:</strong> Kubernetes automatically maintains the specified replica count</li>
 </ul>
-<pre><code class="language-bash">brew install --cask lens
+<h3 id="critical-operational-behavior">Critical Operational Behavior</h3>
+<p>⚠️⚠️⚠️ <strong>Important:</strong> When defining a <strong>replica</strong> count during deployment creation, the Kubernetes cluster continuously
+attempts to maintain that many replicas running. Even if Pods are manually deleted, new Pods are automatically started
+in the background. This is why direct Pod creation is not recommended - Kubernetes handles this optimization
+automatically.</p>
+<p><strong>Best Practice:</strong> Even for single Pod scenarios, create them using Deployments! (Official Kubernetes recommendation)</p>
+<h2 id="deployment-operations">Deployment Operations</h2>
+<h3 id="creation-via-command-line">Creation via Command Line</h3>
+<pre><code class="language-shell">kubectl create deployment &lt;deploymentName&gt; --image=&lt;imageName&gt; --replicas=&lt;replicasNumber&gt;
+
+kubectl create deployment &lt;deploymentName&gt; --image=nginx:latest --replicas=2
+
+kubectl get deployment
+# Pay attention to the ready column for all deployments!
 </code></pre>
-<ul>
-<li><strong>Windows (Chocolatey):</strong></li>
-</ul>
-<pre><code class="language-bash">choco install lens
+<h3 id="image-updates">Image Updates</h3>
+<pre><code class="language-shell">kubectl set image deployment/&lt;deploymentName&gt; &lt;containerName&gt;=&lt;newImage&gt;
+
+kubectl set image deployment/firstdeployment nginx=httpd
 </code></pre>
-<ul>
+<p><strong>Default Behavior:</strong> The strategy updates one Pod at a time. This behavior can be customized through deployment
+configuration.</p>
+<h3 id="scaling-operations">Scaling Operations</h3>
+<pre><code class="language-shell">kubectl scale deployment &lt;deploymentName&gt; --replicas=&lt;newReplicaNumber&gt;
+</code></pre>
+<h3 id="resource-management">Resource Management</h3>
+<pre><code class="language-shell">kubectl delete deployments &lt;deploymentName&gt;
+</code></pre>
+<h2 id="yaml-configuration">YAML Configuration</h2>
+<h3 id="conversion-process">Conversion Process</h3>
+<ol>
+<li><strong>Extract Pod Configuration:</strong> Copy the configuration under <strong><code>metadata</code></strong> from any YAML file that creates a Pod:</li>
+</ol>
+<pre><code class="language-yaml"># podexample.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: examplepod
+  labels:
+    app: frontend
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+</code></pre>
+<ol>
 <li>
-<p><strong>Linux (AppImage):</strong>
-  Download the latest <code>.AppImage</code> from the <a href="https://github.com/lensapp/lens/releases">Lens GitHub releases</a>.</p>
+<p><strong>Template Integration:</strong> Paste the configuration under the <strong><code>template</code></strong> section in the deployment YAML file. <em>(Pay
+   attention to indentation!)</em></p>
 </li>
 <li>
-<p>Or directly download Lens from the <a href="https://k8slens.dev/">Lens Official Website</a>.</p>
+<p><strong>Template Modification:</strong> <strong>Remove the <code>name</code> field from the Pod template.</strong></p>
 </li>
-</ul>
-<h3 id="usage">Usage</h3>
-<ul>
-<li>Start Lens and add your cluster via <code>~/.kube/config</code>.</li>
-<li>Explore resources such as pods, deployments, and services.</li>
-<li>Use built-in terminal and monitoring features for troubleshooting.</li>
-</ul>
-<hr />
-<h2 id="3-headlamp">3. Headlamp</h2>
-<h3 id="overview_2">Overview</h3>
-<p><a href="https://github.com/headlamp-k8s/headlamp"><strong>Headlamp</strong></a> is an open-source, web-based Kubernetes UI. Unlike Lens, it
-runs as a web app and supports plugins for customization.</p>
-<h3 id="installation_2">Installation</h3>
-<p>You can run Headlamp as a desktop app or deploy it into a cluster.</p>
-<h4 id="option-1-desktop-app">Option 1: Desktop App</h4>
-<ul>
-<li><strong>macOS (Homebrew):</strong></li>
-</ul>
-<pre><code class="language-bash">brew install headlamp
+</ol>
+<h3 id="deployment-configuration">Deployment Configuration</h3>
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstdeployment
+  labels:
+    team: development
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend # Label to be used to match with the Pod in the template
+  template: # Area where we specify the properties of the Pods to be created
+    metadata:
+      labels:
+        app: frontend # Label of the Pod matching with the deployment
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80 # Port to be opened to the outside
 </code></pre>
+<h3 id="configuration-requirements">Configuration Requirements</h3>
 <ul>
-<li><strong>Linux &amp; Windows:</strong>
-  Download binaries from the <a href="https://github.com/headlamp-k8s/headlamp/releases">Headlamp releases</a>.</li>
+<li>Each deployment must have <strong>at least one</strong> <code>selector</code> definition</li>
+<li><strong>For multiple deployments, use different labels</strong> to avoid conflicts and ensure proper Pod management</li>
+<li><strong>Creating singleton Pods with the same labels as deployments is risky and not recommended</strong></li>
 </ul>
-<h4 id="option-2-deploy-in-cluster">Option 2: Deploy in Cluster</h4>
-<pre><code class="language-bash">kubectl apply -f https://raw.githubusercontent.com/headlamp-k8s/headlamp/main/kubernetes-headlamp.yaml
+<h2 id="replicaset">ReplicaSet</h2>
+<h3 id="architecture">Architecture</h3>
+<p>In Kubernetes, the object type that actually creates and manages a specific number of Pods is <strong>not Deployment</strong> - it's
+<strong>ReplicaSet</strong>. When defining a deployment and specifying the desired state, the Deployment object creates a ReplicaSet
+object, and ReplicaSet performs all Pod management tasks.</p>
+<h3 id="historical-context">Historical Context</h3>
+<p>When Kubernetes was first introduced, the <strong>Replication-controller</strong> object provided this functionality. While it still
+exists, it is no longer used in modern Kubernetes deployments.</p>
+<pre><code class="language-shell">kubectl get replicaset # Lists active ReplicaSets
 </code></pre>
-<p>Expose the service (e.g., via <code>kubectl port-forward</code> or Ingress).</p>
-<h3 id="usage_1">Usage</h3>
+<h3 id="update-behavior">Update Behavior</h3>
+<p>When modifying a deployment, the deployment <strong>creates a new ReplicaSet</strong>, and this ReplicaSet starts creating new Pods.
+Meanwhile, old Pods are deleted according to the specified strategy.</p>
+<h3 id="rollback-operations">Rollback Operations</h3>
+<pre><code class="language-shell">kubectl rollout undo deployment &lt;deploymentName&gt;
+</code></pre>
+<p>In this scenario, the old deployment is recreated, and the old ReplicaSet starts creating the previous Pods. This is
+why, <strong>to avoid managing all these operations manually</strong>, ReplicaSets are not created directly; operations continue
+through Deployments.</p>
+<p><strong>Hierarchy:</strong> <strong>Deployment &gt; ReplicaSet &gt; Pods</strong></p>
+<h3 id="yaml-configuration_1">YAML Configuration</h3>
+<p>When ReplicaSet is desired to be created as YAML, <strong>it is created exactly the same way as Deployment.</strong></p>
+<h2 id="references">References</h2>
 <ul>
-<li>Log in with your kubeconfig file or token.</li>
-<li>Navigate through workloads, namespaces, and nodes.</li>
-<li>Extend functionality using available plugins.</li>
-</ul>
-<hr />
-<h2 id="comparison">Comparison</h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Kubernetes Dashboard</th>
-<th>Lens (Desktop)</th>
-<th>Headlamp (Web/Desktop)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Interface</td>
-<td>Web UI</td>
-<td>Desktop app</td>
-<td>Web &amp; Desktop app</td>
-</tr>
-<tr>
-<td>Installation</td>
-<td>In-cluster YAML</td>
-<td>Binary/AppImage</td>
-<td>In-cluster or Desktop</td>
-</tr>
-<tr>
-<td>Authentication</td>
-<td>Token</td>
-<td>kubeconfig</td>
-<td>kubeconfig / token</td>
-</tr>
-<tr>
-<td>Extensibility</td>
-<td>Limited</td>
-<td>No plugins</td>
-<td>Plugin system</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>✅ You can choose the tool that best fits your needs:</p>
-<ul>
-<li><strong>Kubernetes Dashboard</strong> → Official and lightweight.</li>
-<li><strong>Lens</strong> → Powerful desktop client.</li>
-<li><strong>Headlamp</strong> → Flexible, extensible, and web-based.  </li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">Kubernetes Official Deployment Overview</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/">Kubernetes Official ReplicaSet Overview</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/deployment">GitHub - Aytitech K8sFundamentals - Deployment</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/deployment/replicaset">GitHub - Aytitech K8sFundamentals - ReplicaSet</a></li>
 </ul>
 
 
@@ -3293,10 +4198,10 @@ runs as a web app and supports plugins for customization.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

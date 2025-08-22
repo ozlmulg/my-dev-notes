@@ -6,28 +6,30 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Kubernetes Authentication - Core Concepts, Commands, YAML Configuration, and Practical Examples">
       
       
       
-        <link rel="prev" href="../kubectl-cheatsheet/">
+      
+        <link rel="prev" href="../storage-class/">
       
       
-        <link rel="next" href="../kubernetes-dashboards/">
+        <link rel="next" href="../rbac/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Kubeadm - My Dev Notes</title>
+        <title>Authentication - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubeadm" class="md-skip">
+        <a href="#kubernetes-objects-authentication" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubeadm
+              Authentication
             
           </span>
         </div>
@@ -212,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -233,7 +235,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../shell/shell-commands/" class="md-tabs__link">
+        <a href="../../../shell/shell-commands/" class="md-tabs__link">
           
   
   
@@ -255,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -277,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -299,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -321,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../docker/docker-installation/" class="md-tabs__link">
+        <a href="../../../docker/docker-installation/" class="md-tabs__link">
           
   
   
@@ -345,7 +347,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../minikube/" class="md-tabs__link">
+        <a href="../../kubernetes-introduction/" class="md-tabs__link">
           
   
   
@@ -367,7 +369,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../terraform/terraform-cheatsheet/" class="md-tabs__link">
+        <a href="../../../terraform/terraform-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -389,7 +391,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -418,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+        <a href="../../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -450,7 +452,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cloud/aws/athena/" class="md-tabs__link">
+        <a href="../../../cloud/aws/athena/" class="md-tabs__link">
           
   
   
@@ -482,7 +484,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -507,7 +509,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -529,7 +531,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -565,7 +567,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -583,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -656,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-commands/" class="md-nav__link">
         
   
   
@@ -679,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-network-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-network-commands/" class="md-nav__link">
         
   
   
@@ -702,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/bash-completion/" class="md-nav__link">
+      <a href="../../../shell/bash-completion/" class="md-nav__link">
         
   
   
@@ -785,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -808,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -831,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -854,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -931,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -1010,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1033,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/sdkman/" class="md-nav__link">
+      <a href="../../../java/sdkman/" class="md-nav__link">
         
   
   
@@ -1116,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-installation/" class="md-nav__link">
+      <a href="../../../docker/docker-installation/" class="md-nav__link">
         
   
   
@@ -1139,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1162,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1185,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-examples/" class="md-nav__link">
+      <a href="../../../docker/docker-examples/" class="md-nav__link">
         
   
   
@@ -1273,12 +1275,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../kubernetes-introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Minikube
+    Kubernetes Introduction
     
   </span>
   
@@ -1296,12 +1298,493 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubectl-cheatsheet/" class="md-nav__link">
+      <a href="../../kubernetes-installation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubectl Cheatsheet
+    Kubernetes Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Objects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Objects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label-selector-annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Label, Selector, Annotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-replicaset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment, ReplicaSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rollout-rollback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rollout, Rollback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statefulset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StatefulSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daemonset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DaemonSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-cronjob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job, CronJob
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-structure-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Structure, Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ingress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volume-secret-configmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secret, Image Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probes-resource-limits-env-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probes, Resource Limits, Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affinity-taint-toleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affinity, Taint, Toleration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistent-volume-claim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Persistent Volume Claim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Storage Class
     
   </span>
   
@@ -1333,7 +1816,7 @@
   
   
   <span class="md-ellipsis">
-    Kubeadm
+    Authentication
     
   </span>
   
@@ -1346,7 +1829,7 @@
   
   
   <span class="md-ellipsis">
-    Kubeadm
+    Authentication
     
   </span>
   
@@ -1369,45 +1852,225 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-create-virtual-machines" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Create virtual machines
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
+  <a href="#authentication-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Activate kernel modules and disable swap
+      Authentication Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Certificates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Certificates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Private Key
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-install-containerd" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate-certificate-signing-request-csr" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Install containerd
+      Generate Certificate Signing Request (CSR)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-install-kubeadm" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submit-csr-to-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Install kubeadm
+      Submit CSR to Kubernetes
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#approve-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approve CSR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extract Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bearer-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bearer Tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bearer Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-service-account-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Service Account Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#5-kubernetes-cluster-setup" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Kubernetes cluster setup
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Specific Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developer-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-account-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Account Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Commands
     </span>
   </a>
   
@@ -1438,17 +2101,279 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes-dashboards/" class="md-nav__link">
+      <a href="../rbac/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubernetes Dashboards
+    RBAC
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubeadm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubeadm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/minikube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minikube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/monitoring-prometheus-efk-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring (Prometheus, EFK Stack)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/service-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Mesh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1517,7 +2442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/terraform-cheatsheet/" class="md-nav__link">
+      <a href="../../../terraform/terraform-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1540,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1617,7 +2542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1743,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1823,7 +2748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1846,7 +2771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -1978,7 +2903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/aws/athena/" class="md-nav__link">
+      <a href="../../../cloud/aws/athena/" class="md-nav__link">
         
   
   
@@ -2118,7 +3043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2141,7 +3066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -2164,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2187,7 +3112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2271,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2294,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2317,7 +3242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -2340,7 +3265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2431,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2454,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2477,7 +3402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2500,7 +3425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2589,7 +3514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2612,7 +3537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2635,7 +3560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2658,7 +3583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multipass/" class="md-nav__link">
+      <a href="../../../tools/multipass/" class="md-nav__link">
         
   
   
@@ -2681,7 +3606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/bloomrpc/" class="md-nav__link">
+      <a href="../../../tools/bloomrpc/" class="md-nav__link">
         
   
   
@@ -2704,7 +3629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/windows-on-mac-via-utm/" class="md-nav__link">
+      <a href="../../../tools/windows-on-mac-via-utm/" class="md-nav__link">
         
   
   
@@ -2727,7 +3652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/overriding-hostnames/" class="md-nav__link">
+      <a href="../../../tools/overriding-hostnames/" class="md-nav__link">
         
   
   
@@ -2777,45 +3702,225 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-create-virtual-machines" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Create virtual machines
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-activate-kernel-modules-and-disable-swap" class="md-nav__link">
+  <a href="#authentication-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Activate kernel modules and disable swap
+      Authentication Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client Certificates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Certificates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Private Key
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-install-containerd" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generate-certificate-signing-request-csr" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Install containerd
+      Generate Certificate Signing Request (CSR)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-install-kubeadm" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#submit-csr-to-kubernetes" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Install kubeadm
+      Submit CSR to Kubernetes
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#approve-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approve CSR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extract Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bearer-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bearer Tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bearer Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-service-account-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Service Account Token
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#5-kubernetes-cluster-setup" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Kubernetes cluster setup
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-specific-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Specific Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developer-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-account-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Account Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Commands
     </span>
   </a>
   
@@ -2846,95 +3951,158 @@
 
 
 
-<h1 id="kubeadm">Kubeadm</h1>
-<p>You can find the kubernetes
-documentation <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">here.</a></p>
-<h2 id="1-create-virtual-machines">1. Create virtual machines</h2>
-<pre><code>$ multipass launch --name master -c 2 -m 2G -d 10G
-$ multipass launch --name node1 -c 2 -m 2G -d 10G
-</code></pre>
-<ul>
-<li>Connect to the master node and run <code>sudo hostnamectl set-hostname master</code>.<br />
-  Connect to node1 and run <code>sudo hostnamectl set-hostname node1</code>.</li>
-</ul>
-<h2 id="2-activate-kernel-modules-and-disable-swap">2. Activate kernel modules and disable swap</h2>
-<pre><code>$ sudo modprobe overlay
-$ sudo modprobe br_netfilter
-</code></pre>
-<pre><code>$ cat &lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf
-overlay
-br_netfilter
-EOF
-</code></pre>
-<pre><code>$ cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-iptables  = 1
-net.bridge.bridge-nf-call-ip6tables = 1
-net.ipv4.ip_forward                 = 1
-EOF
-</code></pre>
-<pre><code>$ sudo sysctl --system
-</code></pre>
-<pre><code>$ sudo swapoff -a
-$ free -m
-$ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
-</code></pre>
-<h2 id="3-install-containerd">3. Install containerd</h2>
-<pre><code>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
-echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-$ sudo apt update
-$ sudo apt install containerd.io
-$ sudo systemctl daemon-reload
-$ sudo systemctl enable --now containerd
-$ sudo systemctl start containerd
-$ sudo mkdir -p /etc/containerd
-$ sudo su -
-$ containerd config default | tee /etc/containerd/config.toml
-$ exit
-$ sudo sed -i 's/            SystemdCgroup = false/            SystemdCgroup = true/' /etc/containerd/config.toml
-$ sudo systemctl restart containerd
+<h1 id="kubernetes-objects-authentication">Kubernetes Objects - Authentication</h1>
+<h2 id="overview">Overview</h2>
+<p>Authentication in Kubernetes determines who can access the cluster. It verifies the identity of users and service
+accounts before allowing access to cluster resources.</p>
+<h2 id="authentication-methods">Authentication Methods</h2>
+<h3 id="client-certificates">Client Certificates</h3>
+<p>The most common authentication method using X.509 certificates.</p>
+<h4 id="generate-private-key">Generate Private Key</h4>
+<pre><code class="language-shell"># Generate private key
+openssl genrsa -out &lt;username&gt;.key 2048
 
+# Example:
+openssl genrsa -out john.key 2048
 </code></pre>
-<h2 id="4-install-kubeadm">4. Install kubeadm</h2>
-<pre><code>$ sudo ufw allow 6443/tcp
-$ sudo ufw allow 2379:2380/tcp
-$ sudo ufw allow 10250/tcp
-$ sudo ufw allow 10259/tcp
-$ sudo ufw allow 10257/tcp
-$ sudo apt-get update
-$ sudo apt-get install -y apt-transport-https ca-certificates curl
-$ sudo mkdir -p -m 755 /etc/apt/keyrings
-### If you want to install a Kubernetes version other than 1.31, update the v1.31 parts in the two commands below.
-$ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-$ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-$ sudo apt-get update
-$ sudo apt-get install -y kubelet kubeadm kubectl
-$ sudo apt-mark hold kubelet kubeadm kubectl
-</code></pre>
-<h2 id="5-kubernetes-cluster-setup">5. Kubernetes cluster setup</h2>
-<pre><code>$ sudo kubeadm config images pull
+<h4 id="generate-certificate-signing-request-csr">Generate Certificate Signing Request (CSR)</h4>
+<pre><code class="language-shell"># Generate CSR
+openssl req -new -key &lt;username&gt;.key -out &lt;username&gt;.csr -subj &quot;/CN=&lt;username&gt;/O=&lt;group&gt;&quot;
 
-$ sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=&lt;ip&gt; --control-plane-endpoint=&lt;ip&gt;
+# Example:
+openssl req -new -key john.key -out john.csr -subj &quot;/CN=john/O=developers&quot;
 </code></pre>
-<pre><code>$ mkdir -p $HOME/.kube
-$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+<h4 id="submit-csr-to-kubernetes">Submit CSR to Kubernetes</h4>
+<pre><code class="language-shell"># Submit CSR
+cat &lt;username&gt;.csr | base64 | tr -d '\n' | kubectl apply -f -
+
+# Example:
+cat john.csr | base64 | tr -d '\n' | kubectl apply -f -
 </code></pre>
-<pre><code>$ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
-$ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
+<h4 id="approve-csr">Approve CSR</h4>
+<pre><code class="language-shell"># Approve CSR
+kubectl certificate approve &lt;username&gt;-&lt;hash&gt;
+
+# Example:
+kubectl certificate approve john-abc123
 </code></pre>
-<pre><code>kubectl taint nodes --all node-role.kubernetes.io/control-plane-
-kubectl taint nodes --all node-role.kubernetes.io/master-
+<h4 id="extract-certificate">Extract Certificate</h4>
+<pre><code class="language-shell"># Extract approved certificate
+kubectl get csr &lt;username&gt;-&lt;hash&gt; -o jsonpath='{.status.certificate}' | base64 -d &gt; &lt;username&gt;.crt
+
+# Example:
+kubectl get csr john-abc123 -o jsonpath='{.status.certificate}' | base64 -d &gt; john.crt
+</code></pre>
+<h3 id="bearer-tokens">Bearer Tokens</h3>
+<p>Simple token-based authentication for service accounts.</p>
+<h4 id="create-service-account-token">Create Service Account Token</h4>
+<pre><code class="language-shell"># Create service account
+kubectl create serviceaccount &lt;serviceaccount-name&gt;
+
+# Create token
+kubectl create token &lt;serviceaccount-name&gt;
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<h3 id="set-credentials">Set Credentials</h3>
+<pre><code class="language-shell"># Set credentials in kubeconfig
+kubectl config set-credentials &lt;username&gt; --client-certificate=&lt;username&gt;.crt --client-key=&lt;username&gt;.key
+
+# Example:
+kubectl config set-credentials john --client-certificate=john.crt --client-key=john.key
+</code></pre>
+<h3 id="set-context">Set Context</h3>
+<pre><code class="language-shell"># Set context
+kubectl config set-context &lt;context-name&gt; --cluster=&lt;cluster-name&gt; --user=&lt;username&gt;
+
+# Example:
+kubectl config set-context john-context --cluster=minikube --user=john
+</code></pre>
+<h3 id="use-context">Use Context</h3>
+<pre><code class="language-shell"># Switch to context
+kubectl config use-context &lt;context-name&gt;
+
+# Example:
+kubectl config use-context john-context
+</code></pre>
+<h2 id="testing-authentication">Testing Authentication</h2>
+<h3 id="check-permissions">Check Permissions</h3>
+<pre><code class="language-shell"># Test if user can perform action
+kubectl auth can-i create pods
+kubectl auth can-i delete pods --namespace=&lt;namespace&gt;
+kubectl auth can-i get secrets --as=&lt;user&gt; --as-group=&lt;group&gt;
+
+# Examples:
+kubectl auth can-i create pods
+kubectl auth can-i delete pods --namespace=default
+</code></pre>
+<h3 id="check-specific-resources">Check Specific Resources</h3>
+<pre><code class="language-shell"># Test permissions for specific resource
+kubectl auth can-i get pods --subresource=log
+kubectl auth can-i create deployments --namespace=&lt;namespace&gt;
+
+# Examples:
+kubectl auth can-i get pods --subresource=log
+kubectl auth can-i create deployments --namespace=default
+</code></pre>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="developer-access">Developer Access</h3>
+<pre><code class="language-shell"># Create developer user
+openssl genrsa -out developer.key 2048
+openssl req -new -key developer.key -out developer.csr -subj &quot;/CN=developer/O=developers&quot;
+
+# Submit and approve
+cat developer.csr | base64 | tr -d '\n' | kubectl apply -f -
+kubectl certificate approve developer-&lt;hash&gt;
+
+# Extract certificate
+kubectl get csr developer-&lt;hash&gt; -o jsonpath='{.status.certificate}' | base64 -d &gt; developer.crt
+
+# Configure access
+kubectl config set-credentials developer --client-certificate=developer.crt --client-key=developer.key
+kubectl config set-context developer-context --cluster=minikube --user=developer
+kubectl config use-context developer-context
+</code></pre>
+<h3 id="service-account-access">Service Account Access</h3>
+<pre><code class="language-shell"># Create service account
+kubectl create serviceaccount app-service-account
+
+# Create token
+kubectl create token app-service-account
+
+# Use token in kubeconfig
+kubectl config set-credentials app-user --token=&lt;token&gt;
+</code></pre>
+<h2 id="basic-commands">Basic Commands</h2>
+<pre><code class="language-shell"># Check current context
+kubectl config current-context
+
+# List contexts
+kubectl config get-contexts
+
+# Switch context
+kubectl config use-context &lt;context-name&gt;
+
+# Check permissions
+kubectl auth can-i &lt;verb&gt; &lt;resource&gt;
+
+# View kubeconfig
+kubectl config view
 </code></pre>
 <h2 id="references">References</h2>
-<p>For more details, check the <a href="https://github.com/aytitech/k8sfundamentals/blob/main/setup/README.md">website</a>.</p>
+<ul>
+<li><a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/">Kubernetes Authentication</a></li>
+<li><a href="https://kubernetes.io/docs/tasks/tls/managing-tls-certificates/">Kubernetes Certificates</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/authetication">GitHub - Aytitech K8sFundamentals - Authentication</a></li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -3006,10 +4174,10 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

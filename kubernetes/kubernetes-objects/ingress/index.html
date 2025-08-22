@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../docker/docker-examples/">
+        <link rel="prev" href="../network-structure-service/">
       
       
-        <link rel="next" href="../kubectl-cheatsheet/">
+        <link rel="next" href="../network-policy/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Minikube - My Dev Notes</title>
+        <title>Ingress - My Dev Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minikube" class="md-skip">
+        <a href="#kubernetes-objects-ingress" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Minikube
+              Ingress
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -233,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../shell/shell-commands/" class="md-tabs__link">
+        <a href="../../../shell/shell-commands/" class="md-tabs__link">
           
   
   
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../git/git-cheatsheet/" class="md-tabs__link">
+        <a href="../../../git/git-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../maven/maven-wrapper/" class="md-tabs__link">
+        <a href="../../../maven/maven-wrapper/" class="md-tabs__link">
           
   
   
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../java/jenv/" class="md-tabs__link">
+        <a href="../../../java/jenv/" class="md-tabs__link">
           
   
   
@@ -321,7 +321,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../docker/docker-installation/" class="md-tabs__link">
+        <a href="../../../docker/docker-installation/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../kubernetes-introduction/" class="md-tabs__link">
           
   
   
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../terraform/terraform-cheatsheet/" class="md-tabs__link">
+        <a href="../../../terraform/terraform-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -389,7 +389,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../nodejs/nvm-npm/" class="md-tabs__link">
+        <a href="../../../nodejs/nvm-npm/" class="md-tabs__link">
           
   
   
@@ -418,7 +418,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
+        <a href="../../../database/mysql/mysql-cheatsheet/" class="md-tabs__link">
           
   
   
@@ -450,7 +450,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cloud/aws/athena/" class="md-tabs__link">
+        <a href="../../../cloud/aws/athena/" class="md-tabs__link">
           
   
   
@@ -482,7 +482,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../mobile/android/android-firebase-integration/" class="md-tabs__link">
+        <a href="../../../mobile/android/android-firebase-integration/" class="md-tabs__link">
           
   
   
@@ -507,7 +507,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../slack/slack-reminder/" class="md-tabs__link">
+        <a href="../../../slack/slack-reminder/" class="md-tabs__link">
           
   
   
@@ -529,7 +529,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tools/apicurio-via-docker/" class="md-tabs__link">
+        <a href="../../../tools/apicurio-via-docker/" class="md-tabs__link">
           
   
   
@@ -565,7 +565,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+    <a href="../../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -583,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-commands/" class="md-nav__link">
         
   
   
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/shell-network-commands/" class="md-nav__link">
+      <a href="../../../shell/shell-network-commands/" class="md-nav__link">
         
   
   
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../shell/bash-completion/" class="md-nav__link">
+      <a href="../../../shell/bash-completion/" class="md-nav__link">
         
   
   
@@ -785,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-cheatsheet/" class="md-nav__link">
+      <a href="../../../git/git-cheatsheet/" class="md-nav__link">
         
   
   
@@ -808,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/github-actions/" class="md-nav__link">
+      <a href="../../../git/github-actions/" class="md-nav__link">
         
   
   
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/tmate/" class="md-nav__link">
+      <a href="../../../git/tmate/" class="md-nav__link">
         
   
   
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/list-github-actions/" class="md-nav__link">
+      <a href="../../../git/list-github-actions/" class="md-nav__link">
         
   
   
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../maven/maven-wrapper/" class="md-nav__link">
+      <a href="../../../maven/maven-wrapper/" class="md-nav__link">
         
   
   
@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/jenv/" class="md-nav__link">
+      <a href="../../../java/jenv/" class="md-nav__link">
         
   
   
@@ -1033,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java/sdkman/" class="md-nav__link">
+      <a href="../../../java/sdkman/" class="md-nav__link">
         
   
   
@@ -1116,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-installation/" class="md-nav__link">
+      <a href="../../../docker/docker-installation/" class="md-nav__link">
         
   
   
@@ -1139,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-cheatsheet/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1185,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-examples/" class="md-nav__link">
+      <a href="../../../docker/docker-examples/" class="md-nav__link">
         
   
   
@@ -1270,6 +1270,349 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Objects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Objects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../label-selector-annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Label, Selector, Annotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-replicaset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment, ReplicaSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rollout-rollback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rollout, Rollback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statefulset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StatefulSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daemonset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DaemonSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-cronjob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job, CronJob
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-structure-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Structure, Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1287,7 +1630,7 @@
   
   
   <span class="md-ellipsis">
-    Minikube
+    Ingress
     
   </span>
   
@@ -1300,7 +1643,7 @@
   
   
   <span class="md-ellipsis">
-    Minikube
+    Ingress
     
   </span>
   
@@ -1323,55 +1666,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-minikube" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Minikube
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starting-minikube" class="md-nav__link">
+  <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Minikube
+      Use Cases
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Starting Minikube">
+    <nav class="md-nav" aria-label="Use Cases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-start-with-a-docker-driver" class="md-nav__link">
+  <a href="#scenario-1-load-balancer-management" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Start with a Docker driver
+      Scenario 1: Load Balancer Management
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-start-with-a-virtualbox-driver" class="md-nav__link">
+  <a href="#scenario-2-path-based-routing" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Start with a VirtualBox driver
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-start-with-multiple-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Start with multiple nodes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-start-with-a-named-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Start with a named profile
+      Scenario 2: Path-Based Routing
     </span>
   </a>
   
@@ -1383,82 +1708,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checking-minikube-status" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Checking Minikube Status
+      Architecture
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stopping-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stopping Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-service-url-in-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a service url in Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-new-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add new node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-addons-in-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Addons in Minikube
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Addons in Minikube">
+    <nav class="md-nav" aria-label="Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-listing-addons" class="md-nav__link">
+  <a href="#ingress-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Listing Addons
+      Ingress Controller
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-enabling-ingress-addon" class="md-nav__link">
+  <a href="#ingress-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Enabling Ingress Addon
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-enabling-kubernetes-dashboard-addon" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Enabling Kubernetes Dashboard Addon
+      Ingress Objects
     </span>
   </a>
   
@@ -1470,37 +1741,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deleting-all-docker-objects-in-minikube" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Deleting All Docker Objects in Minikube
+      Implementation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deleting All Docker Objects in Minikube">
+    <nav class="md-nav" aria-label="Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-delete-all-docker-objects-inside-minikube" class="md-nav__link">
+  <a href="#environment-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Delete All Docker Objects Inside Minikube
+      Environment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minikube-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Minikube Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-completely-reset-the-minikube-environment" class="md-nav__link">
+  <a href="#2-ingress-controller-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Completely Reset the Minikube Environment
+      2. Ingress Controller Installation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-delete-all-kubernetes-resources-only" class="md-nav__link">
+  <a href="#3-application-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Delete All Kubernetes Resources Only
+      3. Application Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ingress-object-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ingress Object Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verification
     </span>
   </a>
   
@@ -1510,11 +1809,16 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      References
     </span>
   </a>
   
@@ -1536,12 +1840,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubectl-cheatsheet/" class="md-nav__link">
+      <a href="../network-policy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubectl Cheatsheet
+    Network Policy
     
   </span>
   
@@ -1559,7 +1863,307 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubeadm/" class="md-nav__link">
+      <a href="../volume-secret-configmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConfigMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secret, Image Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probes-resource-limits-env-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probes, Resource Limits, Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affinity-taint-toleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affinity, Taint, Toleration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistent-volume-claim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Persistent Volume Claim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Storage Class
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RBAC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubectl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/kubeadm/" class="md-nav__link">
         
   
   
@@ -1582,17 +2186,117 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes-dashboards/" class="md-nav__link">
+      <a href="../../kubernetes-tools/minikube/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Kubernetes Dashboards
+    Minikube
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/dashboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dashboards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Helm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/monitoring-prometheus-efk-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring (Prometheus, EFK Stack)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-tools/service-mesh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Mesh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1661,7 +2365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/terraform-cheatsheet/" class="md-nav__link">
+      <a href="../../../terraform/terraform-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1684,7 +2388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terraform/tfenv/" class="md-nav__link">
+      <a href="../../../terraform/tfenv/" class="md-nav__link">
         
   
   
@@ -1761,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nodejs/nvm-npm/" class="md-nav__link">
+      <a href="../../../nodejs/nvm-npm/" class="md-nav__link">
         
   
   
@@ -1887,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/mysql/mysql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1967,7 +2671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1990,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
+      <a href="../../../database/postgresql/postgresql-jsonb-operations/" class="md-nav__link">
         
   
   
@@ -2122,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud/aws/athena/" class="md-nav__link">
+      <a href="../../../cloud/aws/athena/" class="md-nav__link">
         
   
   
@@ -2262,7 +2966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2285,7 +2989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-keystore-settings/" class="md-nav__link">
+      <a href="../../../mobile/android/android-keystore-settings/" class="md-nav__link">
         
   
   
@@ -2308,7 +3012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2331,7 +3035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/android/android-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/android/android-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2415,7 +3119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-firebase-integration/" class="md-nav__link">
         
   
   
@@ -2438,7 +3142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-google-maps-integration/" class="md-nav__link">
         
   
   
@@ -2461,7 +3165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-test-flight-integration/" class="md-nav__link">
         
   
   
@@ -2484,7 +3188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
+      <a href="../../../mobile/ios/ios-push-notification-integration/" class="md-nav__link">
         
   
   
@@ -2575,7 +3279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-reminder/" class="md-nav__link">
+      <a href="../../../slack/slack-reminder/" class="md-nav__link">
         
   
   
@@ -2598,7 +3302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-message/" class="md-nav__link">
+      <a href="../../../slack/slack-message/" class="md-nav__link">
         
   
   
@@ -2621,7 +3325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-user-group-creation/" class="md-nav__link">
+      <a href="../../../slack/slack-user-group-creation/" class="md-nav__link">
         
   
   
@@ -2644,7 +3348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../slack/slack-github-workflows/" class="md-nav__link">
+      <a href="../../../slack/slack-github-workflows/" class="md-nav__link">
         
   
   
@@ -2733,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/apicurio-via-docker/" class="md-nav__link">
+      <a href="../../../tools/apicurio-via-docker/" class="md-nav__link">
         
   
   
@@ -2756,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/kafkaui-via-docker/" class="md-nav__link">
+      <a href="../../../tools/kafkaui-via-docker/" class="md-nav__link">
         
   
   
@@ -2779,7 +3483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multi-gitter/" class="md-nav__link">
+      <a href="../../../tools/multi-gitter/" class="md-nav__link">
         
   
   
@@ -2802,7 +3506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/multipass/" class="md-nav__link">
+      <a href="../../../tools/multipass/" class="md-nav__link">
         
   
   
@@ -2825,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/bloomrpc/" class="md-nav__link">
+      <a href="../../../tools/bloomrpc/" class="md-nav__link">
         
   
   
@@ -2848,7 +3552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/windows-on-mac-via-utm/" class="md-nav__link">
+      <a href="../../../tools/windows-on-mac-via-utm/" class="md-nav__link">
         
   
   
@@ -2871,7 +3575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/overriding-hostnames/" class="md-nav__link">
+      <a href="../../../tools/overriding-hostnames/" class="md-nav__link">
         
   
   
@@ -2921,55 +3625,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-minikube" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Minikube
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starting-minikube" class="md-nav__link">
+  <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Minikube
+      Use Cases
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Starting Minikube">
+    <nav class="md-nav" aria-label="Use Cases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-start-with-a-docker-driver" class="md-nav__link">
+  <a href="#scenario-1-load-balancer-management" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Start with a Docker driver
+      Scenario 1: Load Balancer Management
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-start-with-a-virtualbox-driver" class="md-nav__link">
+  <a href="#scenario-2-path-based-routing" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Start with a VirtualBox driver
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-start-with-multiple-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Start with multiple nodes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-start-with-a-named-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Start with a named profile
+      Scenario 2: Path-Based Routing
     </span>
   </a>
   
@@ -2981,82 +3667,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checking-minikube-status" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Checking Minikube Status
+      Architecture
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stopping-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stopping Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deleting Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-service-url-in-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a service url in Minikube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-new-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add new node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-addons-in-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Addons in Minikube
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Addons in Minikube">
+    <nav class="md-nav" aria-label="Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-listing-addons" class="md-nav__link">
+  <a href="#ingress-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Listing Addons
+      Ingress Controller
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-enabling-ingress-addon" class="md-nav__link">
+  <a href="#ingress-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Enabling Ingress Addon
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-enabling-kubernetes-dashboard-addon" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Enabling Kubernetes Dashboard Addon
+      Ingress Objects
     </span>
   </a>
   
@@ -3068,37 +3700,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deleting-all-docker-objects-in-minikube" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Deleting All Docker Objects in Minikube
+      Implementation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deleting All Docker Objects in Minikube">
+    <nav class="md-nav" aria-label="Implementation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-delete-all-docker-objects-inside-minikube" class="md-nav__link">
+  <a href="#environment-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Delete All Docker Objects Inside Minikube
+      Environment Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-minikube-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Minikube Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-completely-reset-the-minikube-environment" class="md-nav__link">
+  <a href="#2-ingress-controller-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Completely Reset the Minikube Environment
+      2. Ingress Controller Installation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-delete-all-kubernetes-resources-only" class="md-nav__link">
+  <a href="#3-application-deployment" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Delete All Kubernetes Resources Only
+      3. Application Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ingress-object-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ingress Object Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Verification
     </span>
   </a>
   
@@ -3108,11 +3768,16 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      References
     </span>
   </a>
   
@@ -3134,186 +3799,257 @@
 
 
 
-<h1 id="minikube">Minikube</h1>
-<p>Minikube is a tool that makes it easy to run Kubernetes locally. Below are some commonly used Minikube commands with
-brief explanations.</p>
-<hr />
-<h2 id="installing-minikube">Installing Minikube</h2>
-<pre><code class="language-bash">brew install minikube
-</code></pre>
+<h1 id="kubernetes-objects-ingress">Kubernetes Objects - Ingress</h1>
+<h2 id="overview">Overview</h2>
+<p>Ingress provides the infrastructure for applications to access external resources and be accessible from external
+sources. It serves as the primary mechanism for managing external access to services within a Kubernetes cluster.</p>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="scenario-1-load-balancer-management">Scenario 1: Load Balancer Management</h3>
+<p><img alt="" src="../../images/kubernetes_load_balancer.png" /></p>
+<p>In cloud environments like Azure, organizations define LoadBalancer services within clusters. Cloud providers assign IP
+addresses to these LoadBalancer services, and all requests directed to these IPs are handled by the LoadBalancer. Domain
+names are matched with IP addresses through DNS, enabling user access.</p>
+<p><strong>Challenge:</strong> When multiple applications are deployed in the same Kubernetes cluster, organizations need to <strong>pay
+additional costs to cloud providers and perform manual configurations for each LoadBalancer.</strong></p>
+<h3 id="scenario-2-path-based-routing">Scenario 2: Path-Based Routing</h3>
+<p><img alt="" src="../../images/kubernetes_path_based_routing.png" /></p>
+<p>In this scenario: when users visit <strong>example.com</strong>, application A runs; when they visit <strong>example.com/contact</strong>,
+application B runs. LoadBalancer services cannot handle this setup because <strong>/contact</strong> paths cannot be defined in DNS.
+However, a load balancer that functions like a gateway is required to welcome users in all scenarios.</p>
+<p><strong>Solution:</strong> Both scenarios are resolved using <strong>Ingress Controller and Ingress Objects</strong>.</p>
+<h2 id="architecture">Architecture</h2>
+<h3 id="ingress-controller">Ingress Controller</h3>
+<p><img alt="" src="../../images/kubernetes_nginx.png" /></p>
+<p><strong>Ingress Controller</strong> refers to load balancer applications like Nginx, Traefik, or KrakenD that can be deployed.
+Organizations select one of these applications, deploy it to the Kubernetes cluster, and expose it externally by setting
+up a LoadBalancer service. This provides the application with a <strong>public IP</strong>, enabling complete user communication
+through this IP address.</p>
+<h3 id="ingress-objects">Ingress Objects</h3>
+<p><strong>How are incoming requests directed?</strong> This is where <strong>Ingress Objects</strong> come into play. (<em>Structures defined in YAML
+files</em>) Organizations determine how Ingress Objects and Ingress Controllers should behave against incoming requests
+through configurations made in Ingress Controllers.</p>
+<p><strong>Features:</strong> Ingress provides <strong>load balancing, SSL termination, and path-based routing</strong>.</p>
+<h2 id="implementation">Implementation</h2>
+<h3 id="environment-setup">Environment Setup</h3>
+<h4 id="1-minikube-configuration">1. Minikube Configuration</h4>
+<p>To run Ingress, the minikube driver must be changed:</p>
 <ul>
-<li>Installs Minikube on macOS using Homebrew.</li>
+<li><strong>Windows:</strong> Choose <strong>Hyper-V</strong></li>
+<li><strong>macOS/Linux:</strong> Choose <strong>VirtualBox</strong></li>
 </ul>
-<hr />
-<h2 id="starting-minikube">Starting Minikube</h2>
-<h3 id="1-start-with-a-docker-driver">1. Start with a Docker driver</h3>
-<pre><code class="language-bash">minikube start --driver=docker
+<p>Install the appropriate driver before making the selection.</p>
+<pre><code class="language-shell">minikube start --driver=hyperv
 </code></pre>
-<h3 id="2-start-with-a-virtualbox-driver">2. Start with a VirtualBox driver</h3>
-<pre><code class="language-bash">minikube start --driver=virtualbox
+<h4 id="2-ingress-controller-installation">2. Ingress Controller Installation</h4>
+<p><strong>Nginx Controller:</strong> Each ingress controller has different installation procedures. Installation details can be found
+on the application's official website.</p>
+<p><strong>Installation Reference:</strong> https://kubernetes.github.io/ingress-nginx/deploy/</p>
+<p><strong>Minikube Add-ons:</strong> minikube offers some ingress controllers like Nginx that are heavily used as add-ons for faster
+activation.</p>
+<pre><code class="language-shell">minikube addons enable ingress # Activates the ingress add-on
+minikube addons list # Lists all available add-ons
 </code></pre>
-<h3 id="3-start-with-multiple-nodes">3. Start with multiple nodes</h3>
-<pre><code class="language-bash">minikube start --nodes=5 --driver=docker
+<p><strong>Namespace Creation:</strong> When <strong>Nginx</strong> is installed, it creates a <strong>namespace named <code>ingress-nginx</code></strong> for itself.</p>
+<pre><code class="language-shell"># To list all objects belonging to the ingress-nginx namespace:
+kubectl get all -n ingress-nginx 
 </code></pre>
-<h3 id="4-start-with-a-named-profile">4. Start with a named profile</h3>
-<pre><code class="language-bash">minikube start -p profileName
+<h4 id="3-application-deployment">3. Application Deployment</h4>
+<p>Deploy the YAML file that creates both Pods and Services for <strong>blueapp, greenapp, todoapp</strong>.</p>
+<p><strong>Important:</strong> All services must be ClusterIP type services.</p>
+<details>
+<summary>ingress.yaml</summary>
+
+
+<pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blueapp
+  labels:
+    app: blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: blue
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      containers:
+        - name: blueapp
+          image: ozlmulg/k8s:blue
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bluesvc
+spec:
+  selector:
+    app: blue
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greenapp
+  labels:
+    app: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: green
+  template:
+    metadata:
+      labels:
+        app: green
+    spec:
+      containers:
+        - name: greenapp
+          image: ozlmulg/k8s:green
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: greensvc
+spec:
+  selector:
+    app: green
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapp
+  labels:
+    app: todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+        - name: todoapp
+          image: ozlmulg/samplewebapp:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todosvc
+spec:
+  selector:
+    app: todo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 </code></pre>
-<blockquote>
-<p>The default profile name is <code>minikube</code>.</p>
-</blockquote>
-<hr />
-<h2 id="checking-minikube-status">Checking Minikube Status</h2>
-<pre><code class="language-bash">minikube status
+
+
+</details>
+
+<h4 id="4-ingress-object-configuration">4. Ingress Object Configuration</h4>
+<p>After selecting and installing the Ingress Controller (Nginx) and installing the ClusterIP type services for each app,
+deploy the <strong>Ingress objects</strong> necessary for users to access service A when they write <strong>example.com/a</strong>.</p>
+<p><strong>Ingress Object definition for blue and green apps:</strong></p>
+<p>The <code>pathType</code> section can be set in two ways: <code>exact</code> or <code>Prefix</code>. For detailed information, refer to
+the <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Kubernetes Official Documentation</a></p>
+<pre><code class="language-yaml">apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: appingress
+  annotations:
+    # Nginx settings are configured through annotations
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: example.com
+      http:
+        paths:
+          - path: /blue
+            pathType: Prefix
+            backend:
+              service:
+                name: bluesvc
+                port:
+                  number: 80
+          - path: /green
+            pathType: Prefix
+            backend:
+              service:
+                name: greensvc
+                port:
+                  number: 80
 </code></pre>
+<p><strong>Ingress Object prepared using a different <code>path</code>:</strong></p>
+<pre><code class="language-yaml">apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: todoingress
+spec:
+  rules:
+    - host: todoapp.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: todosvc
+                port:
+                  number: 80
+</code></pre>
+<h4 id="5-verification">5. Verification</h4>
+<pre><code class="language-shell">kubectl get ingress
+</code></pre>
+<p><strong>Note:</strong> To simulate with URLs, edit the <strong>hosts</strong> file.</p>
+<h2 id="references">References</h2>
 <ul>
-<li>Shows the current status of the Minikube cluster.</li>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Kubernetes Official Ingress Overview</a></li>
+<li><a href="https://github.com/aytitech/k8sfundamentals/tree/main/ingress">GitHub - Aytitech K8sFundamentals</a></li>
 </ul>
-<hr />
-<h2 id="stopping-minikube">Stopping Minikube</h2>
-<pre><code class="language-bash">minikube stop
-</code></pre>
-<ul>
-<li>Stops the running Minikube cluster without deleting it.</li>
-</ul>
-<hr />
-<h2 id="deleting-minikube">Deleting Minikube</h2>
-<pre><code class="language-bash">minikube delete
-</code></pre>
-<ul>
-<li>Deletes the Minikube cluster and all its data.</li>
-</ul>
-<hr />
-<h2 id="creating-a-service-url-in-minikube">Creating a service url in Minikube</h2>
-<pre><code class="language-bash">minikube service --url &lt;service-name&gt;
-</code></pre>
-<ul>
-<li>Starts a service in Minikube and provides the URL to access it. (e.g. http://127.0.0.1:33901)</li>
-</ul>
-<h2 id="add-new-node">Add new node</h2>
-<pre><code class="language-bash">minikube node add
-</code></pre>
-<ul>
-<li>Adds a new node to the Minikube cluster.</li>
-</ul>
-<hr />
-<h2 id="using-addons-in-minikube">Using Addons in Minikube</h2>
-<p>With Minikube addons, you can quickly enable powerful Kubernetes features such as <strong>Ingress</strong>, <strong>Dashboard</strong>, and many
-others for local testing and learning.</p>
-<h3 id="1-listing-addons">1. Listing Addons</h3>
-<p>To see all available addons in Minikube:</p>
-<pre><code class="language-bash">minikube addons list
-</code></pre>
-<p>This will show a list of supported addons, their status (enabled/disabled), and descriptions.</p>
-<h3 id="2-enabling-ingress-addon">2. Enabling Ingress Addon</h3>
-<p>The <strong>Ingress addon</strong> provides an NGINX Ingress Controller, useful for routing traffic into your cluster.</p>
-<p>Enable it with:</p>
-<pre><code class="language-bash">minikube addons enable ingress
-</code></pre>
-<p>After enabling, you can use <code>Ingress</code> resources in your cluster to expose services.</p>
-<h3 id="3-enabling-kubernetes-dashboard-addon">3. Enabling Kubernetes Dashboard Addon</h3>
-<p>The <strong>Dashboard addon</strong> provides a web-based UI to manage your Kubernetes cluster.</p>
-<p>Enable it with:</p>
-<pre><code class="language-bash">minikube addons enable dashboard
-</code></pre>
-<p>Start the dashboard with:</p>
-<pre><code class="language-bash">minikube dashboard
-</code></pre>
-<p>This command will automatically open the Dashboard in your default web browser.</p>
-<hr />
-<h2 id="deleting-all-docker-objects-in-minikube">Deleting All Docker Objects in Minikube</h2>
-<p>Minikube runs its own <strong>Docker daemon</strong> inside a virtual machine (VM).<br />
-Because of this, regular Docker commands won’t affect it unless you connect to Minikube’s Docker environment first.</p>
-<hr />
-<h3 id="1-delete-all-docker-objects-inside-minikube">1. Delete All Docker Objects Inside Minikube</h3>
-<p><strong>Step 1:</strong> Connect your shell to Minikube's Docker environment</p>
-<pre><code class="language-bash">eval $(minikube docker-env)
-</code></pre>
-<p><strong>Step 2:</strong> Remove all unused containers, images, networks, and volumes</p>
-<pre><code class="language-bash">docker system prune -a --volumes
-</code></pre>
-<ul>
-<li>eval $(minikube docker-env) → Points your shell to Minikube’s Docker daemon.</li>
-<li>docker system prune -a --volumes → Removes <strong>all</strong> unused containers, images, networks, and volumes.<br />
-  ⚠ <strong>Warning:</strong> This action cannot be undone.</li>
-</ul>
-<hr />
-<h3 id="2-completely-reset-the-minikube-environment">2. Completely Reset the Minikube Environment</h3>
-<p>If you want to remove not just Docker objects, but the entire Minikube Kubernetes environment:</p>
-<pre><code class="language-bash">minikube delete --all
-</code></pre>
-<p>Afterward, you can start fresh with:</p>
-<pre><code class="language-bash">minikube start
-</code></pre>
-<hr />
-<h3 id="3-delete-all-kubernetes-resources-only">3. Delete All Kubernetes Resources Only</h3>
-<p>If you only want to remove Kubernetes objects (pods, deployments, services, etc.) without deleting Docker images:</p>
-<pre><code class="language-bash">kubectl delete all --all -A
-</code></pre>
-<hr />
-<h2 id="summary">Summary</h2>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>brew install minikube</code></td>
-<td>Install Minikube</td>
-</tr>
-<tr>
-<td><code>minikube start --driver=docker</code></td>
-<td>Start Minikube with Docker driver</td>
-</tr>
-<tr>
-<td><code>minikube start --nodes=5 --driver=docker</code></td>
-<td>Start Minikube with multiple nodes</td>
-</tr>
-<tr>
-<td><code>minikube status</code></td>
-<td>Check the status of Minikube</td>
-</tr>
-<tr>
-<td><code>minikube stop</code></td>
-<td>Stop the Minikube cluster</td>
-</tr>
-<tr>
-<td><code>minikube delete</code></td>
-<td>Delete the Minikube cluster</td>
-</tr>
-<tr>
-<td><code>minikube service --url &lt;service-name&gt;</code></td>
-<td>Create a service url</td>
-</tr>
-<tr>
-<td><code>minikube node add</code></td>
-<td>Add new node</td>
-</tr>
-<tr>
-<td><code>minikube delete --all</code></td>
-<td>Reset the Minikube cluster</td>
-</tr>
-<tr>
-<td><code>minikube addons list</code></td>
-<td>List addons</td>
-</tr>
-<tr>
-<td><code>minikube addons enable dashboard</code></td>
-<td>Enable Kubernetes dashboard</td>
-</tr>
-<tr>
-<td><code>minikube dashboard</code></td>
-<td>Start Kubernetes dashboard</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>For more details, visit the official documentation: <a href="https://minikube.sigs.k8s.io/docs/">Minikube Official Website</a></p>
-<blockquote>
-<p><strong>Note:</strong> Docker must be installed and running on your machine to use Minikube with the Docker driver.</p>
-</blockquote>
 
 
 
@@ -3391,10 +4127,10 @@ Because of this, regular Docker commands won’t affect it unless you connect to
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
