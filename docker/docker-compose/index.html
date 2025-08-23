@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../docker-cheatsheet/">
+        <link rel="prev" href="../dockerfile/">
       
       
-        <link rel="next" href="../docker-examples/">
+        <link rel="next" href="../docker-swarm/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Docker Compose Cheatsheet - My Dev Notes</title>
+        <title>Docker Compose - My Dev Notes</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-compose-cheatsheet" class="md-skip">
+        <a href="#docker-compose" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Compose Cheatsheet
+              Docker Compose
             
           </span>
         </div>
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../docker-installation/" class="md-tabs__link">
+        <a href="../docker-introduction/" class="md-tabs__link">
           
   
   
@@ -1067,6 +1067,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1103,6 +1111,29 @@
             Docker
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1154,6 +1185,75 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-useful-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Useful Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dockerfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1171,7 +1271,7 @@
   
   
   <span class="md-ellipsis">
-    Docker Compose Cheatsheet
+    Docker Compose
     
   </span>
   
@@ -1184,7 +1284,7 @@
   
   
   <span class="md-ellipsis">
-    Docker Compose Cheatsheet
+    Docker Compose
     
   </span>
   
@@ -1207,81 +1307,114 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-services" class="md-nav__link">
+  <a href="#what-is-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Services
+      What is Docker Compose?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starting-services-in-detached-mode" class="md-nav__link">
+  <a href="#why-use-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Services in Detached Mode
+      Why Use Docker Compose?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-services" class="md-nav__link">
+  <a href="#installing-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Stopping Services
+      Installing Docker Compose
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-running-containers" class="md-nav__link">
+  <a href="#docker-compose-cli-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing Running Containers
+      Docker Compose CLI Basics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-logs" class="md-nav__link">
+  <a href="#docker-composeyml-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing Logs
+      docker-compose.yml Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rebuilding-services" class="md-nav__link">
+  <a href="#example-multi-container-app" class="md-nav__link">
     <span class="md-ellipsis">
-      Rebuilding Services
+      Example: Multi-Container App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Multi-Container App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker-compose.yml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overriding-and-extending-compose-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding and Extending Compose Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restarting-services" class="md-nav__link">
+  <a href="#scaling-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Restarting Services
+      Scaling Services
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Stopping Services Without Removing Containers
+      Best Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      References
     </span>
   </a>
   
@@ -1303,12 +1436,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker-examples/" class="md-nav__link">
+      <a href="../docker-swarm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Docker Examples
+    Docker Swarm
     
   </span>
   
@@ -3499,81 +3632,114 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-services" class="md-nav__link">
+  <a href="#what-is-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Services
+      What is Docker Compose?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#starting-services-in-detached-mode" class="md-nav__link">
+  <a href="#why-use-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Starting Services in Detached Mode
+      Why Use Docker Compose?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-services" class="md-nav__link">
+  <a href="#installing-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
-      Stopping Services
+      Installing Docker Compose
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-running-containers" class="md-nav__link">
+  <a href="#docker-compose-cli-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing Running Containers
+      Docker Compose CLI Basics
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-logs" class="md-nav__link">
+  <a href="#docker-composeyml-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing Logs
+      docker-compose.yml Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rebuilding-services" class="md-nav__link">
+  <a href="#example-multi-container-app" class="md-nav__link">
     <span class="md-ellipsis">
-      Rebuilding Services
+      Example: Multi-Container App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Multi-Container App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker-compose.yml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overriding-and-extending-compose-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding and Extending Compose Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#restarting-services" class="md-nav__link">
+  <a href="#scaling-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Restarting Services
+      Scaling Services
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-services-without-removing-containers" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Stopping Services Without Removing Containers
+      Best Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      References
     </span>
   </a>
   
@@ -3595,67 +3761,29 @@
 
 
 
-<h1 id="docker-compose-cheatsheet">Docker Compose Cheatsheet</h1>
-<p>Docker Compose is a tool for defining and running multi-container Docker applications. Below are some common Docker
-Compose commands with explanations using the new <code>docker compose</code> syntax.</p>
+<h1 id="docker-compose">Docker Compose</h1>
+<h2 id="what-is-docker-compose">What is Docker Compose?</h2>
+<p>Docker Compose is a tool for defining and running <strong>multi-container Docker applications</strong>.<br />
+It uses a YAML file (<code>docker-compose.yml</code>) to configure application services, networks, and volumes.</p>
+<p>With a single command (<code>docker compose up</code>), you can start all the defined services.</p>
 <hr />
-<h2 id="starting-services">Starting Services</h2>
-<pre><code class="language-bash">docker compose up
-</code></pre>
+<h2 id="why-use-docker-compose">Why Use Docker Compose?</h2>
 <ul>
-<li>Builds, (re)creates, starts, and attaches to containers for a service defined in <code>docker-compose.yml</code>.</li>
+<li>Simplifies running multi-container applications.</li>
+<li>Configuration as code (<code>docker-compose.yml</code>).</li>
+<li>Easy to share and reproduce environments.</li>
+<li>Supports scaling services up and down.</li>
 </ul>
 <hr />
-<h2 id="starting-services-in-detached-mode">Starting Services in Detached Mode</h2>
-<pre><code class="language-bash">docker compose up -d
+<h2 id="installing-docker-compose">Installing Docker Compose</h2>
+<p>Docker Desktop includes Compose by default.<br />
+Check version:</p>
+<pre><code>docker compose version
 </code></pre>
-<ul>
-<li>Starts the containers in the background (detached mode).</li>
-</ul>
+<p>For Linux, install separately:<br />
+<a href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p>
 <hr />
-<h2 id="stopping-services">Stopping Services</h2>
-<pre><code class="language-bash">docker compose down
-</code></pre>
-<ul>
-<li>Stops and removes containers, networks, volumes, and images created by <code>docker compose up</code>.</li>
-</ul>
-<hr />
-<h2 id="viewing-running-containers">Viewing Running Containers</h2>
-<pre><code class="language-bash">docker compose ps
-</code></pre>
-<ul>
-<li>Lists containers started by <code>docker compose</code>.</li>
-</ul>
-<hr />
-<h2 id="viewing-logs">Viewing Logs</h2>
-<pre><code class="language-bash">docker compose logs
-</code></pre>
-<ul>
-<li>Shows output logs from containers.</li>
-</ul>
-<hr />
-<h2 id="rebuilding-services">Rebuilding Services</h2>
-<pre><code class="language-bash">docker compose build
-</code></pre>
-<ul>
-<li>Builds or rebuilds services.</li>
-</ul>
-<hr />
-<h2 id="restarting-services">Restarting Services</h2>
-<pre><code class="language-bash">docker compose restart
-</code></pre>
-<ul>
-<li>Restarts running containers.</li>
-</ul>
-<hr />
-<h2 id="stopping-services-without-removing-containers">Stopping Services Without Removing Containers</h2>
-<pre><code class="language-bash">docker compose stop
-</code></pre>
-<ul>
-<li>Stops running containers but does not remove them.</li>
-</ul>
-<hr />
-<h2 id="summary">Summary</h2>
+<h2 id="docker-compose-cli-basics">Docker Compose CLI Basics</h2>
 <table>
 <thead>
 <tr>
@@ -3670,19 +3798,23 @@ Compose commands with explanations using the new <code>docker compose</code> syn
 </tr>
 <tr>
 <td><code>docker compose up -d</code></td>
-<td>Start containers in detached mode</td>
+<td>Start containers in detached mode (background)</td>
 </tr>
 <tr>
 <td><code>docker compose down</code></td>
-<td>Stop and remove containers and networks</td>
+<td>Stop and remove containers, volumes and networks</td>
 </tr>
 <tr>
 <td><code>docker compose ps</code></td>
-<td>List containers</td>
+<td>List running services (containers)</td>
 </tr>
 <tr>
 <td><code>docker compose logs</code></td>
-<td>Show container logs</td>
+<td>Show services logs</td>
+</tr>
+<tr>
+<td><code>docker compose exec web sh</code></td>
+<td>Run a shell inside a service container</td>
 </tr>
 <tr>
 <td><code>docker compose build</code></td>
@@ -3699,7 +3831,103 @@ Compose commands with explanations using the new <code>docker compose</code> syn
 </tbody>
 </table>
 <hr />
-<p>For more info, visit the official docs: https://docs.docker.com/compose/</p>
+<h2 id="docker-composeyml-structure">docker-compose.yml Structure</h2>
+<p>A basic YAML file structure includes:</p>
+<ul>
+<li><strong>services</strong>: Application containers (e.g., web, db).</li>
+<li><strong>networks</strong>: Communication between services.</li>
+<li><strong>volumes</strong>: Data persistence.</li>
+</ul>
+<p>Example:</p>
+<pre><code>version: "3.9"
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: mydb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+</code></pre>
+<hr />
+<h2 id="example-multi-container-app">Example: Multi-Container App</h2>
+<h3 id="docker-composeyml">docker-compose.yml</h3>
+<pre><code>version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgres://admin:secret@db:5432/mydb
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: mydb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+</code></pre>
+<h3 id="commands">Commands</h3>
+<pre><code>docker compose up -d      # Start all services in background
+docker compose ps         # Check running services
+docker compose logs db    # View logs of db service
+docker compose down       # Stop and clean up
+</code></pre>
+<hr />
+<h2 id="overriding-and-extending-compose-files">Overriding and Extending Compose Files</h2>
+<ul>
+<li>Default file is <code>docker-compose.yml</code>.</li>
+<li>You can use multiple files for environments (e.g., <code>docker-compose.override.yml</code>).</li>
+</ul>
+<pre><code class="language-bash">docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+</code></pre>
+<hr />
+<h2 id="scaling-services">Scaling Services</h2>
+<p>You can scale services with a single command:</p>
+<pre><code class="language-bash">docker compose up -d --scale web=3
+</code></pre>
+<p>This runs <strong>3 replicas</strong> of the <code>web</code> service.</p>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Keep secrets outside YAML files (use <code>.env</code> files).</li>
+<li>Use version control for your Compose files.</li>
+<li>Separate development and production configurations.</li>
+<li>Use named volumes for persistent data.</li>
+</ul>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.docker.com/compose/">Docker Compose Documentation</a></li>
+<li><a href="https://docs.docker.com/compose/compose-file/">Compose file reference</a>  </li>
+</ul>
 
 
 
