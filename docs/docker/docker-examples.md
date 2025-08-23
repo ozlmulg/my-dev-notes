@@ -399,6 +399,28 @@ chmod +x copy_image.sh
 ./copy_image.sh
 ```
 
+You can also change Dockerfile content to build the image with a new name.
+
+Dockerfile:
+
+```dockerfile
+FROM olduser/oldrepo:version
+RUN echo "Added extra changes." > /info.txt
+```
+
+Run commands in the same folder as Dockerfile:
+
+```shell
+docker build -t newuser/newrepo:version .
+docker push newuser/newrepo:version
+```
+
+View your changes (info.txt) in the new image:
+
+```shell
+docker run -it newuser/newrepo:version ls -al /
+```
+
 ## References
 
 For more details, check
