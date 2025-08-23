@@ -3832,6 +3832,18 @@ echo &quot;✅ Done! $NEW_IMAGE is now available under your new account.&quot;
 <pre><code class="language-bash">chmod +x copy_image.sh
 ./copy_image.sh
 </code></pre>
+<p>You can also change Dockerfile content to build the image with a new name.</p>
+<p>Dockerfile:</p>
+<pre><code class="language-dockerfile">FROM olduser/oldrepo:version
+RUN echo &quot;Added extra changes.&quot; &gt; /info.txt
+</code></pre>
+<p>Run commands in the same folder as Dockerfile:</p>
+<pre><code class="language-shell">docker build -t newuser/newrepo:version .
+docker push newuser/newrepo:version
+</code></pre>
+<p>View your changes (info.txt) in the new image:</p>
+<pre><code class="language-shell">docker run -it newuser/newrepo:version ls -al /
+</code></pre>
 <h2 id="references">References</h2>
 <p>For more details, check
 the <a href="https://github.com/ozgurozturknet/AdanZyeDocker/blob/master/DockerCheatSheetTurkce.md">website</a>.</p>
