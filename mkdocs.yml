@@ -69,10 +69,14 @@ nav:
       - Jenv: java/jenv.md
       - Sdkman: java/sdkman.md
   - Docker:
+      - Docker Introduction: docker/docker-introduction.md
       - Docker Installation: docker/docker-installation.md
       - Docker Cheatsheet: docker/docker-cheatsheet.md
-      - Docker Compose Cheatsheet: docker/docker-compose-cheatsheet.md
       - Docker Examples: docker/docker-examples.md
+      - Docker Useful Scripts: docker/docker-useful-scripts.md
+      - Dockerfile: docker/dockerfile.md
+      - Docker Compose: docker/docker-compose.md
+      - Docker Swarm: docker/docker-swarm.md
   - Kubernetes:
       - Kubernetes Introduction: kubernetes/kubernetes-introduction.md
       - Kubernetes Installation: kubernetes/kubernetes-installation.md

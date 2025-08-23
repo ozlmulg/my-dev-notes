@@ -162,13 +162,13 @@ ___
 
 `docker image push repository/image:tag`
 
-Example: `docker image push ozgurozturknet/adanzyedocker:latest`
+Example: `docker image push testuser/adanzyedocker:latest`
 ___
 **Tagging an existing image with a new tag:**
 
 `docker image tag image:tag newimage:tag`
 
-Example: `docker image tag nginx:latest ozgurozturknet/nginx:v1`
+Example: `docker image tag nginx:latest testuser/nginx:v1`
 ___
 **Inspecting image details:**
 
@@ -186,7 +186,7 @@ ___
 
 `docker image build -t image:tag .`
 
-Example: `docker image build -t ozgurozturknet/hello-world:latest .`
+Example: `docker image build -t testuser/hello-world:latest .`
 (Dockerfile must be in the folder where this command is run)
 ___
 **Using build args when building image:**
@@ -209,13 +209,13 @@ ___
 
 `docker commit container_id|or|container_name image:tag`
 
-Example: `docker commit 12a793b3fec0 ozgurozturknet/img:latest`
+Example: `docker commit 12a793b3fec0 testuser/img:latest`
 ___
 **Saving an image to a file and loading an image from a saved file:**
 
 `docker save image:tag -o filename.tar`
 
-Example: `docker save ozgurozturknet/img:latest -o image.tar`
+Example: `docker save testuser/img:latest -o image.tar`
 
 `docker load -i filename.tar`
 
@@ -353,75 +353,9 @@ ___
 Example: `docker logs -f 12a793b3fec0`
 (logs will show live as they occur; use Ctrl-C to exit)
 
-___
-
-## Image Copy
-
-You can copy an image from one Docker Hub account to another using the following script.
-
-> You need to change the `OLD_IMAGE` and `NEW_IMAGE` variables accordingly.
-
-<details>
-<summary>copy_image.sh</summary>
-
-```bash
-#!/bin/bash
-
-# Old image (source)
-OLD_IMAGE="olduser/oldrepo:version"
-
-# New image (destination)
-NEW_IMAGE="newuser/newrepo:version"
-
-# 1. Pull the old image
-docker pull $OLD_IMAGE
-
-# 2. Tag it with the new name
-docker tag $OLD_IMAGE $NEW_IMAGE
-
-# 3. Log in to Docker Hub (will ask for password unless already logged in)
-#echo "Please log in to your Docker account:"
-#docker login -u newuser
-
-# 4. Push the new image
-docker push $NEW_IMAGE
-
-echo "✅ Done! $NEW_IMAGE is now available under your new account."
-
-```
-
-</details>
-
-Usage:
-
-```bash
-chmod +x copy_image.sh
-./copy_image.sh
-```
-
-You can also change Dockerfile content to build the image with a new name.
-
-Dockerfile:
-
-```dockerfile
-FROM olduser/oldrepo:version
-RUN echo "Added extra changes." > /info.txt
-```
-
-Run commands in the same folder as Dockerfile:
-
-```shell
-docker build -t newuser/newrepo:version .
-docker push newuser/newrepo:version
-```
-
-View your changes (info.txt) in the new image:
-
-```shell
-docker run -it newuser/newrepo:version ls -al /
-```
+---
 
 ## References
 
 For more details, check
-the [website](https://github.com/ozgurozturknet/AdanZyeDocker/blob/master/DockerCheatSheetTurkce.md).
+the [website](https://github.com/testuser/AdanZyeDocker/blob/master/DockerCheatSheetTurkce.md).
