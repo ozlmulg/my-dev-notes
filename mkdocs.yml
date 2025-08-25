@@ -122,6 +122,8 @@ nav:
           - PostgreSQL JSONB Operations: database/postgresql/postgresql-jsonb-operations.md
   - Cloud:
       - AWS:
+          - AWS Introduction: cloud/aws/aws-introduction.md
+          - AWS Services: cloud/aws/aws-services.md
           - Athena: cloud/aws/athena.md
   - Mobile:
       - Android:
